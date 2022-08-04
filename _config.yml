@@ -23,7 +23,7 @@ email: representation.of.ugly@zohomail.eu
 description: >- # this means to ignore newlines until "baseurl:"
   My collection of weird errors
 url: phoeo.github.io
-baseurl: /blog
+baseurl: 
 # twitter_username: jekyllrb
 github_username:  phoeo
 
