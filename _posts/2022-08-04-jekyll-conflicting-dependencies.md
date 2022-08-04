@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bundler could not find compatible versions for gem "jekyll-feed""
+title:  "Bundler could not find compatible versions for gem 'jekyll-feed'"
 date:   2022-08-04 19:28:30 +0300
 categories: jekyll bug solved
 ---
