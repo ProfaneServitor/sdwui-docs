@@ -28,7 +28,7 @@ baseurl: /blog
 github_username:  phoeo
 
 # Build settings
-theme: jekyll-theme-time-machine
+theme: minima
 plugins:
   - jekyll-feed
 
