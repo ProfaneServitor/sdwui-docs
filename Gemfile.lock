@@ -1,6 +1,5 @@
-GIT
-  remote: https://github.com/ntkme/sass-embedded-host-ruby.git
-  revision: ecc135fb0fa74c1a7bf53e607ef57059905bbbe8
+PATH
+  remote: lib/sass-embedded-host-ruby
   specs:
     sass-embedded (1.57.1)
       google-protobuf (~> 3.21)
