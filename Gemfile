@@ -9,7 +9,7 @@ gem 'jekyll-readme-index'
 gem 'jemoji'
 gem 'webrick'
 gem 'sass-embedded'#, git: 'https://github.com/cyparu/dart-sass-embedded.git'
-gem "jekyll-polyglot"
+# gem "jekyll-polyglot"
 gem 'jekyll-timeago'
 
 # gem "rails"
