@@ -62,6 +62,7 @@ plugins:
   - jekyll-readme-index
   - jemoji
   - jekyll-polyglot
+  - jekyll-timeago
 
 languages: ["en", "ru", "de"]
 default_lang: "en"
