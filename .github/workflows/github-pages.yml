@@ -27,8 +27,10 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
-      - name: Install Dart Sass Embedded # Installs dart-sass
-        run: sudo apt-get install dart-sass-embedded
+      - name: Unpack Embedded Dart Sass v${{ env.DART_SASS_VERSION }}
+        run: |
+          tar -xvf sass_embedded-${{ env.DART_SASS_VERSION }}-linux-x64.tar.gz
+          sass_embedded/dart-sass-embedded --version
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
