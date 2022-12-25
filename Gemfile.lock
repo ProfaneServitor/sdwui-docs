@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/ntkme/sass-embedded-host-ruby.git
+  revision: ecc135fb0fa74c1a7bf53e607ef57059905bbbe8
+  specs:
+    sass-embedded (1.57.1)
+      google-protobuf (~> 3.21)
+      rake (>= 10.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -42,8 +50,6 @@ GEM
       webrick (~> 1.7)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-polyglot (1.5.1)
-      jekyll (>= 3.0)
     jekyll-readme-index (0.3.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-sass-converter (3.0.0)
@@ -80,9 +86,6 @@ GEM
     rexml (3.2.5)
     rouge (4.0.1)
     safe_yaml (1.0.5)
-    sass-embedded (1.57.1)
-      google-protobuf (~> 3.21)
-      rake (>= 10.0.0)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     tzinfo (2.0.5)
@@ -96,10 +99,10 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-feed
-  jekyll-polyglot
   jekyll-readme-index
   jekyll-timeago
   jemoji
+  sass-embedded!
   webrick
 
 BUNDLED WITH
