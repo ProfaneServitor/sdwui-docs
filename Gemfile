@@ -7,11 +7,11 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gem "github-pages", group: :jekyll_plugins
 # gem "jekyll"
 # gem 'kramdown-parser-gfm'
-gem 'jekyll-feed'
-gem 'jekyll-readme-index'
-gem 'jemoji'
+# gem 'jekyll-feed'
+# gem 'jekyll-readme-index'
+gem 'jemoji', group: :jekyll_plugins
 gem 'webrick'
-gem "jekyll-polyglot"
-gem 'jekyll-timeago'
+gem "jekyll-polyglot", group: :jekyll_plugins
+# gem 'jekyll-timeago'
 
 # gem "rails"
