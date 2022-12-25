@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
-gem 'sass-embedded', path: "lib/sass-embedded"
+gem 'sass-embedded'
 gem "jekyll"
 gem 'jekyll-feed'
 gem 'jekyll-readme-index'
