@@ -1,5 +1,5 @@
 PATH
-  remote: lib/sass-embedded-host-ruby
+  remote: lib/sass-embedded
   specs:
     sass-embedded (1.57.1)
       google-protobuf (~> 3.21)
