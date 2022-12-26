@@ -9,9 +9,9 @@ gem "jekyll"
 gem 'kramdown-parser-gfm'
 gem 'jekyll-feed'
 gem 'jekyll-readme-index'
-gem 'jemoji', group: :jekyll_plugins
+gem 'jemoji'
 gem 'webrick'
-gem "jekyll-polyglot", group: :jekyll_plugins
+gem "jekyll-polyglot"
 gem 'jekyll-timeago'
 gem "jekyll-index-pages"
 
