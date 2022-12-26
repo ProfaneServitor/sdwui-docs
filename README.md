@@ -13,7 +13,7 @@ All content is in _pages folder. Copy a page from en folder, change language in 
 
 ## How to add a language
 
-Add a language code in `_config_yml`, `languages` variable. Then create a folder of the same name in `_pages` folder.
+Add a language code in `_config_yml`, `languages` variable. Then create a folder of the same name in `_pages` folder..
 
 ## Credits
 
