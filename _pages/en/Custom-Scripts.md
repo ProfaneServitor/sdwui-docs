@@ -1,3 +1,9 @@
+---
+title: Custom scripts
+layout: post
+category: Guides
+lang: ru
+---
 # Installing and Using Custom Scripts
 To install custom scripts, place them into the `scripts` directory and click the `Reload custom script` button at the bottom in the settings tab. Custom scripts will appear in the lower-left dropdown menu on the txt2img and img2img tabs after being installed. Below are some notable custom scripts created by Web UI users:
 
@@ -17,7 +23,7 @@ Will output 4 prompts: `a corgi wearing goggles`, `a corgi wearing a hat`, `a ca
 
 When using a `batch count` > 1, each prompt variation will be generated for each seed. `batch size` is ignored.
 
-## txt2img2img 
+## txt2img2img
 https://github.com/ThereforeGames/txt2img2img
 
 Greatly improve the editability of any character/subject while retaining their likeness. The main motivation for this script is improving the editability of embeddings created through [Textual Inversion](https://textual-inversion.github.io/).
@@ -80,13 +86,13 @@ https://github.com/amotile/stable-diffusion-backend/tree/master/src/process/impl
 This script allows you to combine multiple weighted prompts together by mathematically combining their textual embeddings before generating the image.
 
 Ex.
-
+{%raw%}
 `Crystal containing elemental {fire|ice}`
 
 It supports nested definitions so you can do this as well:
 
 `Crystal containing elemental {{fire:5|ice}|earth}`
-
+{%endraw%}
 ## Animator
 https://github.com/Animator-Anon/Animator
 
@@ -260,7 +266,7 @@ Custom script for AUTOMATIC1111's stable-diffusion-webui that adds more features
 
 <img src="https://user-images.githubusercontent.com/80003301/202277871-a4a3341b-13f7-42f4-a3e6-ca8f8cd8250a.png" width="574" height="197" />
 
-Example images: Prompt: "darth vader riding a bicycle, modifier"; X: Multitool: "Prompt S/R: bicycle, motorcycle | CFG scale: 7.5, 10 | Prompt S/R Placeholder: modifier, 4k, artstation"; Y: Multitool: "Sampler: Euler, Euler a | Steps: 20, 50" 
+Example images: Prompt: "darth vader riding a bicycle, modifier"; X: Multitool: "Prompt S/R: bicycle, motorcycle | CFG scale: 7.5, 10 | Prompt S/R Placeholder: modifier, 4k, artstation"; Y: Multitool: "Sampler: Euler, Euler a | Steps: 20, 50"
 
 </details>
 
@@ -393,7 +399,7 @@ Adds the ability to apply multiple hypernetworks at once. Overrides the hijack, 
 ## Hypernetwork Structure(.hns)/Variable Dropout/ Monkey Patches
 https://github.com/aria1th/Hypernetwork-MonkeyPatch-Extension
 
-Adds the ability to apply Hypernetwork Structure, as defining it in .hns file. see [here](https://github.com/AUTOMATIC1111/stable-diffusion-webui/pull/4334) for detailed information. 
+Adds the ability to apply Hypernetwork Structure, as defining it in .hns file. see [here](https://github.com/AUTOMATIC1111/stable-diffusion-webui/pull/4334) for detailed information.
 
 Adds the ability to use proper variable dropout rate, like 0.05. Also fixes issues with using hypernetwork right after training.
 
