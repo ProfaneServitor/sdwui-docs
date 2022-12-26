@@ -19,3 +19,4 @@ Add a language code in `_config_yml`, `languages` variable. Then create a folder
 
 * Powered by [Jekyll](https://jekyllrb.com/)
 * [Gitbook theme](https://github.com/sighingnow/jekyll-gitbook) by Tao He
+*
