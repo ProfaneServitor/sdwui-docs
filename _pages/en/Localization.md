@@ -1,3 +1,9 @@
+---
+title: Localization
+layout: post
+category: Guides
+lang: en
+---
 # Using localization files
 The intended way to do localizations now is via extensions. See:
 https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Developing-extensions

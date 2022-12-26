@@ -1,3 +1,9 @@
+---
+title: Developing extensions
+layout: post
+category: development
+lang: en
+---
 An extension is just a subdirectory in the `extensions` directory.
 
 Web ui interacts with installed extensions in the following way:

@@ -1,3 +1,9 @@
+---
+title: List of time zones
+layout: post
+category: Guides
+lang: en
+---
 You can generate the list of valid time zones by running this Python Script
 ```py
 import pytz

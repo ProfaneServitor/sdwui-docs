@@ -1,3 +1,9 @@
+---
+title: install on AMD
+layout: post
+category: Getting started
+lang: en
+---
 The instructions below only work on Linux! An alternative guide for Windows user can be found [here](https://rentry.org/ayymd-stable-diffustion-v1_4-guide) (untested).
 
 # Running natively
@@ -25,7 +31,7 @@ source venv/bin/activate
 TORCH_COMMAND='pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/rocm5.1.1' python launch.py --precision full --no-half
 ```
 
-The first generation after starting the WebUI might take very long, and you might see a message similar to this: 
+The first generation after starting the WebUI might take very long, and you might see a message similar to this:
 > MIOpen(HIP): Warning [SQLiteBase] Missing system database file: gfx1030_40.kdb Performance may degrade. Please follow
 > instructions to install: https://github.com/ROCmSoftwarePlatform/MIOpen#installing-miopen-kernels-package
 

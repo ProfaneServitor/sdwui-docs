@@ -1,3 +1,9 @@
+---
+title: Optimizations
+layout: post
+category: Guides
+lang: en
+---
 A number of optimization can be enabled by [commandline arguments](Run-with-Custom-Parameters):
 
 | commandline argument           | explanation                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -14,7 +20,7 @@ A number of optimization can be enabled by [commandline arguments](Run-with-Cust
 | `--opt-channelslast`           | Changes torch memory type for stable diffusion to channels last. Effects not closely studied.                                                                                                                                                                                                                                                                                                                                        |
 
 
-Extra tips (Windows): 
+Extra tips (Windows):
 - https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/3889 Disable Hardware GPU scheduling.
 - disable browser hardware acceleration
 - Go in nvidia control panel, 3d parameters, and change power profile to "maximum performance"

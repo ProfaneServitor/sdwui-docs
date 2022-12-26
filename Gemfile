@@ -14,5 +14,7 @@ gem 'webrick'
 gem "jekyll-polyglot"
 gem 'jekyll-timeago'
 gem "jekyll-index-pages"
+gem 'jekyll-relative-links'
+gem 'jekyll-compose', group: [:jekyll_plugins]
 
 # gem "rails"

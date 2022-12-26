@@ -1,3 +1,9 @@
+---
+title: Troubleshooting
+layout: post
+category: Guides
+lang: en
+---
 - **The program is tested to work on Python 3.10.6. Don't use other versions unless you are looking for trouble.**
 - The installer creates a python virtual environment, so none of the installed modules will affect existing system installations of python.
 - To use the system's python rather than creating a virtual environment, use custom parameter replacing `set VENV_DIR=-`.

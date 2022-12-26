@@ -4,7 +4,11 @@ layout: post
 category: development
 lang: en
 ---
+
+[features](../Features)
+
 # Pull requests
+
 To contribute, clone the repository, make your changes, commit and push to your clone, and submit a pull request.
 
 Make sure that your changes do not break anything by running [tests](Tests).

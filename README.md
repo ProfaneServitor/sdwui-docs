@@ -15,6 +15,15 @@ All content is in _pages folder. Copy a page from en folder, change language in 
 
 Add a language code in `_config_yml`, `languages` variable. Then create a folder of the same name in `_pages` folder..
 
+## Compile
+
+Currently github actions are broken, so the thing needs to be built before changes on site are rendered.
+
+```
+bundle
+bundle exec jekyll build
+```
+
 ## Credits
 
 * Powered by [Jekyll](https://jekyllrb.com/)

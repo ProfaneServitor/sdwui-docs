@@ -1,4 +1,10 @@
-The Script class definition can be found in `modules/scripts.py`. To create your own custom script, create a python script that implements the class and drop it into the `scripts` folder, using the below example or other scripts already in the folder as a guide. 
+---
+title: Developing custom scripts
+layout: post
+category: Guides
+lang: en
+---
+The Script class definition can be found in `modules/scripts.py`. To create your own custom script, create a python script that implements the class and drop it into the `scripts` folder, using the below example or other scripts already in the folder as a guide.
 
 The Script class has four primary methods, described in further detail below with a simple example script that rotates and/or flips generated images.
 
@@ -21,7 +27,7 @@ class Script(scripts.Script):
         return "Flip/Rotate Output"
 
 
-# Determines when the script should be shown in the dropdown menu via the 
+# Determines when the script should be shown in the dropdown menu via the
 # returned value. As an example:
 # is_img2img is True if the current tab is img2img, and False if it is txt2img.
 # Thus, return is_img2img to only show the script on the img2img tab.
@@ -43,26 +49,26 @@ class Script(scripts.Script):
         overwrite = gr.Checkbox(False, label="Overwrite existing files")
         return [angle, hflip, vflip, overwrite]
 
-  
+
 
 # This is where the additional processing is implemented. The parameters include
 # self, the model object "p" (a StableDiffusionProcessing class, see
 # processing.py), and the parameters returned by the ui method.
-# Custom functions can be defined here, and additional libraries can be imported 
+# Custom functions can be defined here, and additional libraries can be imported
 # to be used in processing. The return value should be a Processed object, which is
 # what is returned by the process_images method.
 
     def run(self, p, angle, hflip, vflip, overwrite):
 
-        # function which takes an image from the Processed object, 
+        # function which takes an image from the Processed object,
         # and the angle and two booleans indicating horizontal and
-        # vertical flips from the UI, then returns the 
+        # vertical flips from the UI, then returns the
         # image rotated and flipped accordingly
         def rotate_and_flip(im, angle, hflip, vflip):
             from PIL import Image
-            
+           
             raf = im
-            
+           
             if angle != 0:
                 raf = raf.rotate(angle, expand=True)
             if hflip:
@@ -71,7 +77,7 @@ class Script(scripts.Script):
                 raf = raf.transpose(Image.FLIP_TOP_BOTTOM)
             return raf
 
-  
+
 
         # If overwrite is false, append the rotation information to the filename
         # using the "basename" parameter and save it in the same directory.
@@ -103,4 +109,3 @@ class Script(scripts.Script):
 
         return proc
 ```
-

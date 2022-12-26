@@ -1,4 +1,9 @@
-# Required Dependencies
+---
+title: dependencies
+layout: post
+category: Getting started
+lang: en
+---
 1. Python 3.10.6 and Git:
     - Windows: download and run installers for Python 3.10.6 ([webpage](https://www.python.org/downloads/release/python-3106/), [exe](https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe), or [win7 version](https://github.com/adang1345/PythonWin7/raw/master/3.10.6/python-3.10.6-amd64-full.exe)) and git ([webpage](https://git-scm.com/download/win))
     - Linux (Debian-based): `sudo apt install wget git python3 python3-venv`

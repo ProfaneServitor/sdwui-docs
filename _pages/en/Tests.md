@@ -1,3 +1,9 @@
+---
+title: Optimizations
+layout: post
+category: development
+lang: en
+---
 There are tests that just verify that basic image creation works vi API.
 
 To run tests, add `--tests` as a commandline argument to `launch.py` along with your other command line arguments:

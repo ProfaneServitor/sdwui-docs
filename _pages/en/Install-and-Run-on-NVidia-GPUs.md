@@ -1,3 +1,9 @@
+---
+title: install on Nvidia
+layout: post
+category: Getting started
+lang: en
+---
 Before attempting to install make sure all the required [dependencies](Dependencies) are met.
 
 # Automatic Installation
@@ -102,7 +108,7 @@ At this point, the instructions for the Manual installation may be applied start
 
 
 # Alternative installation on Windows using Conda
-- Prerequisites _*(Only needed if you do not have them)*_. Assumes [Chocolatey](https://chocolatey.org/install) is installed. 
+- Prerequisites _*(Only needed if you do not have them)*_. Assumes [Chocolatey](https://chocolatey.org/install) is installed.
     ```bash
     # install git
     choco install git
@@ -133,12 +139,11 @@ At this point, the instructions for the Manual installation may be applied start
         ```bash
         GIT\StableDiffusion\models\Stable-diffusion
         ```
-        after that restart the server by restarting Anaconda prompt and 
+        after that restart the server by restarting Anaconda prompt and
         ```bash
         webui-user.bat
         ```
 - Alternative defaults worth trying out:
-    1. Try **euler a** (Ancestral Euler) with higher **Sampling Steps** ex: 40 or others with 100. 
+    1. Try **euler a** (Ancestral Euler) with higher **Sampling Steps** ex: 40 or others with 100.
     2. Set "Settings > User interface > Show image creation progress every N sampling steps" to 1 and pick a deterministic **Seed** value. Can visually see how image defusion happens and record a .gif with [ScreenToGif](https://github.com/NickeManarin/ScreenToGif).
     3. Use **Restore faces**. Generally, better results, but that quality comes at the cost of speed.
-

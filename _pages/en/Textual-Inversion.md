@@ -1,3 +1,9 @@
+---
+title: Textual inversion
+layout: post
+category: Guides
+lang: en
+---
 # What is Textual Inversion?
 Textual Inversion allows you to train a tiny part of the neural network on your own pictures, and use results when generating new ones. In this context, embedding is the name of the tiny bit of the neural network you trained.
 

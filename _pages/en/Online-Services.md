@@ -11,8 +11,8 @@ lang: en
    - [maintained by camenduru](https://github.com/camenduru/stable-diffusion-webui-colab)
    - [maintained by ddPn08](https://github.com/ddPn08/automatic1111-colab)
    - [maintained by Akaibu](https://colab.research.google.com/drive/1kw3egmSn-KgWsikYvOMjJkVDsPLjEMzl)
-   - [Colab, original by me, outdated](https://colab.research.google.com/drive/1Iy-xW9t1-OQWhb0hNxueGij8phCyluOh).
-
+   - [Colab, original by AUTOMATIC1111, outdated](https://colab.research.google.com/drive/1Iy-xW9t1-OQWhb0hNxueGij8phCyluOh).
+   - [Russian colab, maintained by PR0LAPSE](https://colab.research.google.com/drive/1TC4SSLncPWytSPvquR6Y4-U7wZRfAXrV)
 
 ## Paperspace
    - [maintained by Cyberes](https://github.com/Engineer-of-Stuff/stable-diffusion-paperspace)

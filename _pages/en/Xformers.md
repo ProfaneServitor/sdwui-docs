@@ -1,3 +1,9 @@
+---
+title: Xformers
+layout: post
+category: Guides
+lang: en
+---
 Xformers library is an optional way to speedup your image generation.
 
 There are no binaries for Windows except for one specific configuration, but you can build it yourself.
@@ -62,7 +68,7 @@ pip install wheel
 6. As CUDA 11.3 is rather old, you need to force enable it to be built on MS Build Tools 2022. Do `$env:NVCC_FLAGS = "-allow-unsupported-compiler"` if on `powershell`, or `set NVCC_FLAGS=-allow-unsupported-compiler` if on `cmd`
 
 
-7. You can finally build xFormers, note that the build will take a long time (probably 10-20minutes), it may initially complain of some errors but it should still compile correctly. 
+7. You can finally build xFormers, note that the build will take a long time (probably 10-20minutes), it may initially complain of some errors but it should still compile correctly.
 
 > OPTIONAL tip: To further speed up on multi-core CPU Windows systems, install ninja https://github.com/ninja-build/ninja.
 > Steps to install:

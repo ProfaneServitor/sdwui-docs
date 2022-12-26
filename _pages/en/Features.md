@@ -1,3 +1,9 @@
+---
+title: Features
+layout: post
+category: Guides
+lang: en
+---
 This is a feature showcase page for [Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui).
 
 All examples are non-cherrypicked unless specified otherwise.
@@ -414,7 +420,7 @@ combine prompts using an uppercase AND
 
 Supports weights for prompts: `a cat :1.2 AND a dog AND a penguin :2.2`
 The default weight value is 1.
-It can be quite useful for combining multiple embeddings to your result: `creature_embedding in the woods:0.7 AND arcane_embedding:0.5 AND glitch_embedding:0.2` 
+It can be quite useful for combining multiple embeddings to your result: `creature_embedding in the woods:0.7 AND arcane_embedding:0.5 AND glitch_embedding:0.2`
 
 Using a value lower than 0.1 will barely have an effect. `a cat AND a dog:0.03` will produce basically the same output as `a cat`
 

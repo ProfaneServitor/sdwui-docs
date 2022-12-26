@@ -275,3 +275,11 @@ code span.w {
 .summary h2 {
 	padding: 0 10px;
 }
+
+/* .book-summary ul.summary li a {
+  padding: 2px 10px !important;
+} */
+
+.markdown-section code {
+  color: #333;
+}

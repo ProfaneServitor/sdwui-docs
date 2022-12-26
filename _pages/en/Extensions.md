@@ -1,3 +1,9 @@
+---
+title: Extensions
+layout: post
+category: Guides
+lang: en
+---
 # General info
 
 Extensions are a more convenient form of user scripts.
@@ -185,7 +191,7 @@ Adds a tab to the webui that allows the user to automatically extract keyframes 
 
 ## Unprompted
 https://github.com/ThereforeGames/unprompted
- 
+
 Supercharge your prompt workflow with this powerful scripting language!
 
 ![unprompted_header](https://user-images.githubusercontent.com/95403634/199041569-7c6c5748-e7dc-4068-943f-c2d92745dbb5.png)
@@ -229,7 +235,7 @@ To install it, clone the repo into the `extensions` directory and restart the we
 
 ## StylePile
 https://github.com/some9000/StylePile
-			
+
 An easy way to mix and match elements to prompts that affect the style of the result.
 
 ![image](https://user-images.githubusercontent.com/98228077/208331056-2956d050-a7a4-4b6f-b064-72f6a7d7ee0d.png)

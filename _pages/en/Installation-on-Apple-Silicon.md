@@ -1,3 +1,9 @@
+---
+title: install on Apple
+layout: post
+category: Getting started
+lang: en
+---
 Mac users: Please provide feedback on if these instructions do or don't work for you, and if anything is unclear or you are otherwise still having problems with your install that are not currently [mentioned here](https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/5461).
 
 Important notes

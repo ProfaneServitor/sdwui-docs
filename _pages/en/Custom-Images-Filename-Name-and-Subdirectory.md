@@ -1,3 +1,9 @@
+---
+title: Custom images filename and subdirectory
+layout: post
+category: Guides
+lang: en
+---
 > the following information is about the image filename and subdirectory name, not the `Paths for saving \ Output directorys`
 ### By default, the Wub UI save images in the output directorys with a filename structure of
 
@@ -68,7 +74,7 @@ note: the `Styles` mentioned above is referring to the two drop down menu below 
 this is due to Computer has a maximum file length
 
 # Add / Remove number to filename when saving
-you can remove the prefix number 
+you can remove the prefix number
 by unchecking the checkbox under
 
 `Setting` > `Saving images/grids` > `Add number to filename when saving`
@@ -93,7 +99,7 @@ Generally datetime down to seconds should be able to guarantee that file name is
 
 ```
 [datetime<%Y%m%d_%H%M%S>]-[seed]
-``` 
+```
 ```
 20221025_014350-281391998.png
 ```
