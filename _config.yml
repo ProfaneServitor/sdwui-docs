@@ -1,10 +1,9 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            Stable Diffusion webUI
+longtitle:        Stable Diffusion webUI
+email:            ''
 description: >
-  Build Jekyll site with the GitBook style.
+  A browser interface based on Gradio library for Stable Diffusion.
 
 version:          1.0
 gitbook_version:  3.2.3

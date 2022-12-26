@@ -1,8 +1,9 @@
 ---
 title: Changing UI defaults
 layout: post
-category: getting started
+category: Getting started
 permalink: /ui-defaults/
+priority: 2
 lang: en
 ---
 The default values in the web UI can be changed by editing `ui-config.json`, which appears in the base directory containing `webui.py` after the first run.

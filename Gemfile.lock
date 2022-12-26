@@ -125,6 +125,9 @@ GEM
       octokit (~> 4.0, != 4.4.0)
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
+    jekyll-index-pages (0.5.1)
+      i18n (~> 0.8)
+      jekyll (~> 3.3)
     jekyll-mentions (1.6.0)
       html-pipeline (~> 2.3)
       jekyll (>= 3.7, < 5.0)
@@ -259,6 +262,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-index-pages
   jekyll-polyglot
   jemoji
   webrick

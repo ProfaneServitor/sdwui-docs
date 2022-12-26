@@ -1,8 +1,9 @@
 ---
 title: Изменение настроек интерфейса
 layout: post
-category: getting started
+category: Getting started
 permalink: /ui-defaults/
+priority: 2
 lang: ru
 ---
 Значения по умолчанию в веб-интерфейсе можно изменить, отредактировав файл `ui-config.json`, который появляется в базовом каталоге, содержащем `webui.py`, после первого запуска. Изменения применяются только после перезапуска.

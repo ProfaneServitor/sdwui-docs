@@ -271,3 +271,7 @@
 code span.w {
   background: transparent !important;
 }
+
+.summary h2 {
+	padding: 0 10px;
+}

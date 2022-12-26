@@ -2,7 +2,7 @@
 title: API guide
 author: Kilvoctu
 layout: post
-category: guides
+category: Guides
 permalink: /api/
 lang: en
 ---
