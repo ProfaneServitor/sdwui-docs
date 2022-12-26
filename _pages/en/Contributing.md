@@ -1,7 +1,7 @@
 ---
 title: Contributing
 layout: post
-category: Guides
+category: Development
 lang: en
 ---
 # Pull requests
