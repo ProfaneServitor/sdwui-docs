@@ -2,6 +2,7 @@
 title: dependencies
 layout: post
 category: Getting started
+permalink: /dependencies/
 lang: en
 ---
 1. Python 3.10.6 and Git:

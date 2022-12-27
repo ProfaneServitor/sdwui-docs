@@ -2,6 +2,7 @@
 title: Custom images filename and subdirectory
 layout: post
 category: Guides
+permalink: /custom-filenames/
 lang: en
 ---
 > the following information is about the image filename and subdirectory name, not the `Paths for saving \ Output directorys`

@@ -2,6 +2,7 @@
 title: Localization
 layout: post
 category: Guides
+permalink: /localization/
 lang: en
 ---
 # Using localization files

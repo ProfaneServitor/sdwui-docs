@@ -2,6 +2,7 @@
 title: Features
 layout: post
 category: Guides
+permalink: /features/
 lang: en
 ---
 This is a feature showcase page for [Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui).

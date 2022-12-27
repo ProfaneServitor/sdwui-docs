@@ -2,6 +2,7 @@
 title: Developing custom scripts
 layout: post
 category: Guides
+permalink: /developing-custom-scripts/
 lang: en
 ---
 The Script class definition can be found in `modules/scripts.py`. To create your own custom script, create a python script that implements the class and drop it into the `scripts` folder, using the below example or other scripts already in the folder as a guide.

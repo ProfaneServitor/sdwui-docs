@@ -2,6 +2,7 @@
 title: Command line arguments and settings
 layout: post
 category: Guides
+permalink: /cli/
 lang: en
 ---
 ## webui-user

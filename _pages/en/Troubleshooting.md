@@ -2,6 +2,7 @@
 title: Troubleshooting
 layout: post
 category: Guides
+permalink: /troubleshooting/
 lang: en
 ---
 - **The program is tested to work on Python 3.10.6. Don't use other versions unless you are looking for trouble.**

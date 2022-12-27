@@ -8,7 +8,7 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
+url:              'https://github.com/ProfaneServitor/sdwui-docs'
 baseurl:          '/sdwui-docs'
 rss:              RSS
 
@@ -40,7 +40,8 @@ syntax_highlighter_style: colorful
 markdown_ext:     markdown,mkdown,mkdn,mkd,md
 
 # Permalinks
-permalink:        /:categories/:year-:month-:day-:title:output_ext
+# permalink:        /:categories/:year-:month-:day-:title:output_ext
+permalink: pretty
 
 exclude:
   - _drafts

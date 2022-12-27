@@ -287,3 +287,7 @@ details {
   padding: 1em;
   cursor: context-menu;
 }
+
+code .highlight .err {
+  background-color: transparent;
+}

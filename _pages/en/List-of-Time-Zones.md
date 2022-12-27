@@ -2,6 +2,7 @@
 title: List of time zones
 layout: post
 category: Guides
+permalink: /list-of-time-zones/
 lang: en
 ---
 You can generate the list of valid time zones by running this Python Script

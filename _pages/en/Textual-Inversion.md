@@ -2,6 +2,7 @@
 title: Textual inversion
 layout: post
 category: Guides
+permalink: /textual-inversion/
 lang: en
 ---
 # What is Textual Inversion?

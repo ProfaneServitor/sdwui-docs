@@ -2,6 +2,7 @@
 title: Extensions
 layout: post
 category: Guides
+permalink: /extensions/
 lang: en
 ---
 # General info

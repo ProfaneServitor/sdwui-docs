@@ -6,6 +6,7 @@ priority: 2
 permalink: /online-services/
 lang: en
 ---
+
 ## Google Colab
    - [maintained by TheLastBen](https://colab.research.google.com/github/TheLastBen/fast-stable-diffusion/blob/main/fast_stable_diffusion_AUTOMATIC1111.ipynb)
    - [maintained by camenduru](https://github.com/camenduru/stable-diffusion-webui-colab)

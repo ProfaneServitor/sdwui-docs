@@ -2,6 +2,7 @@
 title: Custom scripts
 layout: post
 category: Guides
+permalink: /custom-scripts/
 lang: en
 ---
 # Installing and Using Custom Scripts

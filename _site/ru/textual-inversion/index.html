@@ -1,0 +1,759 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Текстовая инверсия · Stable Diffusion webUI</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="A browser interface based on Gradio library for Stable Diffusion.
+"><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/style.css">
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/rouge/colorful.css">
+
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/custom.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/sdwui-docs/ru/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/sdwui-docs/ru//assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+
+
+
+            <link rel="prev" href="/sdwui-docs/ru/pages/ru/Tests/" />
+        
+
+        
+            <link rel="next" href="/sdwui-docs/ru/troubleshooting/" />
+        
+    </head>
+    <body>
+        <div class="book">
+<div class="book-summary">
+    <nav role="navigation">
+        <div id="lang">
+<a href="/sdwui-docs/textual-inversion/"><img class="emoji" title=":uk:" alt=":uk:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png" height="20" width="20"> en</a> | <a style="font-weight: bold;" href="/sdwui-docs/ru/textual-inversion/"><img class="emoji" title=":ru:" alt=":ru:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1f7-1f1fa.png" height="20" width="20"> ru</a> | <a href="/sdwui-docs/de/textual-inversion/"><img class="emoji" title=":de:" alt=":de:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1e9-1f1ea.png" height="20" width="20"> de</a> | <br>
+</div>
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search">
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/sdwui-docs/ru/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter" data-level="1.1" data-path="/sdwui-docs">
+            
+                <!-- <a href="/sdwui-docs/ru/">
+                    Stable Diffusion webUI
+                </a> -->
+            </li>
+
+            <!-- <li class="divider"></li> -->
+
+
+                    
+                    
+                    <li>
+                      <h2>Guides</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/cli/">
+                          
+                              <a href="/sdwui-docs/ru/cli/">
+                                  Аргументы и настройки командной строки
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-filenames/">
+                          
+                              <a href="/sdwui-docs/ru/custom-filenames/">
+                                  Имя файла и подкаталог пользовательских изображений
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-scripts/">
+                          
+                              <a href="/sdwui-docs/ru/custom-scripts/">
+                                  Пользовательские скрипты
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-custom-scripts/">
+                          
+                              <a href="/sdwui-docs/developing-custom-scripts/">
+                                  Разработка пользовательских скриптов
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/extensions/">
+                          
+                              <a href="/sdwui-docs/extensions/">
+                                  Расширения
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/features/">
+                          
+                              <a href="/sdwui-docs/ru/features/">
+                                  Функции
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/list-of-time-zones/">
+                          
+                              <a href="/sdwui-docs/ru/list-of-time-zones/">
+                                  Список часовых поясов
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/localization/">
+                          
+                              <a href="/sdwui-docs/ru/localization/">
+                                  Локализация
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/negative-prompt/">
+                          
+                              <a href="/sdwui-docs/negative-prompt/">
+                                  Отрицательное приглашение
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/optimizations/">
+                          
+                              <a href="/sdwui-docs/optimizations/">
+                                  Optimizations
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter active" data-level="1.2" data-path="/sdwui-docs/textual-inversion/">
+                          
+                              <a href="/sdwui-docs/ru/textual-inversion/">
+                                  Текстовая инверсия
+                              </a>
+                              
+                                  
+                                      <ul>
+<li><a href="#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D0%B8%D0%BD%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F">Что такое текстовая инверсия?</a></li>
+<li><a href="#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%B5%D0%B4%D0%B2%D0%B0%D1%80%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D1%8D%D0%BC%D0%B1%D0%B5%D0%B4%D0%B4%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2">Использование предварительно обученных эмбеддингов</a></li>
+<li>
+<a href="#%D0%BE%D0%B1%D1%83%D1%87%D0%B0%D1%8E%D1%89%D0%B8%D0%B5-%D0%B2%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F">Обучающие вложения</a><ul>
+<li><a href="#%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0-%D0%B8%D0%BD%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F-%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B0">Вкладка Инверсия текста</a></li>
+<li>
+<a href="#%D0%BE%D0%B1%D1%8A%D1%8F%D1%81%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%BE%D0%B2">Объяснение параметров</a><ul>
+<li><a href="#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B2%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F">Создание встраивания</a></li>
+<li><a href="#%D0%BF%D1%80%D0%B5%D0%B4%D0%B2%D0%B0%D1%80%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0">Предварительная обработка</a></li>
+<li><a href="#%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E">Обучение встраиванию</a></li>
+<li><a href="#%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%8B%D0%B5-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0">файловые слова</a></li>
+</ul>
+</li>
+<li><a href="#%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B8">Сторонние репозитории</a></li>
+</ul>
+</li>
+<li><a href="#%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D0%B2%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD">Поиск вложений онлайн</a></li>
+<li>
+<a href="#%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D0%B5%D1%82%D0%B8">Гиперсети</a><ul>
+<li><a href="#%D0%B3%D0%BB%D1%83%D0%BF%D1%8B%D0%B9-%D0%B3%D0%BB%D1%83%D0%BF%D1%8B%D0%B9-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE">Глупый Глупый Руководство</a></li>
+<li><a href="#%D0%B2%D1%8B%D0%B3%D1%80%D1%83%D0%B6%D0%B0%D1%82%D1%8C-vae-%D0%B8-clip-%D0%B8%D0%B7-vram-%D0%BF%D1%80%D0%B8-%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B8">Выгружать VAE и CLIP из VRAM при обучении</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                                  
+                              
+                          
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/troubleshooting/">
+                          
+                              <a href="/sdwui-docs/ru/troubleshooting/">
+                                  Исправление проблем
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/xformers/">
+                          
+                              <a href="/sdwui-docs/ru/xformers/">
+                                  Иксформеры
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/api/">
+                          
+                              <a href="/sdwui-docs/ru/api/">
+                                  API guide
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/pages/ru/Optimizations/">
+                          
+                              <a href="/sdwui-docs/ru/pages/ru/Optimizations/">
+                                  Оптимизации
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>development</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/contributing/">
+                          
+                              <a href="/sdwui-docs/ru/contributing/">
+                                  Содействие
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-extensions/">
+                          
+                              <a href="/sdwui-docs/developing-extensions/">
+                                  Разработка расширений
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/pages/ru/Tests/">
+                          
+                              <a href="/sdwui-docs/ru/pages/ru/Tests/">
+                                  Тесты
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>Getting started</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/dependencies/">
+                          
+                              <a href="/sdwui-docs/dependencies/">
+                                  зависимости
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-amd/">
+                          
+                              <a href="/sdwui-docs/ru/install-on-amd/">
+                                  установить на амд
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-nvidia/">
+                          
+                              <a href="/sdwui-docs/ru/install-on-nvidia/">
+                                  установить на нвидиа
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-apple/">
+                          
+                              <a href="/sdwui-docs/ru/install-on-apple/">
+                                  установить на Apple
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/">
+                          
+                              <a href="/sdwui-docs/ru/">
+                                  Стабильный диффузионный веб-интерфейс
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install/">
+                          
+                              <a href="/sdwui-docs/ru/install/">
+                                  Установить
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/online-services/">
+                          
+                              <a href="/sdwui-docs/online-services/">
+                                  Онлайн-сервисы
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/ui-defaults/">
+                          
+                              <a href="/sdwui-docs/ru/ui-defaults/">
+                                  Изменение настроек интерфейса
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+
+                    
+
+            <!-- <li>
+                <a href="https://github.com/sighingnow/jekyll-gitbook/fork" target="blank" class="gitbook-link">
+                    Fork it Now!
+                </a>
+            </li> -->
+            </li>
+<li><h2>Release notes</h2></li>
+            
+              <li>
+                <a href="/sdwui-docs/ru/2022/12/27/my-new-post/">
+                  Release note example
+                </a>
+              </li>
+            
+        
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href=".">Текстовая инверсия</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner">
+<div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/Textual-Inversion">Текстовая инверсия</h1>
+                    
+
+                    
+                      <div style="border: 1px dashed red; width: 100%; padding: 1em;">
+  <b><img class="emoji" title=":robot:" alt=":robot:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f916.png" height="20" width="20"> This page have been translated automatically. If you want to improve this translation and remove this warning,
+    see <a href="https://github.com/ProfaneServitor/sdwui-docs">project's repository</a></b>
+</div>
+
+                    
+                    <h1 id="что-такое-текстовая-инверсия">Что такое текстовая инверсия?</h1>
+<p>Текстовая инверсия позволяет обучить крошечную часть нейронной сети на собственных картинках и использовать результаты при генерации новых. В этом контексте встраивание — это название крошечной части нейронной сети, которую вы обучили.</p>
+
+<p>Результатом обучения является файл .pt или .bin (первый формат используется автором оригинала, второй - библиотекой диффузоров) с вложением в него.</p>
+
+<p>Подробнее о том, что такое текстовая инверсия, см. на исходном сайте: https://textual-inversion.github.io/.</p>
+
+<h1 id="использование-предварительно-обученных-эмбеддингов">Использование предварительно обученных эмбеддингов</h1>
+<p>Поместите вложение в каталог «embeddings» и используйте его имя файла в подсказке. Вам не нужно перезапускать программу, чтобы это работало.</p>
+
+<p>В качестве примера вот вставка <a href="https://drive.google.com/file/d/1MDSmzSbzkIcw5_aw_i79xfO3CRWQDl-8/view?usp=sharing">Усада Пекора</a> Тренировалась на модели WD1.2, на 53 картинках ( 119 дополнен) для 19500 шагов, с 8 векторами на настройку токена.</p>
+
+<p>Картины, которые он генерирует:
+<img src="https://user-images.githubusercontent.com/20920490/193285043-5d5d57d8-7b5e-4803-a211-5ca5220c35f4.png" alt="сетка-0037"></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>portrait of usada pekora
+Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 4077357776, Size: 512x512, Model hash: 45dee52b
+</code></pre></div></div>
+
+<p>Вы можете комбинировать несколько вложений в одном приглашении:
+<img src="https://user-images.githubusercontent.com/20920490/193285265-a5224378-4ae2-48bf-ad7d-e79a9f998f9c.png" alt="сетка-0038"></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>portrait of usada pekora, mignon
+Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 4077357776, Size: 512x512, Model hash: 45dee52b
+</code></pre></div></div>
+
+<p>Будьте очень осторожны с тем, какую модель вы используете со своими встраиваниями: они хорошо работают с моделью, которую вы использовали во время обучения, и не так хорошо с другими моделями. Например, вот приведенная выше модель встраивания и стабильной диффузии vanilla 1.4:
+<img src="https://user-images.githubusercontent.com/20920490/193285611-486373f2-35d0-437c-895a-71454564a7c4.png" alt="сетка-0036"></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>portrait of usada pekora
+Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 4077357776, Size: 512x512, Model hash: 7460a6fa
+</code></pre></div></div>
+
+<h1 id="обучающие-вложения">Обучающие вложения</h1>
+<h2 id="вкладка-инверсия-текста">Вкладка Инверсия текста</h2>
+<p>Экспериментальная поддержка обучающих вложений в пользовательский интерфейс.</p>
+<ul>
+  <li>создать новую пустую вставку, выбрать директорию с изображениями, обучить на ней вставку</li>
+  <li>функция очень сырая, используйте на свой страх и риск</li>
+  <li>я смог воспроизвести результаты, которые я получил с другими репозиториями при обучении аниме-художников стилям, после нескольких десятков тысяч шагов</li>
+  <li>работает с поплавками половинной точности, но нужно поэкспериментировать, чтобы увидеть, будут ли результаты такими же хорошими</li>
+  <li>если у вас достаточно памяти, безопаснее запускать с <code class="language-plaintext highlighter-rouge">--no-half --precision full</code>
+</li>
+  <li>Раздел для пользовательского интерфейса для автоматического запуска предварительной обработки изображений.</li>
+  <li>вы можете прерывать и возобновлять обучение без потери данных (кроме параметров оптимизации AdamW, но, кажется, ни один из существующих репозиториев не сохраняет их, так что общее мнение - они не важны)</li>
+  <li>нет поддержки размеров партии или накопления градиента</li>
+  <li>не должно быть возможности запустить это с флагами <code class="language-plaintext highlighter-rouge">--lowvram</code> и <code class="language-plaintext highlighter-rouge">--medvram</code>.</li>
+</ul>
+
+<h2 id="объяснение-параметров">Объяснение параметров</h2>
+
+<h3 id="создание-встраивания">Создание встраивания</h3>
+<ul>
+  <li>
+<strong>Имя</strong>: имя файла созданного встраивания. Вы также будете использовать этот текст в подсказках при обращении к встраиванию.</li>
+  <li>
+<strong>Текст инициализации</strong>: создаваемое встраивание будет изначально заполнено векторами этого текста. Если вы создадите одно векторное вложение с именем «zzzz1234» с «деревом» в качестве текста инициализации и используете его в подсказке без обучения, то подсказка «a zzzz1234 by monet» создаст те же изображения, что и «tree by monet».</li>
+  <li>
+<strong>Количество векторов на токен</strong>: размер встраивания. Чем больше это значение, тем больше информации о предмете вы сможете уместить во вложение, но и тем больше слов оно уберет из вашего оперативного пособия. При стабильной диффузии у вас есть ограничение в 75 токенов в подсказке. Если вы используете вставку с 16 векторами в подсказке, у вас останется место для 75 - 16 = 59. Также по моему опыту, чем больше количество векторов, тем больше изображений вам нужно для получения хороших результатов.</li>
+</ul>
+
+<h3 id="предварительная-обработка">Предварительная обработка</h3>
+<p>Это берет изображения из каталога, обрабатывает их, чтобы они были готовы к текстовой инверсии, и записывает результаты в другой каталог. Это удобная функция, и вы можете предварительно обработать изображения самостоятельно, если хотите.</p>
+<ul>
+  <li>
+<strong>Исходный каталог</strong>: каталог с изображениями</li>
+  <li>
+<strong>Каталог назначения</strong>: каталог, в который будут записаны результаты.</li>
+  <li>
+<strong>Создавать перевернутые копии</strong>: для каждого изображения также запишите его зеркальную копию.</li>
+  <li>
+<strong>Разделить слишком большое изображение на два</strong>: если изображение слишком высокое или широкое, измените его размер, чтобы короткая сторона соответствовала желаемому разрешению, и создайте из него два, возможно, пересекающихся изображения.</li>
+  <li>
+<strong>Использовать заголовок BLIP в качестве имени файла</strong>: используйте модель BLIP из опросчика, чтобы добавить заголовок к имени файла.</li>
+</ul>
+
+<h3 id="обучение-встраиванию">Обучение встраиванию</h3>
+<ul>
+  <li>
+<strong>Встраивание</strong>: выберите вложение, которое вы хотите обучить, из этого раскрывающегося списка.</li>
+  <li>
+<strong>Скорость обучения</strong>: как быстро должно проходить обучение. Опасность установки этого параметра на высокое значение заключается в том, что вы можете нарушить встраивание, если установите слишком высокое значение. Если вы видите «Потеря: nan» в текстовом поле с информацией об обучении, это означает, что вы потерпели неудачу, и встраивание мертво. Со значением по умолчанию этого не должно происходить. В этом параметре можно указать несколько скоростей обучения, используя следующий синтаксис: «0,005:100, 1e-3:1000, 1e-5» — это будет обучать с lr «0,005» для первых 100 шагов, затем «1e-3». ` до 1000 шагов, затем <code class="language-plaintext highlighter-rouge">1e-5</code> до конца.</li>
+  <li>
+<strong>Каталог набора данных</strong>: каталог с изображениями для обучения. Все они должны быть квадратными.</li>
+  <li>
+<strong>Каталог журналов</strong>: в этот каталог будут записываться образцы изображений и копии частично обученных вложений.</li>
+  <li>
+<strong>Файл шаблона подсказки</strong>: текстовый файл с подсказками, по одной в строке, для обучения модели. Посмотрите файлы в каталоге <code class="language-plaintext highlighter-rouge">textual_inversion_templates</code>, чтобы узнать, что вы можете с ними сделать. Используйте <code class="language-plaintext highlighter-rouge">style.txt</code> при обучении стилей и <code class="language-plaintext highlighter-rouge">subject.txt</code> при обучении внедрению объектов. В файле можно использовать следующие теги:</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[имя]</code>: имя встраивания</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[filewords]</code>: слова из имени файла изображения из набора данных. Подробнее см. ниже.</li>
+  <li>
+<strong>Максимальное количество шагов</strong>: обучение остановится после того, как будет выполнено это количество шагов. Шаг — это когда одно изображение (или один пакет изображений, но пакеты в настоящее время не поддерживаются) показывается модели и используется для улучшения встраивания. если вы прервете тренировку и возобновите ее позже, количество шагов сохранится.</li>
+  <li>
+<strong>Сохранение изображений с встраиванием в виде фрагментов PNG</strong>: каждый раз, когда создается изображение, оно объединяется с последним зарегистрированным встраиванием и сохраняется в image_embeddings в формате, которым можно поделиться как изображением и поместить в папку встраивания. и загружен.</li>
+  <li>
+<strong>Подсказка для предварительного просмотра</strong>: если она не пуста, эта подсказка будет использоваться для создания изображений для предварительного просмотра. Если пусто, будет использоваться подсказка из обучения.</li>
+</ul>
+
+<h3 id="файловые-слова">файловые слова</h3>
+<p><code class="language-plaintext highlighter-rouge">[filewords]</code> — это тег для файла шаблона подсказки, который позволяет вам вставлять текст из имени файла в подсказку. По умолчанию расширение файла удаляется, а также все цифры и дефисы (<code class="language-plaintext highlighter-rouge">-</code>) в начале имени файла. Таким образом, это имя файла: <code class="language-plaintext highlighter-rouge">000001-1-a man in suit.png</code> станет этим текстом для подсказки: <code class="language-plaintext highlighter-rouge">a man in suit</code>. Форматирование текста в имени файла оставлено как есть.</p>
+
+<p>Можно использовать опции <code class="language-plaintext highlighter-rouge">Filename word regex</code> и <code class="language-plaintext highlighter-rouge">Filename join string</code>, чтобы изменить текст из имени файла: например, со словом regex = <code class="language-plaintext highlighter-rouge">\w+</code> и join string = <code class="language-plaintext highlighter-rouge">, </code> файл, указанный выше, создаст этот текст. : <code class="language-plaintext highlighter-rouge">а, мужчина, в, костюме</code>. регулярное выражение используется для извлечения слов из текста (и это <code class="language-plaintext highlighter-rouge">['a', 'man', 'in', 'suit', ]</code>), а соединяющая строка (‘, ‘) помещается между этими словами для создания одного текст: <code class="language-plaintext highlighter-rouge">а, мужчина, в, костюме</code>.</p>
+
+<p>Также можно создать текстовый файл с тем же именем, что и у изображения (<code class="language-plaintext highlighter-rouge">000001-1-мужчина в костюме.txt</code>) и просто поместить туда текст подсказки. Параметры имени файла и регулярного выражения использоваться не будут.</p>
+
+<h2 id="сторонние-репозитории">Сторонние репозитории</h2>
+<p>Я успешно обучил вложения, используя эти репозитории:</p>
+
+<ul>
+  <li>[nicolai256] (https://github.com/nicolai256/Stable-textual-inversion_win)</li>
+  <li>[lstein] (https://github.com/invoke-ai/InvokeAI)</li>
+</ul>
+
+<p>Другие варианты — тренироваться на колабах и/или использовать библиотеку диффузоров, о которой я ничего не знаю.</p>
+
+<h1 id="поиск-вложений-онлайн">Поиск вложений онлайн</h1>
+
+<ul>
+  <li>
+<a href="https://cyberes.github.io/stable-diffusion-textual-inversion-models/">библиотека концепций обнимающего лица</a> - много разных вложений, но</li>
+  <li>
+<a href="https://gitlab.com/16777216c/stable-diffusion-embeddings">16777216c</a> - NSFW, стиль аниме-художника таинственного незнакомца.</li>
+  <li>
+<a href="https://gitlab.com/cattoroboto/waifu-broadcast-embeds">cattoroboto</a> - несколько вложений аниме от анона.</li>
+  <li>
+<a href="https://gitgud.io/viper1/stable-diffusion-embeddings">viper1</a> - NSFW, пушистые девочки.</li>
+  <li>
+<a href="https://mega.nz/folder/7k0R2arB#5_u6PYfdn-ZS7sRdoecD2A">вставки анона</a> - NSFW, художники аниме.</li>
+  <li>
+<a href="https://rentry.org/embeddings">rentry</a> - страница со ссылками на вложения из множества источников.</li>
+</ul>
+
+<h1 id="гиперсети">Гиперсети</h1>
+
+<p>Гиперсети — это новая (понятно?) концепция тонкой настройки модели без изменения ее веса.</p>
+
+<p>Текущий способ обучения гиперсетей — на вкладке текстовой инверсии.</p>
+
+<p>Обучение работает так же, как и при текстовой инверсии.</p>
+
+<p>Единственное требование — использовать очень-очень низкую скорость обучения, что-то вроде 0,000005 или 0,0000005.</p>
+
+<h3 id="глупый-глупый-руководство">Глупый Глупый Руководство</h3>
+<p>Анонимный пользователь написал руководство с картинками по использованию гиперсетей: https://rentry.org/hypernetwork4dumdums</p>
+
+<h3 id="выгружать-vae-и-clip-из-vram-при-обучении">Выгружать VAE и CLIP из VRAM при обучении</h3>
+<p>Эта опция на вкладке настроек позволяет сэкономить немного памяти за счет более медленного создания изображения для предварительного просмотра.</p>
+
+                </section>
+            </div>
+<div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title">
+<span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+                        <a href="/sdwui-docs/ru/pages/ru/Tests/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Тесты">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        <a href="/sdwui-docs/ru/troubleshooting/" class="navigation navigation-next navigation-unique" aria-label="Next page: Исправление проблем">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "Исправление проблем",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/ru/Troubleshooting.md",
+            "ref": "_pages/ru/Troubleshooting.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"],
+                "facebook": true,
+                "google": false,
+                "github": true,
+                "github_link": "https://github.com",
+                "telegram": false,
+                "telegram_link": "https://t.me",
+                "instapaper": false,
+                "twitter": true,
+                "vk": false,
+                "weibo": false
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            }
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "Stable Diffusion webUI",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/ru/Textual-Inversion.md",
+        "mtime": "",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2022-12-27 19:12:07 +0300"
+    },
+    "basePath": "/sdwui-docs",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/sdwui-docs/assets/gitbook/gitbook.js"></script>
+<script src="/sdwui-docs/assets/gitbook/theme.js"></script>
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+
+<!-- <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script> -->
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+
+</body>
+</html>

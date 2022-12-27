@@ -23,7 +23,7 @@
             <!-- <li class="divider"></li> -->
 
 
-                    {% assign categories = site.pages | group_by: 'category' | sort: 'name' %}
+                    {% assign categories = site.pages | group_by: 'category' %}
                     {% for category in categories %}
                     <li>
                       <h2>{{ category.name }}</h2>

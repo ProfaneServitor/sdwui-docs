@@ -2,6 +2,7 @@
 title: Developing extensions
 layout: post
 category: development
+permalink: /developing-extensions/
 lang: en
 ---
 An extension is just a subdirectory in the `extensions` directory.

@@ -2,6 +2,7 @@
 title: install on AMD
 layout: post
 category: Getting started
+permalink: /install-on-amd/
 lang: en
 ---
 The instructions below only work on Linux! An alternative guide for Windows user can be found [here](https://rentry.org/ayymd-stable-diffustion-v1_4-guide) (untested).

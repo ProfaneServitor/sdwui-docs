@@ -6,6 +6,7 @@ permalink: /ui-defaults/
 priority: 2
 lang: en
 ---
+{% include machine-translated.html %}
 The default values in the web UI can be changed by editing `ui-config.json`, which appears in the base directory containing `webui.py` after the first run.
 The changes are only applied after restarting.
 

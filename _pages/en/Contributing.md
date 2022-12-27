@@ -2,6 +2,7 @@
 title: Contributing
 layout: post
 category: development
+permalink: /contributing/
 lang: en
 ---
 

@@ -2,6 +2,7 @@
 title: Xformers
 layout: post
 category: Guides
+permalink: /xformers/
 lang: en
 ---
 Xformers library is an optional way to speedup your image generation.

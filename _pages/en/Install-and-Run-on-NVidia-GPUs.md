@@ -2,6 +2,7 @@
 title: install on Nvidia
 layout: post
 category: Getting started
+permalink: /install-on-nvidia/
 lang: en
 ---
 Before attempting to install make sure all the required [dependencies](Dependencies) are met.

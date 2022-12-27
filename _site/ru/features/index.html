@@ -1,0 +1,1467 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Функции · Stable Diffusion webUI</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="A browser interface based on Gradio library for Stable Diffusion.
+"><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/style.css">
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/rouge/colorful.css">
+
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/custom.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/sdwui-docs/ru/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/sdwui-docs/ru//assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+
+
+
+            <link rel="prev" href="/sdwui-docs/extensions/" />
+        
+
+        
+            <link rel="next" href="/sdwui-docs/ru/install-on-amd/" />
+        
+    </head>
+    <body>
+        <div class="book">
+<div class="book-summary">
+    <nav role="navigation">
+        <div id="lang">
+<a href="/sdwui-docs/features/"><img class="emoji" title=":uk:" alt=":uk:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png" height="20" width="20"> en</a> | <a style="font-weight: bold;" href="/sdwui-docs/ru/features/"><img class="emoji" title=":ru:" alt=":ru:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1f7-1f1fa.png" height="20" width="20"> ru</a> | <a href="/sdwui-docs/de/features/"><img class="emoji" title=":de:" alt=":de:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1e9-1f1ea.png" height="20" width="20"> de</a> | <br>
+</div>
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search">
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/sdwui-docs/ru/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter" data-level="1.1" data-path="/sdwui-docs">
+            
+                <!-- <a href="/sdwui-docs/ru/">
+                    Stable Diffusion webUI
+                </a> -->
+            </li>
+
+            <!-- <li class="divider"></li> -->
+
+
+                    
+                    
+                    <li>
+                      <h2>Guides</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/cli/">
+                          
+                              <a href="/sdwui-docs/ru/cli/">
+                                  Аргументы и настройки командной строки
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-filenames/">
+                          
+                              <a href="/sdwui-docs/ru/custom-filenames/">
+                                  Имя файла и подкаталог пользовательских изображений
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-scripts/">
+                          
+                              <a href="/sdwui-docs/ru/custom-scripts/">
+                                  Пользовательские скрипты
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-custom-scripts/">
+                          
+                              <a href="/sdwui-docs/developing-custom-scripts/">
+                                  Разработка пользовательских скриптов
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/extensions/">
+                          
+                              <a href="/sdwui-docs/extensions/">
+                                  Расширения
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter active" data-level="1.2" data-path="/sdwui-docs/features/">
+                          
+                              <a href="/sdwui-docs/ru/features/">
+                                  Функции
+                              </a>
+                              
+                                  
+                                      <ul>
+<li>
+<a href="#%D1%81%D1%82%D0%B0%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%B4%D0%B8%D1%84%D1%84%D1%83%D0%B7%D0%B8%D1%8F-20">Стабильная диффузия 2.0</a><ul>
+<li><a href="#%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8">Базовые модели</a></li>
+<li><a href="#%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C-%D1%81-%D0%BD%D0%B0%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC-%D0%BF%D0%BE-%D0%B3%D0%BB%D1%83%D0%B1%D0%B8%D0%BD%D0%B5">Модель с наведением по глубине</a></li>
+</ul>
+</li>
+<li><a href="#%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">Перекрашивание</a></li>
+<li>
+<a href="#%D0%B7%D0%B0%D0%BA%D1%80%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">Закрашивание</a><ul>
+<li><a href="#%D0%BF%D0%BE%D0%BA%D1%80%D0%B0%D1%81%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8">Покраска модели</a></li>
+<li><a href="#%D0%BC%D0%B0%D1%81%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82">Маскированный контент</a></li>
+<li><a href="#inpaint-%D0%B2-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%BC-%D1%80%D0%B0%D0%B7%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B8">Inpaint в полном разрешении</a></li>
+<li><a href="#%D0%BC%D0%B0%D1%81%D0%BA%D0%B8%D1%80%D1%83%D1%8E%D1%89%D0%B8%D0%B9-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC">Маскирующий режим</a></li>
+<li><a href="#%D0%B0%D0%BB%D1%8C%D1%84%D0%B0-%D0%BC%D0%B0%D1%81%D0%BA%D0%B0">Альфа-маска</a></li>
+</ul>
+</li>
+<li><a href="#%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0-%D0%BF%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B7%D0%BE%D0%BA">Матрица подсказок</a></li>
+<li><a href="#%D1%86%D0%B2%D0%B5%D1%82%D0%BD%D0%BE%D0%B9-%D1%8D%D1%81%D0%BA%D0%B8%D0%B7">Цветной эскиз</a></li>
+<li><a href="#%D1%81%D1%82%D0%B0%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%B4%D0%B8%D1%84%D1%84%D1%83%D0%B7%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B0%D0%BF%D1%81%D0%BA%D0%B5%D0%B9%D0%BB">Стабильный диффузионный апскейл</a></li>
+<li><a href="#%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%D0%B0%D0%BA%D1%86%D0%B5%D0%BD%D1%82">Внимание/акцент</a></li>
+<li><a href="#%D0%BF%D0%B5%D1%82%D0%BB%D1%8F">петля</a></li>
+<li>
+<a href="#%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA-xy">График X/Y</a><ul><li><a href="#%D0%BF%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0-sr">Подсказка S/R</a></li></ul>
+</li>
+</ul>
+</li>
+<li><a href="#%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D0%B8%D0%BD%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F">Текстовая инверсия</a></li>
+<li><a href="#%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D0%B0">Изменение размера</a></li>
+<li><a href="#%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B0-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%BA%D0%B8">Выбор метода выборки</a></li>
+<li><a href="#%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D0%B0-%D1%81%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8">Изменение размера семени</a></li>
+<li><a href="#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D1%86%D0%B8%D0%B8">Вариации</a></li>
+<li><a href="#%D1%81%D1%82%D0%B8%D0%BB%D0%B8">Стили</a></li>
+<li><a href="#%D0%BE%D1%82%D1%80%D0%B8%D1%86%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5-%D0%BF%D1%80%D0%B8%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%B8%D0%B5">Отрицательное приглашение</a></li>
+<li><a href="#%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%87%D0%B8%D0%BA-clip">Опросчик CLIP</a></li>
+<li>
+<a href="#%D0%B1%D1%8B%D1%81%D1%82%D1%80%D0%BE%D0%B5-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">Быстрое редактирование</a><ul><li><a href="#%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%83%D1%8E%D1%89%D0%B8%D0%B5%D1%81%D1%8F-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0">Чередующиеся слова</a></li></ul>
+</li>
+<li><a href="#%D0%B2%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B5-%D1%80%D0%B0%D0%B7%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C">Высокое разрешение. исправить</a></li>
+<li><a href="#%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D0%B4%D0%B8%D1%84%D1%84%D1%83%D0%B7%D0%B8%D1%8F">Составная диффузия</a></li>
+<li><a href="#%D0%BF%D1%80%D0%B5%D1%80%D1%8B%D0%B2%D0%B0%D1%82%D1%8C">Прерывать</a></li>
+<li><a href="#%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0-%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D0%BA%D0%B0%D1%80%D1%82%D1%8B-4gb">Поддержка видеокарты 4GB</a></li>
+<li><a href="#%D1%80%D0%B5%D1%81%D1%82%D0%B0%D0%B2%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%BB%D0%B8%D1%86%D0%B0">Реставрация лица</a></li>
+<li><a href="#%D1%81%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5">Сохранение</a></li>
+<li><a href="#%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0">Загрузка</a></li>
+<li><a href="#%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0">Оперативная проверка</a></li>
+<li><a href="#%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%BE-png">Информация о PNG</a></li>
+<li><a href="#%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8">Настройки</a></li>
+<li><a href="#%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82-%D0%B8%D0%BC%D0%B5%D0%BD-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2">Формат имен файлов</a></li>
+<li><a href="#%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B5-%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B">Пользовательские скрипты</a></li>
+<li><a href="#%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0">Конфигурация пользовательского интерфейса</a></li>
+<li><a href="#%D0%B0%D0%BB%D1%8C%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9-%D1%82%D0%B5%D1%81%D1%82-img2img">альтернативный тест img2img</a></li>
+<li><a href="#%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8Ccss">пользователь.css</a></li>
+<li><a href="#%D1%83%D0%B2%D0%B5%D0%B4%D0%BE%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5mp3">уведомление.mp3</a></li>
+<li>
+<a href="#%D1%82%D0%B2%D0%B8%D0%BA%D0%B8">Твики</a><ul><li><a href="#%D0%B8%D0%B3%D0%BD%D0%BE%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D0%B8%D0%B5-%D1%81%D0%BB%D0%BE%D0%B8-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-clip">Игнорировать последние слои модели CLIP</a></li></ul>
+</li>
+</ul>
+
+                                  
+                              
+                          
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/list-of-time-zones/">
+                          
+                              <a href="/sdwui-docs/ru/list-of-time-zones/">
+                                  Список часовых поясов
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/localization/">
+                          
+                              <a href="/sdwui-docs/ru/localization/">
+                                  Локализация
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/negative-prompt/">
+                          
+                              <a href="/sdwui-docs/negative-prompt/">
+                                  Отрицательное приглашение
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/optimizations/">
+                          
+                              <a href="/sdwui-docs/optimizations/">
+                                  Optimizations
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/textual-inversion/">
+                          
+                              <a href="/sdwui-docs/ru/textual-inversion/">
+                                  Текстовая инверсия
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/troubleshooting/">
+                          
+                              <a href="/sdwui-docs/ru/troubleshooting/">
+                                  Исправление проблем
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/xformers/">
+                          
+                              <a href="/sdwui-docs/ru/xformers/">
+                                  Иксформеры
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/api/">
+                          
+                              <a href="/sdwui-docs/ru/api/">
+                                  API guide
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/pages/ru/Optimizations/">
+                          
+                              <a href="/sdwui-docs/ru/pages/ru/Optimizations/">
+                                  Оптимизации
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>development</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/contributing/">
+                          
+                              <a href="/sdwui-docs/ru/contributing/">
+                                  Содействие
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-extensions/">
+                          
+                              <a href="/sdwui-docs/developing-extensions/">
+                                  Разработка расширений
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/pages/ru/Tests/">
+                          
+                              <a href="/sdwui-docs/ru/pages/ru/Tests/">
+                                  Тесты
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>Getting started</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/dependencies/">
+                          
+                              <a href="/sdwui-docs/dependencies/">
+                                  зависимости
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-amd/">
+                          
+                              <a href="/sdwui-docs/ru/install-on-amd/">
+                                  установить на амд
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-nvidia/">
+                          
+                              <a href="/sdwui-docs/ru/install-on-nvidia/">
+                                  установить на нвидиа
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-apple/">
+                          
+                              <a href="/sdwui-docs/ru/install-on-apple/">
+                                  установить на Apple
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/">
+                          
+                              <a href="/sdwui-docs/ru/">
+                                  Стабильный диффузионный веб-интерфейс
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install/">
+                          
+                              <a href="/sdwui-docs/ru/install/">
+                                  Установить
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/online-services/">
+                          
+                              <a href="/sdwui-docs/online-services/">
+                                  Онлайн-сервисы
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/ui-defaults/">
+                          
+                              <a href="/sdwui-docs/ru/ui-defaults/">
+                                  Изменение настроек интерфейса
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+
+                    
+
+            <!-- <li>
+                <a href="https://github.com/sighingnow/jekyll-gitbook/fork" target="blank" class="gitbook-link">
+                    Fork it Now!
+                </a>
+            </li> -->
+            </li>
+<li><h2>Release notes</h2></li>
+            
+              <li>
+                <a href="/sdwui-docs/ru/2022/12/27/my-new-post/">
+                  Release note example
+                </a>
+              </li>
+            
+        
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href=".">Функции</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner">
+<div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/Features">Функции</h1>
+                    
+
+                    
+                      <div style="border: 1px dashed red; width: 100%; padding: 1em;">
+  <b><img class="emoji" title=":robot:" alt=":robot:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f916.png" height="20" width="20"> This page have been translated automatically. If you want to improve this translation and remove this warning,
+    see <a href="https://github.com/ProfaneServitor/sdwui-docs">project's repository</a></b>
+</div>
+
+                    
+                    <p>Это страница демонстрации возможностей [веб-интерфейса стабильной диффузии] (https://github.com/AUTOMATIC1111/stable-diffusion-webui).</p>
+
+<p>Все примеры не отобраны, если не указано иное.</p>
+
+<h1 id="стабильная-диффузия-20">Стабильная диффузия 2.0</h1>
+<h2 id="базовые-модели">Базовые модели</h2>
+<p>Поддерживаются модели: 768-v-ema.ckpt (<a href="https://huggingface.co/stabilityai/stable-diffusion-2/blob/main/768-v-ema.ckpt">модель</a>, <a href="https%20://raw.githubusercontent.com/Stability-AI/stablediffusion/main/configs/stable-diffusion/v2-inference-v.yaml">config</a>) и 512-base-ema.ckpt (<a href="https://huggingface%20.co/stabilityai/stable-diffusion-2-base/blob/main/512-base-ema.ckpt">модель</a>, <a href="https://raw.githubusercontent.com/Stability-AI/stablediffusion/main/configs/%20%D1%81%D1%82%D0%B0%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%B4%D0%B8%D1%84%D1%84%D1%83%D0%B7%D0%B8%D1%8F/v2-inference.yaml">config</a>). 2.1 чекпоинты тоже должны работать.</p>
+
+<ul>
+  <li>скачать чекпоинт (отсюда: https://huggingface.co/stabilityai/stable-diffusion-2)</li>
+  <li>положить в папку models/Stable-Diffusion</li>
+  <li>возьмите конфиг из репозитория SD2.0 и поместите его в то же место, что и контрольная точка, переименовав его, чтобы он имел то же имя файла (т.е. если ваша контрольная точка называется <code class="language-plaintext highlighter-rouge">768-v-ema.ckpt</code>, конфигурация должна называться <code class="language-plaintext highlighter-rouge">768- в-эма.ямл</code>)</li>
+  <li>выберите новую контрольную точку из пользовательского интерфейса</li>
+</ul>
+
+<p>Вкладка «Поезд», скорее всего, будет сломана для моделей 2.0.</p>
+
+<p>Если 2.0 или 2.1 генерируют черные изображения, включите полную точность с помощью <code class="language-plaintext highlighter-rouge">--no-half</code> или попробуйте использовать оптимизацию <code class="language-plaintext highlighter-rouge">--xformers</code>.</p>
+
+<p><em><strong>Примечание:</strong></em> SD 2.0 и 2.1 более чувствительны к численной нестабильности FP16 (как отмечено ими самими <a href="https://github.com/Stability-AI/stablediffusion/commit/c12d960d1ee4f9134c2516862ef991ec52d3f59e">здесь</a>) из-за их новый модуль перекрестного внимания.</p>
+
+<p>На fp16: <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/5503#issuecomment-1341495770">комментарий</a> для включения в webui-user.bat:</p>
+
+<p>@эхо выключено</p>
+
+<p>установить ПИТОН=
+установить GIT =
+установить VENV_DIR=
+установите COMMANDLINE_ARGS = ваши параметры командной строки
+установить STABLE_DIFFUSION_COMMIT_HASH=”c12d960d1ee4f9134c2516862ef991ec52d3f59e”
+установить ATTN_PRECISION=fp16</p>
+
+<p>позвони в webui.bat</p>
+
+<h2 id="модель-с-наведением-по-глубине">Модель с наведением по глубине</h2>
+<p>[Подробнее] (https://github.com/Stability-AI/stablediffusion#depth-conditional-stable-diffusion). <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/pull/5542">PR</a>.
+Инструкции:</p>
+<ul>
+  <li>скачать контрольную точку <a href="https://huggingface.co/stabilityai/stable-diffusion-2-depth">512-depth-ema.ckpt</a>
+</li>
+  <li>поместите его в models/Stable-diffusion</li>
+  <li>возьмите <a href="https://raw.githubusercontent.com/Stability-AI/stablediffusion/main/configs/stable-diffusion/v2-midas-inference.yaml">config</a> и поместите его в ту же папку, что и контрольная точка</li>
+  <li>переименовать конфиг в <code class="language-plaintext highlighter-rouge">512-depth-ema.yaml</code>
+</li>
+  <li>выберите новую контрольную точку из пользовательского интерфейса</li>
+</ul>
+
+<p>Модель с глубиной будет работать только на вкладке img2img.</p>
+
+<h1 id="перекрашивание">Перекрашивание</h1>
+
+<p>Outpainting расширяет исходное изображение и закрашивает созданное пустое пространство.</p>
+
+<p>Пример:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Оригинал</th>
+      <th>Окрашивание</th>
+      <th>Снова перекраска</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="images/outpainting-1.png" alt=""></td>
+      <td><img src="images/outpainting-2.png" alt=""></td>
+      <td><img src="images/outpainting-3.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Исходное изображение анонимного пользователя с 4chan. Спасибо, анонимный пользователь.</p>
+
+<p>Вы можете найти эту функцию на вкладке img2img внизу, в разделе «Сценарий» -&gt; «Перекрашивание бедняка».</p>
+
+<p>Outpainting, в отличие от обычной генерации изображения, кажется, очень выигрывает от большого количества шагов. Рецепт хорошей перекраски</p>
+<ul>
+  <li>хорошая подсказка, соответствующая картинке, ползунки для шумоподавления и шкала CFG установлены на максимум, а количество шагов от 50 до 100 с
+Родовые сэмплеры Euler или DPM2.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>81 шаг, Эйлер А</th>
+      <th>30 шагов, Эйлер А</th>
+      <th>10 шагов, Эйлер А</th>
+      <th>80 шагов, Эйлер А</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="images/inpainting-81-euler-a.png" alt=""></td>
+      <td><img src="images/inpainting-30-euler-a.png" alt=""></td>
+      <td><img src="images/inpainting-10-euler-a.png" alt=""></td>
+      <td><img src="images/inpainting-80-dpm2-a.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="закрашивание">Закрашивание</h1>
+<p>На вкладке img2img нарисуйте маску над частью изображения, и эта часть будет закрашена.</p>
+
+<p><img src="%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/inpainting.png" alt=""></p>
+
+<p>Варианты покраски:</p>
+<ul>
+  <li>нарисовать маску самостоятельно в веб-редакторе</li>
+  <li>стереть часть картинки во внешнем редакторе и загрузить прозрачную картинку. Любые даже слегка прозрачные участки станут частью маски. Имейте в виду, что <a href="https://docs.krita.org/en/reference_manual/layers_and_masks/split_alpha.html#how-to-save-a-png-texture-and-keep-color-values-in-%20%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D1%81%D1%82%D1%8C%D1%8E%20%D0%BF%D1%80%D0%BE%D0%B7%D1%80%D0%B0%D1%87%D0%BD%D1%8B%D0%B5%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8">некоторые редакторы</a> по умолчанию сохраняют полностью прозрачные области черными.</li>
+  <li>изменить режим (в правом нижнем углу картинки) на “Загрузить маску” и выбрать для маски отдельное черно-белое изображение (white=inpaint).</li>
+</ul>
+
+<h2 id="покраска-модели">Покраска модели</h2>
+<p>RunwayML обучил дополнительную модель, специально предназначенную для раскрашивания. Эта модель принимает дополнительные входные данные — исходное изображение без шума плюс маска — и, кажется, работает намного лучше.</p>
+
+<p>Скачать и дополнительную информацию для модели можно здесь: https://github.com/runwayml/stable-diffusion#inpainting-with-stable-diffusion.</p>
+
+<p>Чтобы использовать модель, вы должны переименовать контрольную точку так, чтобы ее имя файла заканчивалось на <code class="language-plaintext highlighter-rouge">inpainting.ckpt</code>, например, <code class="language-plaintext highlighter-rouge">1.5-inpainting.ckpt</code>.</p>
+
+<p>После этого просто выберите контрольную точку, как вы обычно выбираете любую контрольную точку, и все готово.</p>
+
+<h2 id="маскированный-контент">Маскированный контент</h2>
+<p>Поле маскированного содержимого определяет, что содержимое помещается в маскированные области до того, как они будут закрашены.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>маска</th>
+      <th>заполнить</th>
+      <th>оригинальный</th>
+      <th>скрытый шум</th>
+      <th>скрытое ничего</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="images/inpainting-initial-content-mask.png" alt=""></td>
+      <td><img src="images/inpainting-initial-content-fill.png" alt=""></td>
+      <td><img src="images/inpainting-initial-content-original.png" alt=""></td>
+      <td><img src="images/inpainting-initial-content-latent-noise.png" alt=""></td>
+      <td><img src="images/inpainting-initial-content-latent-nothing.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="inpaint-в-полном-разрешении">Inpaint в полном разрешении</h2>
+<p>Обычно inpainting изменяет размер изображения до целевого разрешения, указанного в пользовательском интерфейсе. С Inpaint в полном разрешении
+включена, изменяется размер только маскируемой области, и после обработки она вставляется обратно в исходное изображение.
+Это позволяет работать с большими изображениями и позволяет визуализировать закрашенный объект с гораздо большим разрешением.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Вход</th>
+      <th>Раскрасить нормальный</th>
+      <th>Inpaint в полном разрешении</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="images/inpaint-whole-mask.png" alt=""></td>
+      <td><img src="images/inpaint-whole-no.png" alt=""></td>
+      <td><img src="images/inpaint-whole-yes.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="маскирующий-режим">Маскирующий режим</h2>
+<p>Существует два варианта маскированного режима:</p>
+<ul>
+  <li>Inpaint masked - закрашивается область под маской</li>
+  <li>Inpaint not masked - под маской без изменений, все остальное закрашивается</li>
+</ul>
+
+<h2 id="альфа-маска">Альфа-маска</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Вход</th>
+      <th>Выход</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="images/inpaint-mask.png" alt=""></td>
+      <td><img src="%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/inpaint-mask2.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="матрица-подсказок">Матрица подсказок</h1>
+<p>Разделите несколько подсказок с помощью символа <code class="language-plaintext highlighter-rouge">|</code>, и система создаст изображение для каждой их комбинации.
+Например, если вы используете подсказку «оживленная городская улица в современном городе|иллюстрация|кинематографическое освещение», возможны четыре комбинации (первая часть подсказки всегда сохраняется):</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">оживленная городская улица в современном городе</code></li>
+  <li><code class="language-plaintext highlighter-rouge">оживленная городская улица в современном городе, иллюстрация</code></li>
+  <li><code class="language-plaintext highlighter-rouge">оживленная городская улица в современном городе, кинематографическое освещение</code></li>
+  <li><code class="language-plaintext highlighter-rouge">оживленная городская улица в современном городе, иллюстрация, кинематографическое освещение</code></li>
+</ul>
+
+<p>В этом порядке будут созданы четыре изображения, все с одним и тем же начальным числом и каждое с соответствующей подсказкой:
+<img src="images/prompt-matrix.png" alt=""></p>
+
+<p>Другой пример, на этот раз с 5 подсказками и 16 вариантами:
+<img src="%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/prompt_matrix.jpg" alt=""></p>
+
+<p>Вы можете найти эту функцию внизу, в разделе «Сценарий» -&gt; «Матрица подсказок».</p>
+
+<h1 id="цветной-эскиз">Цветной эскиз</h1>
+
+<p>Базовый инструмент для раскрашивания img2img. Чтобы использовать эту функцию в img2img, включите ее с помощью <code class="language-plaintext highlighter-rouge">--gradio-img2img-tool color-sketch</code> в аргументах командной строки. Чтобы использовать эту функцию в режиме рисования, включите ее с помощью <code class="language-plaintext highlighter-rouge">--gradio-inpaint-tool color-sketch</code>. Браузеры на основе Chromium поддерживают инструмент-дроппер. (см. рисунок)</p>
+
+<p><img src="https://user-images.githubusercontent.com/98228077/196140222-54bc71ad-2746-4c38-8075-5c53fbcde2a9.png" alt="дроппер"></p>
+
+<h1 id="стабильный-диффузионный-апскейл">Стабильный диффузионный апскейл</h1>
+<p>Масштабируйте изображение с помощью RealESRGAN/ESRGAN, а затем просматривайте фрагменты результата, улучшая их с помощью img2img.
+У него также есть возможность позволить вам самостоятельно выполнять масштабирование во внешней программе и просто просматривать плитки с помощью img2img.</p>
+
+<p>Оригинальная идея: https://github.com/jquesnelle/txt2imghd. Это независимая реализация.</p>
+
+<p>Чтобы использовать эту функцию, выберите «Увеличение SD в раскрывающемся списке сценариев» (вкладка img2img).</p>
+
+<p><img src="https://user-images.githubusercontent.com/39339941/193300082-be3b8864-3c28-44b7-bb75-f893f92269b6.png" alt="chrome_dl8hcMPYcx"></p>
+
+<p>Входное изображение будет увеличено в два раза по сравнению с оригиналом.
+ширина и высота, а ползунки ширины и высоты пользовательского интерфейса определяют размер отдельных плиток. Из-за перекрытия,
+размер тайла может быть очень важен: для изображения 512x512 требуется девять тайлов 512x512 (из-за перекрытия), но только
+четыре тайла 640x640.</p>
+
+<p>Рекомендуемые параметры для апскейлинга:</p>
+<ul>
+  <li>Метод выборки: Эйлер a</li>
+  <li>Сила шумоподавления: 0,2, может быть увеличена до 0,4, если вы любите приключения.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Оригинал</th>
+      <th>РеалЕСРГАН</th>
+      <th>топаз гигапиксель</th>
+      <th>SD высококлассный</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="images/sd-upscale-robot-original.png" alt=""></td>
+      <td><img src="images/sd-upscale-robot-realrgan.png" alt=""></td>
+      <td><img src="images/sd-upscale-robot-esrgan-topaz-gigapixel.png" alt=""></td>
+      <td><img src="images/sd-upscale-robot-sd-upscale.png" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="images/sd-upscale-castle-original.png" alt=""></td>
+      <td><img src="images/sd-upscale-castle-realesrgan.png" alt=""></td>
+      <td><img src="images/sd-upscale-castle-esrgan-topaz-gigapixel.png" alt=""></td>
+      <td><img src="images/sd-upscale-castle-sd-upscale.png" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="images/sd-upscale-city-original.png" alt=""></td>
+      <td><img src="images/sd-upscale-city-realesrgan.png" alt=""></td>
+      <td><img src="images/sd-upscale-city-esrgan-topaz-gigapixel.png" alt=""></td>
+      <td><img src="images/sd-upscale-city-sd-upscale.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="вниманиеакцент">Внимание/акцент</h1>
+<p>Использование <code class="language-plaintext highlighter-rouge">()</code> в подсказке увеличивает внимание модели к заключенным в него словам, а <code class="language-plaintext highlighter-rouge">[]</code> уменьшает его. Вы можете комбинировать несколько модификаторов:</p>
+
+<p><img src="%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5-3.jpg" alt=""></p>
+
+<p>Шпаргалка:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">a (слово)</code> - увеличить внимание к <code class="language-plaintext highlighter-rouge">слову</code> в 1,1 раза</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">a ((слово))</code> - увеличить внимание к слову в 1,21 раза (= 1,1 * 1,1)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">a [слово]</code> - уменьшить внимание к <code class="language-plaintext highlighter-rouge">слову</code> в 1,1 раза</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">a (word:1.5)</code> - увеличить внимание к <code class="language-plaintext highlighter-rouge">слову</code> в 1,5 раза</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">a (word:0.25)</code> - уменьшить внимание к <code class="language-plaintext highlighter-rouge">слову</code> в 4 раза (= 1 / 0,25)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">a \(word\)</code> - использовать литеральные символы <code class="language-plaintext highlighter-rouge">()</code> в подсказке</li>
+</ul>
+
+<p>С помощью <code class="language-plaintext highlighter-rouge">()</code> вес может быть указан следующим образом: <code class="language-plaintext highlighter-rouge">(text:1.4)</code>. Если вес не указан, предполагается, что он равен 1,1. Указание веса работает только с <code class="language-plaintext highlighter-rouge">()</code>, но не с <code class="language-plaintext highlighter-rouge">[]</code>.</p>
+
+<p>Если вы хотите использовать какие-либо буквальные символы <code class="language-plaintext highlighter-rouge">()[]</code> в подсказке, используйте обратную косую черту, чтобы избежать их: <code class="language-plaintext highlighter-rouge">anime_\(character\)</code>.</p>
+
+<p>29 сентября 2022 г. была добавлена ​​новая реализация, поддерживающая escape-символы и числовые веса. Недостатком новой реализации является то, что старая не была идеальной и иногда съедала символы: «a (((farm))), daytime», например, без запятой превращалось в «farm daytime». Это поведение не поддерживается новой реализацией, которая корректно сохраняет весь текст, и это означает, что ваши сохраненные начальные значения могут создавать разные изображения. На данный момент в настройках есть возможность использовать старую реализацию.</p>
+
+<p>NAI использует мою реализацию до 2022-09-29, за исключением того, что они имеют 1,05 в качестве множителя и используют <code class="language-plaintext highlighter-rouge">{}</code> вместо <code class="language-plaintext highlighter-rouge">()</code>. Таким образом, преобразование применяется:</p>
+
+<ul>
+  <li>их <code class="language-plaintext highlighter-rouge">{word}</code> = наше <code class="language-plaintext highlighter-rouge">(word:1.05)</code>
+</li>
+  <li>их `` = наше <code class="language-plaintext highlighter-rouge">(word:1.1025)</code>
+</li>
+  <li>их <code class="language-plaintext highlighter-rouge">[слово]</code> = наше <code class="language-plaintext highlighter-rouge">(слово:0,952)</code> (0,952 = 1/1,05)</li>
+  <li>их <code class="language-plaintext highlighter-rouge">[[слово]]</code> = наше <code class="language-plaintext highlighter-rouge">(слово:0,907)</code> (0,907 = 1/1,05/1,05)</li>
+</ul>
+
+<h1 id="петля">петля</h1>
+<p>Выбор сценария обратной связи в img2img позволяет автоматически передавать выходное изображение в качестве входных данных для следующего пакета. Эквивалентно
+сохранение выходного изображения и замена им входного изображения. Параметр количества пакетов определяет, сколько итераций
+это вы получаете.</p>
+
+<p>Обычно при этом вы сами выбираете одно из многих изображений для следующей итерации, поэтому полезность
+этой функции может быть сомнительным, но мне удалось получить с ее помощью несколько очень хороших результатов, которые я не смог
+получить иначе.</p>
+
+<p>Пример: (выбранный результат)</p>
+
+<p><img src="%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/loopback.jpg" alt=""></p>
+
+<p>Исходное изображение анонимного пользователя с 4chan. Спасибо, анонимный пользователь.</p>
+
+<h1 id="график-xy">График X/Y</h1>
+<p>Создает сетку изображений с различными параметрами. Выберите, какие параметры должны быть общими для строк и столбцов, используя
+Поля типа X и типа Y и введите эти параметры, разделенные запятой, в поля значений X/Y. Для целого числа
+поддерживаются числа с плавающей запятой и диапазоны. Примеры:</p>
+
+<ul>
+  <li>Простые диапазоны:</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">1-5</code> = 1, 2, 3, 4, 5</li>
+  <li>Диапазоны с приращением в скобках:</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">1-5 (+2)</code> = 1, 3, 5</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">10-5 (-3)</code> = 10, 7</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">1-3 (+0,5)</code> = 1, 1,5, 2, 2,5, 3</li>
+  <li>Диапазоны с количеством в квадратных скобках:</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">1-10 [5]</code> = 1, 3, 5, 7, 10</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">0,0-1,0 [6]</code> = 0,0, 0,2, 0,4, 0,6, 0,8, 1,0</li>
+</ul>
+
+<p><img src="images/xy_grid-medusa.png" alt=""></p>
+
+<p>Вот настройки, которые создают график выше:</p>
+
+<p><img src="images/xy_grid-medusa-ui.png" alt=""></p>
+
+<h3 id="подсказка-sr">Подсказка S/R</h3>
+<p>Подсказка S/R — один из наиболее сложных для понимания режимов работы графика X/Y. S/R означает поиск/замену, и вот что он делает — вы вводите список слов или фраз, он берет первое из списка и обрабатывает его как ключевое слово и заменяет все экземпляры этого ключевого слова другими элементами из списка. .</p>
+
+<p>Например, с подсказкой «человек держит яблоко, 8к чистый» и подсказкой S/R «яблоко, арбуз, пистолет» вы получите три подсказки:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">человек с яблоком, 8к чистый</code></li>
+  <li><code class="language-plaintext highlighter-rouge">человек, держащий арбуз, чистый 8k</code></li>
+  <li><code class="language-plaintext highlighter-rouge">человек с пистолетом, чистый 8к</code></li>
+</ul>
+
+<p>Список использует тот же синтаксис, что и строка в файле CSV, поэтому, если вы хотите включить запятые в свои записи, вы должны поместить текст в кавычки и убедиться, что между кавычками и разделяющими запятыми нет пробела:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">тьма, свет, зелень, тепло</code> - 4 предмета - <code class="language-plaintext highlighter-rouge">тьма</code>, <code class="language-plaintext highlighter-rouge">свет</code>, <code class="language-plaintext highlighter-rouge">зелень</code>, <code class="language-plaintext highlighter-rouge">тепло</code>
+</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">тьма, "свет, зелень", тепло</code> - НЕПРАВИЛЬНО - 4 пункта - <code class="language-plaintext highlighter-rouge">тьма</code>, ``свет<code class="language-plaintext highlighter-rouge">, </code>зелень<code class="language-plaintext highlighter-rouge">, </code>тепло`</li>
+  <li>“тьма”, “свет, зелень”, тепло<code class="language-plaintext highlighter-rouge"> - ПРАВИЛЬНО - 3 пункта - </code>темнота<code class="language-plaintext highlighter-rouge">, </code>свет, зелень<code class="language-plaintext highlighter-rouge">, </code>тепло`</li>
+</ul>
+
+<h1 id="текстовая-инверсия">Текстовая инверсия</h1>
+<p>Краткое пояснение: поместите свои вложения в каталог «embeddings» и используйте имя файла в подсказке.</p>
+
+<p>Длинное объяснение: <a href="%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B8%D0%BD%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F">текстовая инверсия</a></p>
+
+<p><img src="https://user-images.githubusercontent.com/20920490/193285770-9454c5e1-e594-463c-8be8-1488ddf2877b.png" alt="сетка-0037"></p>
+
+<h1 id="изменение-размера">Изменение размера</h1>
+<p>Есть три варианта изменения размера входных изображений в режиме img2img:</p>
+
+<ul>
+  <li>Just resize - просто изменяет размер исходного изображения до целевого разрешения, что приводит к неправильному соотношению сторон.</li>
+  <li>Обрезка и изменение размера - изменение размера исходного изображения с сохранением соотношения сторон, чтобы оно занимало все целевое разрешение, и обрезка выступающих частей.</li>
+  <li>Изменение размера и заполнение - изменение размера исходного изображения с сохранением соотношения сторон, чтобы оно полностью соответствовало целевому разрешению, и заполнение пустого пространства строками/столбцами из исходного изображения.</li>
+</ul>
+
+<p>Пример:
+<img src="%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D0%B0.jpg" alt=""></p>
+
+<h1 id="выбор-метода-выборки">Выбор метода выборки</h1>
+<p>Выберите один из нескольких методов выборки для txt2img:</p>
+
+<p><img src="%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%BA%D0%B0.jpg" alt=""></p>
+
+<h1 id="изменение-размера-семени">Изменение размера семени</h1>
+<p>Эта функция позволяет создавать изображения из известных семян с разным разрешением. Обычно при изменении разрешения
+изображение полностью изменится, даже если вы сохраните все остальные параметры, включая начальное значение. При изменении размера семени вы указываете разрешение
+исходного изображения, и модель, скорее всего, создаст что-то очень похожее на него, даже в другом разрешении.
+В приведенном ниже примере крайняя левая картинка имеет размер 512x512, а остальные создаются с точно такими же параметрами, но с большей вертикалью.
+разрешающая способность.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Информация</th>
+      <th>Изображение</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Изменение размера семени не включено</td>
+      <td><img src="images/seed-noresize.png" alt=""></td>
+    </tr>
+    <tr>
+      <td>Семя изменено с 512x512</td>
+      <td><img src="images/seed-resize.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Родовые семплеры в этом немного хуже остальных.</p>
+
+<p>Вы можете найти эту функцию, установив флажок «Дополнительно» рядом с семенем.</p>
+
+<h1 id="вариации">Вариации</h1>
+<p>Ползунок «Сила вариации» и поле «Исходное значение вариации» позволяют указать, насколько нужно изменить существующее изображение, чтобы оно выглядело
+вроде другой. На максимальной силе вы получите картинки с Вариационным сидом, на минимальной - картинки с исходным Сидом (кроме
+при использовании наследственных семплеров).</p>
+
+<p><img src="images/seed-variations.jpg" alt=""></p>
+
+<p>Вы можете найти эту функцию, установив флажок «Дополнительно» рядом с семенем.</p>
+
+<h1 id="стили">Стили</h1>
+<p>Нажмите кнопку «Сохранить подсказку как стиль», чтобы записать текущую подсказку в файл styles.csv с набором стилей. Dropbox для
+справа от приглашения вы сможете выбрать любой стиль из ранее сохраненных и автоматически добавить его к вашему вводу.
+Чтобы удалить стиль, вручную удалите его из styles.csv и перезапустите программу.</p>
+
+<p>если вы используете специальную строку <code class="language-plaintext highlighter-rouge">{prompt}</code> в своем стиле, она заменит все, что в данный момент находится в приглашении, на эту позицию, а не добавит стиль к вашему приглашению.</p>
+
+<h1 id="отрицательное-приглашение">Отрицательное приглашение</h1>
+
+<p>Позволяет вам использовать другую подсказку о том, чего модель должна избегать при создании изображения. Это работает с помощью
+отрицательное приглашение для безусловного кондиционирования в процессе выборки вместо пустой строки.</p>
+
+<p>Расширенное объяснение: [Отрицательная подсказка] (Отрицательная подсказка)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Оригинал</th>
+      <th>Негатив: фиолетовый</th>
+      <th>Отрицательное: щупальца</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="images/negative-base.png" alt=""></td>
+      <td><img src="images/negative-purple.png" alt=""></td>
+      <td><img src="images/negative-tentacles.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="опросчик-clip">Опросчик CLIP</h1>
+
+<p>Автор: https://github.com/pharmapsychotic/clip-interrogator</p>
+
+<p>Опросчик CLIP позволяет извлекать подсказку из изображения. Подсказка не позволит вам воспроизвести это
+точное изображение (иногда оно даже не будет близко), но это может быть хорошим началом.</p>
+
+<p><img src="images/CLIP-%D0%B4%D0%BE%D0%BF%D1%80%D0%BE%D1%81.png" alt=""></p>
+
+<p>При первом запуске опросчика CLIP будет загружено несколько гигабайт моделей.</p>
+
+<p>Опросчик CLIP состоит из двух частей: одна представляет собой модель BLIP, которая создает текстовое описание из изображения.
+Другая — это модель CLIP, которая выбирает из списка несколько строк, относящихся к изображению. По умолчанию там
+всего один список - список художников (из <code class="language-plaintext highlighter-rouge">artists.csv</code>). Вы можете добавить больше списков, выполнив следующие действия:</p>
+
+<ul>
+  <li>создайте каталог <code class="language-plaintext highlighter-rouge">опросить</code> в том же месте, что и webui</li>
+  <li>поместите в него текстовые файлы с соответствующим описанием в каждой строке</li>
+</ul>
+
+<p>Например, какие текстовые файлы использовать, см. https://github.com/pharmapsychotic/clip-interrogator/tree/main/data.
+На самом деле, вы можете просто взять оттуда файлы и использовать их — просто пропустите artist.txt, потому что у вас уже есть список
+художников в <code class="language-plaintext highlighter-rouge">artists.csv</code> (или используйте его тоже, кто вас остановит). Каждый файл добавляет одну строку текста к окончательному описанию.
+Если вы добавите “.top3.” к имени файла, например, <code class="language-plaintext highlighter-rouge">flavors.top3.txt</code>, три наиболее релевантные строки из этого файла будут
+добавлено в подсказку (другие номера тоже работают).</p>
+
+<p>Существуют настройки, относящиеся к этой функции:</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">Опросить: хранить модели в VRAM</code> - не выгружать модели Опроса из памяти после их использования. Для пользователей с большим количеством видеопамяти.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Опрашивать: использовать художников из artists.csv</code> - добавляет исполнителя из <code class="language-plaintext highlighter-rouge">artists.csv</code> при опросе. Может быть полезно отключить, когда у вас есть список исполнителей в каталоге «допросить».</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Опросить: количество лучей для BLIP</code> - параметр, влияющий на то, насколько подробны описания из модели BLIP (первая часть сгенерированного приглашения)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Опросить: минимальная длина описания</code> - минимальная длина текста модели BLIP</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Опросить: максимальная длина описания</code> - максимальная длина текста модели BLIP</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Опросить: максимальное количество строк в текстовом файле</code> - опросчик будет рассматривать только это количество первых строк в файле. Если установлено значение 0, значение по умолчанию равно 1500, то есть примерно столько, сколько может выдержать видеокарта на 4 ГБ.</li>
+</ul>
+
+<h1 id="быстрое-редактирование">Быстрое редактирование</h1>
+
+<p><img src="https://user-images.githubusercontent.com/20920490/190426933-9748708b-6db0-4cb0-8cb9-3285053916b8.jpg" alt="xy_grid-0022-646033397"></p>
+
+<p>Быстрое редактирование позволяет вам начать выборку одного изображения, но в середине переключиться на что-то другое. Базовый синтаксис для этого:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[from:to:when]
+</code></pre></div></div>
+
+<p>Где «от» и «до» — это произвольные тексты, а «когда» — это число, определяющее, на каком конце цикла выборки должно быть выполнено переключение. Чем позже, тем меньше мощности у модели для рисования текста «в» вместо текста «из». Если <code class="language-plaintext highlighter-rouge">когда</code> является числом от 0 до 1, это часть количества шагов, после которых нужно сделать переключение. Если это целое число больше нуля, это всего лишь шаг, после которого нужно сделать переключение.</p>
+
+<p>Вложение одной подсказки в другую действительно работает.</p>
+
+<p>Кроме того:</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">[to:when]</code> - добавляет <code class="language-plaintext highlighter-rouge">to</code> в подсказку после фиксированного количества шагов (<code class="language-plaintext highlighter-rouge">when</code>)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[from::when]</code> - удаляет <code class="language-plaintext highlighter-rouge">from</code> из подсказки после фиксированного количества шагов (<code class="language-plaintext highlighter-rouge">when</code>)</li>
+</ul>
+
+<p>Пример:
+<code class="language-plaintext highlighter-rouge">пейзаж [фэнтези:киберпанк:16]</code></p>
+
+<ul>
+  <li>В начале модель будет рисовать “фантазийный пейзаж”.</li>
+  <li>После шага 16 он переключится на рисование «киберпанк-пейзажа», продолжая с того места, где остановился, с фантазией.</li>
+</ul>
+
+<p>Вот более сложный пример с несколькими правками:
+<code class="language-plaintext highlighter-rouge">фантастический пейзаж с [горой:озером:0,25] и [дубом:елкой:0,75][на переднем плане::0,6][на заднем плане:0,25] [дрянной:мастерский:0,5]</code> ​​(сэмплер имеет 100 шагов)</p>
+
+<ul>
+  <li>в начале <code class="language-plaintext highlighter-rouge">фантастический пейзаж с горой и дубом на переднем плане дрянной</code>
+</li>
+  <li>после шага 25, <code class="language-plaintext highlighter-rouge">фантастический пейзаж с озером и дубом на переднем плане, на заднем плане дрянной</code>
+</li>
+  <li>после шага 50 <code class="language-plaintext highlighter-rouge">фантастический пейзаж с озером и дубом на переднем плане на заднем плане мастерски</code>
+</li>
+  <li>после шага 60, <code class="language-plaintext highlighter-rouge">фантастический пейзаж с озером и дубом на заднем плане мастерски</code>
+</li>
+  <li>после шага 75, <code class="language-plaintext highlighter-rouge">фантастический пейзаж с озером и рождественской елкой на заднем плане мастерски</code>
+</li>
+</ul>
+
+<p>Картинка вверху была сделана с подсказкой:</p>
+
+<p>`Официальный портрет улыбающегося генерала Второй мировой войны, [мужчина:женщина:0,99], веселое, счастливое, детально проработанное лицо, 20 век, высокая детализация, кинематографическое освещение, цифровая художественная картина Грега Рутковски</p>
+
+<p>И число 0,99 заменяется тем, что вы видите в метках столбцов на изображении.</p>
+
+<p>Последний столбец на картинке — [мужчина:женщина:0.0], что, по сути, означает, что вы просите модель нарисовать женщину с самого начала, не начиная с генерала-мужчины, и поэтому она выглядит так не похоже на другие.</p>
+
+<h2 id="чередующиеся-слова">Чередующиеся слова</h2>
+
+<p>Удобный синтаксис для замены каждого шага.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>[корова</td>
+      <td>лошадь] в поле</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>На шаге 1 подсказка «корова в поле». Шаг 2 — «лошадь в поле». Шаг 3 — «корова в поле» и так далее.</p>
+
+<p><img src="https://user-images.githubusercontent.com/39339941/197556926-49ceb72b-daf3-4208-86f3-c2e7e9cd775a.gif" alt="Чередование слов"></p>
+
+<p>См. более сложный пример ниже. На шаге 8 цепочка возвращается от «мужчина» к «корове».</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>[корова</td>
+      <td>корова</td>
+      <td>лошадь</td>
+      <td>человек</td>
+      <td>амурский тигр</td>
+      <td>бык</td>
+      <td>человек] в поле</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Редактирование подсказок было впервые реализовано Doggettx в <a href="https://www.reddit.com/r/StableDiffusion/comments/xas2os/simple_prompt2prompt_implementation_with_prompt/">этот пост на myspace.com</a>.</p>
+
+<h1 id="высокое-разрешение-исправить">Высокое разрешение. исправить</h1>
+<p>Удобный вариант для частичного рендеринга изображения с более низким разрешением, увеличения его масштаба, а затем добавления деталей с высоким разрешением. По умолчанию txt2img делает ужасные картинки в очень высоком разрешении, что позволяет избежать использования композиции маленькой картинки. Включается установкой флажка «Highres. fix» на странице txt2img.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Без</th>
+      <th>С</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://user-images.githubusercontent.com/20920490/191177752-ad983e62-8e1c-4197-8f3b-3165a6a6c31d.png" alt="00262-836728130"></td>
+      <td><img src="https://user-images.githubusercontent.com/20920490/191177785-395a951e-0d2e-4db7-9645-4c5af9321772.png" alt="00261-836728130"></td>
+    </tr>
+    <tr>
+      <td><img src="https://user-images.githubusercontent.com/20920490/191178018-25dcd98d-6c45-4c31-ab7a-3de6c51c52e3.png" alt="00345-950170121"></td>
+      <td><img src="https://user-images.githubusercontent.com/20920490/191178048-3eba3db4-e5be-4617-9bfe-2cb36cebaafc.png" alt="00341-950170121"></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="составная-диффузия">Составная диффузия</h1>
+
+<p>Метод, позволяющий комбинировать несколько подсказок.
+объединяйте подсказки, используя заглавную букву И</p>
+
+<p>кошка И собака</p>
+
+<p>Поддерживает веса для подсказок: «кошка: 1,2 И собака И пингвин: 2,2»
+Значение веса по умолчанию равно 1.
+Это может быть очень полезно для объединения нескольких вложений в ваш результат: <code class="language-plaintext highlighter-rouge">creature_embedding in the forest:0.7 AND arcane_embedding:0.5 AND glitch_embedding:0.2</code></p>
+
+<p>Использование значения ниже 0,1 практически не даст эффекта. <code class="language-plaintext highlighter-rouge">a cat AND a dog:0.03</code> даст в основном тот же результат, что и <code class="language-plaintext highlighter-rouge">cat</code></p>
+
+<p>Это может быть удобно для создания точно настроенных рекурсивных вариантов, продолжая добавлять дополнительные подсказки к вашей сумме. <code class="language-plaintext highlighter-rouge">creature_embedding на бревне И лягушка: 0,13 И желтые глаза: 0,08</code></p>
+
+<h1 id="прерывать">Прерывать</h1>
+
+<p>Нажмите кнопку «Прерывание», чтобы остановить текущую обработку.</p>
+
+<h1 id="поддержка-видеокарты-4gb">Поддержка видеокарты 4GB</h1>
+<p>Оптимизация для графических процессоров с низким объемом видеопамяти. Это должно позволить генерировать изображения 512x512 на видеокартах с 4 Гб памяти.</p>
+
+<p><code class="language-plaintext highlighter-rouge">--lowvram</code> — это повторная реализация идеи оптимизации [basujindal] (https://github.com/basujindal/stable-diffusion).
+Модель разделена на модули, и в памяти GPU хранится только один модуль; когда необходимо запустить другой модуль, предыдущий
+удаляется из памяти GPU. Природа этой оптимизации замедляет обработку — примерно в 10 раз медленнее.
+по сравнению с нормальной работой на моей RTX 3090.</p>
+
+<p><code class="language-plaintext highlighter-rouge">--medvram</code> — это еще одна оптимизация, которая должна значительно сократить использование видеопамяти, не обрабатывая условные и
+безусловное шумоподавление в том же пакете.</p>
+
+<p>Эта реализация оптимизации не требует каких-либо модификаций исходного кода Stable Diffusion.</p>
+
+<h1 id="реставрация-лица">Реставрация лица</h1>
+<p>Позволяет улучшать лица на изображениях с помощью GFPGAN или CodeFormer. На каждой вкладке есть флажок, чтобы использовать восстановление лица,
+а также отдельная вкладка, которая просто позволяет вам использовать восстановление лица на любом изображении, с ползунком, который контролирует, насколько видимым
+эффект есть. Вы можете выбрать один из двух методов в настройках.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Оригинал</th>
+      <th>ГФГАН</th>
+      <th>КодФормер</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="images/facefix.png" alt=""></td>
+      <td><img src="images/facefix-gfpgan.png" alt=""></td>
+      <td><img src="images/facefix-codeformer.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="сохранение">Сохранение</h1>
+<p>Нажмите кнопку «Сохранить» в разделе вывода, и сгенерированные изображения будут сохранены в каталоге, указанном в настройках;
+параметры генерации будут добавлены в файл csv в том же каталоге.</p>
+
+<h1 id="загрузка">Загрузка</h1>
+<p>Графика загрузки Gradio очень негативно влияет на скорость обработки нейросети.
+Моя RTX 3090 делает изображения примерно на 10% быстрее, когда вкладка с градиентом не активна. По умолчанию интерфейс
+теперь скрывает анимацию процесса загрузки и заменяет ее статическим текстом «Загрузка…», что позволяет
+тот же эффект. Используйте параметр командной строки <code class="language-plaintext highlighter-rouge">--no-progressbar-hiding</code>, чтобы отменить это и показать анимацию загрузки.</p>
+
+<h1 id="оперативная-проверка">Оперативная проверка</h1>
+<p>Stable Diffusion имеет ограничение на длину вводимого текста. Если ваше приглашение слишком длинное, вы получите
+предупреждение в поле вывода текста, показывающее, какие части вашего текста были усечены и проигнорированы моделью.</p>
+
+<h1 id="информация-о-png">Информация о PNG</h1>
+<p>Добавляет информацию о параметрах генерации в PNG в виде текстового фрагмента. Ты
+можно просмотреть эту информацию позже с помощью любого программного обеспечения, которое поддерживает просмотр
+Информация о фрагменте PNG, например: https://www.nayuki.io/page/png-file-chunk-inspector</p>
+
+<h1 id="настройки">Настройки</h1>
+<p>Вкладка с настройками, позволяет использовать UI для редактирования более половины параметров, которые ранее
+были командной строкой. Настройки сохраняются в файл config.js. Настройки, которые остаются в командной строке
+параметры - это те, которые требуются при запуске.</p>
+
+<h1 id="формат-имен-файлов">Формат имен файлов</h1>
+<p>Поле «Шаблон имени файла изображения» на вкладке «Настройки» позволяет настроить имена файлов сгенерированных изображений txt2img и img2img. Этот шаблон определяет параметры генерации, которые вы хотите включить в имена файлов, и их порядок. Поддерживаемые теги:</p>
+
+<p><code class="language-plaintext highlighter-rouge">[шаги], [cfg], [приглашение], [prompt_no_styles], [prompt_spaces], [ширина], [высота], [стили], [сэмплер], [seed], [model_hash], [prompt_words], [ дата], [дата-время], [job_timestamp].</code></p>
+
+<p>Однако этот список будет пополняться новыми дополнениями. Вы можете получить актуальный список поддерживаемых тегов, наведя указатель мыши на метку «Шаблон имени файла изображений» в пользовательском интерфейсе.</p>
+
+<p>Пример шаблона: <code class="language-plaintext highlighter-rouge">[seed]-[steps]-[cfg]-[sampler]-[prompt_spaces]</code></p>
+
+<p>Примечание о тегах «подсказки»: «[подсказка]» добавит символы подчеркивания между словами подсказки, в то время как «[prompt_spaces]» сохранит подсказку без изменений (проще снова скопировать/вставить в пользовательский интерфейс). <code class="language-plaintext highlighter-rouge">[prompt_words]</code> — это упрощенная и очищенная версия вашей подсказки, которая уже использовалась для создания имен подкаталогов, только со словами вашей подсказки (без пунктуации).</p>
+
+<p>Если вы оставите это поле пустым, будет применен шаблон по умолчанию (<code class="language-plaintext highlighter-rouge">[seed]-[prompt_spaces]</code>).</p>
+
+<p>Обратите внимание, что теги фактически заменяются внутри шаблона. Это означает, что вы также можете добавить к этому шаблону слова, не являющиеся тегами, чтобы сделать имена файлов еще более явными. Например: <code class="language-plaintext highlighter-rouge">s=[seed],p=[prompt_spaces]</code></p>
+
+<h1 id="пользовательские-скрипты">Пользовательские скрипты</h1>
+<p>Если программа запущена с параметром <code class="language-plaintext highlighter-rouge">--allow-code</code>, появится дополнительное поле ввода текста для кода скрипта.
+доступен внизу страницы в разделе Скрипты -&gt; Пользовательский код. Это позволяет вам вводить python
+код, который будет работать с изображением.</p>
+
+<p>В коде доступ к параметрам из веб-интерфейса с помощью переменной <code class="language-plaintext highlighter-rouge">p</code> и предоставление выходных данных для веб-интерфейса.
+с помощью функции display(images, seed, info). Также доступны все глобалы из скрипта.</p>
+
+<p>Простой скрипт, который просто обработает изображение и выведет его в обычном режиме:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">modules.processing</span>
+
+<span class="n">processed</span> <span class="o">=</span> <span class="n">modules</span><span class="p">.</span><span class="n">processing</span><span class="p">.</span><span class="n">process_images</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Seed was: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">processed</span><span class="p">.</span><span class="n">seed</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">processed</span><span class="p">.</span><span class="n">images</span><span class="p">,</span> <span class="n">processed</span><span class="p">.</span><span class="n">seed</span><span class="p">,</span> <span class="n">processed</span><span class="p">.</span><span class="n">info</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h1 id="конфигурация-пользовательского-интерфейса">Конфигурация пользовательского интерфейса</h1>
+<p>Вы можете изменить параметры элементов пользовательского интерфейса:</p>
+<ul>
+  <li>группы радио: выбор по умолчанию</li>
+  <li>ползунки: значение по умолчанию, мин., макс., шаг</li>
+  <li>флажки: отмеченное состояние</li>
+  <li>ввод текста и чисел: значения по умолчанию</li>
+</ul>
+
+<p>Файл ui-config.json находится в каталоге webui, и он создается автоматически, если у вас его нет при запуске программы.</p>
+
+<p>Флажки, которые обычно расширяют скрытый раздел, изначально не будут этого делать, если они установлены в качестве записей конфигурации пользовательского интерфейса.</p>
+
+<p>Некоторые настройки нарушат обработку, например, шаг, не кратный 64 для ширины и высоты, а некоторые, например, изменение значения по умолчанию.
+на вкладке img2img, может нарушить пользовательский интерфейс. У меня нет планов обращаться к ним в ближайшем будущем.</p>
+
+<p>#ЕСРГАН
+Возможно использование моделей ESRGAN на вкладке «Дополнительно», а также в апскейле SD.</p>
+
+<p>Чтобы использовать модели ESRGAN, поместите их в каталог ESRGAN в том же месте, что и webui.py.
+Файл будет загружен как модель, если он имеет расширение .pth. Возьмите модели из [базы данных моделей] (https://upscale.wiki/wiki/Model_Database).</p>
+
+<p>Поддерживаются не все модели из базы данных. Все модели 2x, скорее всего, не поддерживаются.</p>
+
+<h1 id="альтернативный-тест-img2img">альтернативный тест img2img</h1>
+<p>Деконструирует входное изображение, используя обратный диффузор Эйлера, чтобы создать шаблон шума, используемый для создания входной подсказки.</p>
+
+<p>В качестве примера можно использовать это изображение. Выберите альтернативный тест img2img в разделе <em>scripts</em>.</p>
+
+<p><img src="https://user-images.githubusercontent.com/1633844/191771623-6293ec7b-c1c0-425c-9fe9-9d03313761fb.png" alt="alt_src"></p>
+
+<p>Настройте параметры процесса реконструкции:</p>
+<ul>
+  <li>Используйте краткое описание сцены: «Улыбающаяся женщина с каштановыми волосами». Описание функций, которые вы хотите изменить, помогает. Установите это как стартовую подсказку и «Исходную подсказку ввода» в настройках скрипта.</li>
+  <li>Вы <em>ДОЛЖНЫ</em> использовать метод выборки Эйлера, так как этот скрипт построен на нем.</li>
+  <li>Шаги выборки: 50-60. Это НАМНОГО совпадает со значением шагов декодирования в сценарии, иначе у вас будут плохие времена. Используйте 50 для этой демонстрации.</li>
+  <li>Шкала CFG: 2 или ниже. Для этой демонстрации используйте 1.8. (Подсказка: вы можете отредактировать ui-config.json, чтобы изменить «img2img/CFG Scale/step» на .1 вместо .5.</li>
+  <li>Сила шумоподавления - это <em>имеет</em> значение, вопреки тому, что говорилось в старых документах. Установите его на 1.</li>
+  <li>Ширина/Высота - Используйте ширину/высоту входного изображения.</li>
+  <li>Сид… можешь не обращать на это внимания. Обратный Эйлер теперь генерирует шум для изображения.</li>
+  <li>Масштаб декодирования cfg - где-то ниже 1 - самое приятное место. Для демонстрации используйте 1.</li>
+  <li>Шаги декодирования - как упоминалось выше, это должно соответствовать вашим шагам выборки. 50 для демонстрации, рассмотрите возможность увеличения до 60 для более подробных изображений.</li>
+</ul>
+
+<p>После того, как все вышеперечисленное будет выполнено, вы сможете нажать «Создать» и получить результат, <em>очень</em> близкий к оригиналу.</p>
+
+<p>Убедившись, что сценарий повторно создает исходную фотографию с хорошей степенью точности, вы можете попробовать изменить детали подсказки. Более крупные вариации оригинала, скорее всего, приведут к тому, что изображение будет иметь совершенно другую композицию, чем исходное изображение.</p>
+
+<p>Пример вывода с использованием указанных выше настроек и приведенных ниже подсказок (рыжие волосы/пони не показаны)</p>
+
+<p><img src="https://user-images.githubusercontent.com/1633844/191776138-c77bf232-1981-47c9-a4d3-ae155631f5c8.png" alt="демо"></p>
+
+<p>«Улыбающаяся женщина с голубыми волосами». Работает.
+«Хмурая женщина с каштановыми волосами». Работает.
+«Хмурая женщина с рыжими волосами». Работает.
+«Нахмуренная женщина с рыжими волосами верхом на лошади». Кажется, мы полностью заменили женщину, и теперь у нас есть рыжая пони.</p>
+
+<h1 id="пользовательcss">пользователь.css</h1>
+<p>Создайте файл с именем <code class="language-plaintext highlighter-rouge">user.css</code> рядом с <code class="language-plaintext highlighter-rouge">webui.py</code> и поместите в него собственный код CSS. Например, это делает галерею выше:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#txt2img_gallery</span><span class="o">,</span> <span class="nf">#img2img_gallery</span><span class="p">{</span>
+    <span class="nl">min-height</span><span class="p">:</span> <span class="m">768px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Полезный совет: вы можете добавить <code class="language-plaintext highlighter-rouge">/?__theme=dark</code> к URL-адресу веб-интерфейса, чтобы включить встроенную * темную тему *.
+<br>напр. (<code class="language-plaintext highlighter-rouge">http://127.0.0.1:7860/?__theme=темный</code>)</p>
+
+<p>Кроме того, вы можете добавить <code class="language-plaintext highlighter-rouge">--theme=dark</code> к <code class="language-plaintext highlighter-rouge">set COMMANDLINE_ARGS=</code> в <code class="language-plaintext highlighter-rouge">webui-user.bat</code><br>
+например <code class="language-plaintext highlighter-rouge">установить COMMANDLINE_ARGS=--theme=темный</code></p>
+
+<p><img src="https://user-images.githubusercontent.com/39339941/197560013-51e535d6-7cef-4946-ab6b-747e1c76b007.png" alt="chrome_O1kvfKs1es"></p>
+
+<h1 id="уведомлениеmp3">уведомление.mp3</h1>
+<p>Если в корневой папке webui присутствует аудиофайл с именем <code class="language-plaintext highlighter-rouge">notification.mp3</code>, он будет воспроизведен после завершения процесса генерации.</p>
+
+<p>Как источник вдохновения:</p>
+<ul>
+  <li>https://pixabay.com/sound-effects/search/ding/?duration=0-30</li>
+  <li>https://pixabay.com/sound-effects/search/notification/?duration=0-30</li>
+</ul>
+
+<h1 id="твики">Твики</h1>
+
+<h2 id="игнорировать-последние-слои-модели-clip">Игнорировать последние слои модели CLIP</h2>
+<p>Это ползунок в настройках, и он определяет, насколько рано должна быть остановлена ​​обработка подсказки сетью CLIP.</p>
+
+<p>Более подробное объяснение:</p>
+
+<p>CLIP — это очень продвинутая нейронная сеть, которая преобразует ваш текст подсказок в числовое представление. Нейронные сети очень хорошо работают с этим числовым представлением, поэтому разработчики SD выбрали CLIP в качестве одной из 3 моделей, используемых в методе стабильной диффузии для создания изображений. Поскольку CLIP — это нейронная сеть, это означает, что в ней много слоев. Ваша подсказка оцифровывается простым способом, а затем передается через слои. Вы получаете числовое представление приглашения после 1-го уровня, вы передаете его во второй уровень, вы передаете результат этого в третий и т. д., пока не дойдете до последнего уровня, и это вывод CLIP, который используется в стабильной версии. диффузия. Это значение ползунка равное 1. Но вы можете остановиться раньше и использовать вывод предпоследнего слоя — это значение ползунка равное 2. Чем раньше вы остановитесь, тем меньше слоев нейронной сети обработает подсказку.</p>
+
+<p>Некоторые модели были обучены с такой настройкой, поэтому установка этого значения помогает добиться лучших результатов на этих моделях.</p>
+
+                </section>
+            </div>
+<div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title">
+<span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+                        <a href="/sdwui-docs/extensions/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Расширения">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        <a href="/sdwui-docs/ru/install-on-amd/" class="navigation navigation-next navigation-unique" aria-label="Next page: установить на амд">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "установить на амд",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/ru/Install-and-Run-on-AMD-GPUs.md",
+            "ref": "_pages/ru/Install-and-Run-on-AMD-GPUs.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"],
+                "facebook": true,
+                "google": false,
+                "github": true,
+                "github_link": "https://github.com",
+                "telegram": false,
+                "telegram_link": "https://t.me",
+                "instapaper": false,
+                "twitter": true,
+                "vk": false,
+                "weibo": false
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            }
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "Stable Diffusion webUI",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/ru/Features.md",
+        "mtime": "",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2022-12-27 19:12:07 +0300"
+    },
+    "basePath": "/sdwui-docs",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/sdwui-docs/assets/gitbook/gitbook.js"></script>
+<script src="/sdwui-docs/assets/gitbook/theme.js"></script>
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+
+<!-- <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script> -->
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+
+</body>
+</html>

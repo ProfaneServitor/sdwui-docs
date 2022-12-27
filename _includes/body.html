@@ -18,6 +18,9 @@
                         <h1 id="{{ page.id }}">{{ site.title | escape }}</h1>
                     {% endif %}
 
+                    {% if page.machine_translated == true %}
+                      {% include machine-translated.html %}
+                    {% endif %}
                     {{ content }}
                 </section>
             </div>

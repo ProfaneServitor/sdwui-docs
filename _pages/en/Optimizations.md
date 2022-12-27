@@ -2,6 +2,7 @@
 title: Optimizations
 layout: post
 category: Guides
+permalink: /optimizations/
 lang: en
 ---
 A number of optimization can be enabled by [commandline arguments](Run-with-Custom-Parameters):

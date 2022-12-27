@@ -18,4 +18,7 @@ gem 'jekyll-relative-links'
 gem 'jekyll-compose', group: [:jekyll_plugins]
 gem 'jekyll-toc'
 
+gem 'translatomatic'
+gem 'sqlite3'
+
 # gem "rails"

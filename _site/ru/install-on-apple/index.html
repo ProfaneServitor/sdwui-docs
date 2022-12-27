@@ -1,0 +1,663 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>установить на Apple · Stable Diffusion webUI</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="A browser interface based on Gradio library for Stable Diffusion.
+"><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/style.css">
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/rouge/colorful.css">
+
+<link rel="stylesheet" href="/sdwui-docs/ru/assets/gitbook/custom.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/sdwui-docs/ru/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/sdwui-docs/ru//assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+
+
+
+            <link rel="prev" href="/sdwui-docs/ru/install-on-nvidia/" />
+        
+
+        
+            <link rel="next" href="/sdwui-docs/ru/list-of-time-zones/" />
+        
+    </head>
+    <body>
+        <div class="book">
+<div class="book-summary">
+    <nav role="navigation">
+        <div id="lang">
+<a href="/sdwui-docs/install-on-apple/"><img class="emoji" title=":uk:" alt=":uk:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png" height="20" width="20"> en</a> | <a style="font-weight: bold;" href="/sdwui-docs/ru/install-on-apple/"><img class="emoji" title=":ru:" alt=":ru:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1f7-1f1fa.png" height="20" width="20"> ru</a> | <a href="/sdwui-docs/de/install-on-apple/"><img class="emoji" title=":de:" alt=":de:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1e9-1f1ea.png" height="20" width="20"> de</a> | <br>
+</div>
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search">
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/sdwui-docs/ru/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter" data-level="1.1" data-path="/sdwui-docs">
+            
+                <!-- <a href="/sdwui-docs/ru/">
+                    Stable Diffusion webUI
+                </a> -->
+            </li>
+
+            <!-- <li class="divider"></li> -->
+
+
+                    
+                    
+                    <li>
+                      <h2>Guides</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/cli/">
+                          
+                              <a href="/sdwui-docs/ru/cli/">
+                                  Аргументы и настройки командной строки
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-filenames/">
+                          
+                              <a href="/sdwui-docs/ru/custom-filenames/">
+                                  Имя файла и подкаталог пользовательских изображений
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-scripts/">
+                          
+                              <a href="/sdwui-docs/ru/custom-scripts/">
+                                  Пользовательские скрипты
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-custom-scripts/">
+                          
+                              <a href="/sdwui-docs/developing-custom-scripts/">
+                                  Разработка пользовательских скриптов
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/extensions/">
+                          
+                              <a href="/sdwui-docs/extensions/">
+                                  Расширения
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/features/">
+                          
+                              <a href="/sdwui-docs/ru/features/">
+                                  Функции
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/list-of-time-zones/">
+                          
+                              <a href="/sdwui-docs/ru/list-of-time-zones/">
+                                  Список часовых поясов
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/localization/">
+                          
+                              <a href="/sdwui-docs/ru/localization/">
+                                  Локализация
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/negative-prompt/">
+                          
+                              <a href="/sdwui-docs/negative-prompt/">
+                                  Отрицательное приглашение
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/optimizations/">
+                          
+                              <a href="/sdwui-docs/optimizations/">
+                                  Optimizations
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/textual-inversion/">
+                          
+                              <a href="/sdwui-docs/ru/textual-inversion/">
+                                  Текстовая инверсия
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/troubleshooting/">
+                          
+                              <a href="/sdwui-docs/ru/troubleshooting/">
+                                  Исправление проблем
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/xformers/">
+                          
+                              <a href="/sdwui-docs/ru/xformers/">
+                                  Иксформеры
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/api/">
+                          
+                              <a href="/sdwui-docs/ru/api/">
+                                  API guide
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/pages/ru/Optimizations/">
+                          
+                              <a href="/sdwui-docs/ru/pages/ru/Optimizations/">
+                                  Оптимизации
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>development</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/contributing/">
+                          
+                              <a href="/sdwui-docs/ru/contributing/">
+                                  Содействие
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-extensions/">
+                          
+                              <a href="/sdwui-docs/developing-extensions/">
+                                  Разработка расширений
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/pages/ru/Tests/">
+                          
+                              <a href="/sdwui-docs/ru/pages/ru/Tests/">
+                                  Тесты
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>Getting started</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/dependencies/">
+                          
+                              <a href="/sdwui-docs/dependencies/">
+                                  зависимости
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-amd/">
+                          
+                              <a href="/sdwui-docs/ru/install-on-amd/">
+                                  установить на амд
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-nvidia/">
+                          
+                              <a href="/sdwui-docs/ru/install-on-nvidia/">
+                                  установить на нвидиа
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter active" data-level="1.2" data-path="/sdwui-docs/install-on-apple/">
+                          
+                              <a href="/sdwui-docs/ru/install-on-apple/">
+                                  установить на Apple
+                              </a>
+                              
+                                  
+                                      <ul>
+<li><a href="#%D0%B2%D0%B0%D0%B6%D0%BD%D1%8B%D0%B5-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8">Важные заметки</a></li>
+<li>
+<a href="#automatic-installation">Automatic installation</a><ul>
+<li><a href="#%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0">Новая установка:</a></li>
+<li><a href="#%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D0%B0%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0">Существующая установка:</a></li>
+</ul>
+</li>
+<li><a href="#%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B5%D0%B9-%D1%81%D1%82%D0%B0%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9-%D0%B4%D0%B8%D1%84%D1%84%D1%83%D0%B7%D0%B8%D0%B8">Загрузка моделей стабильной диффузии</a></li>
+<li>
+<a href="#troubleshooting">Troubleshooting</a><ul>
+<li><a href="#%D0%B2%D0%B5%D0%B1-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81-%D0%BD%D0%B5-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D1%82%D1%81%D1%8F">Веб-интерфейс не запускается:</a></li>
+<li><a href="#%D0%BF%D0%BB%D0%BE%D1%85%D0%B0%D1%8F-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0">Плохая работа:</a></li>
+</ul>
+</li>
+</ul>
+
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/">
+                          
+                              <a href="/sdwui-docs/ru/">
+                                  Стабильный диффузионный веб-интерфейс
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install/">
+                          
+                              <a href="/sdwui-docs/ru/install/">
+                                  Установить
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/online-services/">
+                          
+                              <a href="/sdwui-docs/online-services/">
+                                  Онлайн-сервисы
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/ui-defaults/">
+                          
+                              <a href="/sdwui-docs/ru/ui-defaults/">
+                                  Изменение настроек интерфейса
+                              </a>
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+
+                    
+
+            <!-- <li>
+                <a href="https://github.com/sighingnow/jekyll-gitbook/fork" target="blank" class="gitbook-link">
+                    Fork it Now!
+                </a>
+            </li> -->
+            </li>
+<li><h2>Release notes</h2></li>
+            
+              <li>
+                <a href="/sdwui-docs/ru/2022/12/27/my-new-post/">
+                  Release note example
+                </a>
+              </li>
+            
+        </ul>
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href=".">установить на Apple</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner">
+<div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/Installation-on-Apple-Silicon">установить на Apple</h1>
+                    
+
+                    
+                      <div style="border: 1px dashed red; width: 100%; padding: 1em;">
+  <b><img class="emoji" title=":robot:" alt=":robot:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f916.png" height="20" width="20"> This page have been translated automatically. If you want to improve this translation and remove this warning,
+    see <a href="https://github.com/ProfaneServitor/sdwui-docs">project's repository</a></b>
+</div>
+
+                    
+                    <p>Пользователи Mac: отправьте отзыв о том, работают ли эти инструкции для вас или нет, и если что-то неясно или у вас все еще есть проблемы с установкой, которые в настоящее время не [упомянуты здесь] (https://github.com /AUTOMATIC1111/stable-diffusion-webui/discussions/5461).</p>
+
+<h2 id="важные-заметки">Важные заметки</h2>
+<p>Currently most functionality in the web UI works correctly on macOS, with the most notable exceptions being CLIP interrogator and training. Although training does seem to work, it is incredibly slow and consumes an excessive amount of memory. CLIP interrogator can be used but it doesn’t work correctly with the GPU acceleration macOS uses so the default configuration will run it entirely via CPU (which is slow).</p>
+
+<p>Most samplers are known to work with the only exception being the PLMS sampler when using the Stable Diffusion 2.0 model. Generated images with GPU acceleration on macOS should usually match or almost match generated images on CPU with the same settings and seed.</p>
+
+<h2 id="automatic-installation">Automatic installation</h2>
+
+<h3 id="новая-установка">Новая установка:</h3>
+<ol>
+  <li>Если Homebrew не установлен, следуйте инструкциям на странице https://brew.sh, чтобы установить его. Держите окно терминала открытым и следуйте инструкциям в разделе «Следующие шаги», чтобы добавить Homebrew в PATH.</li>
+  <li>Откройте новое окно терминала и запустите <code class="language-plaintext highlighter-rouge">brew install cmake protobuf rust python@3.10 git wget</code>
+</li>
+  <li>Клонируйте репозиторий веб-интерфейса, запустив git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.</li>
+  <li>Поместите модели/контрольные точки Stable Diffusion, которые вы хотите использовать, в <code class="language-plaintext highlighter-rouge">stable-diffusion-webui/models/Stable-diffusion</code>. Если у вас их нет, см. <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon#downloading-stable-diffusion-models">Загрузка моделей стабильной диффузии</a> ниже.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">cd stable-diffusion-webui</code>, а затем <code class="language-plaintext highlighter-rouge">./webui.sh</code>, чтобы запустить веб-интерфейс. Виртуальная среда Python будет создана и активирована с помощью venv, а все оставшиеся недостающие зависимости будут автоматически загружены и установлены.</li>
+  <li>Чтобы перезапустить процесс веб-интерфейса позже, снова запустите <code class="language-plaintext highlighter-rouge">./webui.sh</code>. Обратите внимание, что веб-интерфейс не обновляется автоматически; для обновления запустите <code class="language-plaintext highlighter-rouge">git pull</code> перед запуском <code class="language-plaintext highlighter-rouge">./webui.sh</code>.</li>
+</ol>
+
+<h3 id="существующая-установка">Существующая установка:</h3>
+<p>Если у вас уже есть установка веб-интерфейса, созданная с помощью <code class="language-plaintext highlighter-rouge">setup_mac.sh</code>, удалите файл <code class="language-plaintext highlighter-rouge">run_webui_mac.sh</code> и папку <code class="language-plaintext highlighter-rouge">repositories</code> из папки <code class="language-plaintext highlighter-rouge">stable-diffusion-webui</code>. Затем запустите <code class="language-plaintext highlighter-rouge">git pull</code>, чтобы обновить веб-интерфейс, а затем <code class="language-plaintext highlighter-rouge">./webui.sh</code>, чтобы запустить его.</p>
+
+<h2 id="загрузка-моделей-стабильной-диффузии">Загрузка моделей стабильной диффузии</h2>
+
+<p>If you don’t have any models to use, Stable Diffusion models can be downloaded from <a href="https://huggingface.co/models?pipeline_tag=text-to-image&amp;sort=downloads">Hugging Face</a>. To download, click on a model and then click on the <code class="language-plaintext highlighter-rouge">Files and versions</code> header. Look for files listed with the “.ckpt” or “.safetensors” extensions, and then click the down arrow to the right of the file size to download them.</p>
+
+<p>Some popular official Stable Diffusion models are:</p>
+<ul>
+  <li>
+<a href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original">Stable DIffusion 1.4</a> (<a href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt">sd-v1-4.ckpt</a>)</li>
+  <li>
+<a href="https://huggingface.co/runwayml/stable-diffusion-v1-5">Stable Diffusion 1.5</a> (<a href="https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt">v1-5-pruned-emaonly.ckpt</a>)</li>
+  <li>
+<a href="https://huggingface.co/runwayml/stable-diffusion-inpainting">Stable Diffusion 1.5 Inpainting</a> (<a href="https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt">sd-v1-5-inpainting.ckpt</a>)</li>
+</ul>
+
+<p>Stable Diffusion 2.0 and 2.1 require both a model and a configuration file, and image width &amp; height will need to be set to 768 or higher when generating images:</p>
+<ul>
+  <li>
+<a href="https://huggingface.co/stabilityai/stable-diffusion-2">Stable Diffusion 2.0</a> (<a href="https://huggingface.co/stabilityai/stable-diffusion-2/resolve/main/768-v-ema.ckpt">768-v-ema.ckpt</a>)</li>
+  <li>
+<a href="https://huggingface.co/stabilityai/stable-diffusion-2-1">Stable Diffusion 2.1</a> (<a href="https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt">v2-1_768-ema-pruned.ckpt</a>)</li>
+</ul>
+
+<p>For the configuration file, hold down the option key on the keyboard and click <a href="https://github.com/Stability-AI/stablediffusion/raw/main/configs/stable-diffusion/v2-inference-v.yaml">here</a> to download <code class="language-plaintext highlighter-rouge">v2-inference-v.yaml</code> (it may download as <code class="language-plaintext highlighter-rouge">v2-inference-v.yaml.yml</code>). In Finder select that file then go to the menu and select <code class="language-plaintext highlighter-rouge">File</code> &gt; <code class="language-plaintext highlighter-rouge">Get Info</code>. In the window that appears select the filename and change it to the filename of the model, except with the file extension <code class="language-plaintext highlighter-rouge">.yaml</code> instead of <code class="language-plaintext highlighter-rouge">.ckpt</code>, press return on the keyboard (confirm changing the file extension if prompted), and place it in the same folder as the model (e.g. if you downloaded the <code class="language-plaintext highlighter-rouge">768-v-ema.ckpt</code> model, rename it to <code class="language-plaintext highlighter-rouge">768-v-ema.yaml</code> and put it in <code class="language-plaintext highlighter-rouge">stable-diffusion-webui/models/Stable-diffusion</code> along with the model).</p>
+
+<p>Also available is a <a href="https://huggingface.co/stabilityai/stable-diffusion-2-depth">Stable Diffusion 2.0 depth model</a> (<a href="https://huggingface.co/stabilityai/stable-diffusion-2-depth/resolve/main/512-depth-ema.ckpt">512-depth-ema.ckpt</a>). Download the <code class="language-plaintext highlighter-rouge">v2-midas-inference.yaml</code> configuration file by holding down option on the keyboard and clicking <a href="https://github.com/Stability-AI/stablediffusion/raw/main/configs/stable-diffusion/v2-midas-inference.yaml">here</a>, then rename it with the <code class="language-plaintext highlighter-rouge">.yaml</code> extension in the same way as mentioned above and put it in <code class="language-plaintext highlighter-rouge">stable-diffusion-webui/models/Stable-diffusion</code> along with the model. Note that this model works at image dimensions of 512 width/height or higher instead of 768.</p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="веб-интерфейс-не-запускается">Веб-интерфейс не запускается:</h3>
+<p>Если вы столкнулись с ошибками при попытке запустить веб-интерфейс с помощью <code class="language-plaintext highlighter-rouge">./webui.sh</code>, попробуйте удалить папки <code class="language-plaintext highlighter-rouge">repositories</code> и <code class="language-plaintext highlighter-rouge">venv</code> из папки <code class="language-plaintext highlighter-rouge">stable-diffusion-webui</code>, а затем обновите веб-интерфейс с помощью <code class="language-plaintext highlighter-rouge">git pull </code> перед повторным запуском <code class="language-plaintext highlighter-rouge">./webui.sh</code>.</p>
+
+<h3 id="плохая-работа">Плохая работа:</h3>
+<p>В настоящее время ускорение GPU в macOS использует <em>lot</em> памяти. Если производительность низкая (если для создания изображения 512x512 с 20 шагами с любым сэмплером требуется больше минуты), сначала попробуйте начать с параметра командной строки <code class="language-plaintext highlighter-rouge">--opt-split-attention-v1</code> (например, <code class="language-plaintext highlighter-rouge">./webui. sh --opt-split-attention-v1</code>) и посмотрите, поможет ли это. Если это не имеет большого значения, откройте приложение «Мониторинг активности», расположенное в /Applications/Utilities, и проверьте график нехватки памяти на вкладке «Память». Если нехватка памяти отображается красным цветом при создании изображения, закройте процесс веб-интерфейса, а затем добавьте параметр командной строки <code class="language-plaintext highlighter-rouge">--medvram</code> (например, <code class="language-plaintext highlighter-rouge">./webui.sh --opt-split-attention-v1 -- медврам</code>). Если производительность по-прежнему низкая, а нехватка памяти с этой опцией по-прежнему красная, то вместо этого попробуйте <code class="language-plaintext highlighter-rouge">--lowvram</code> (т.е. <code class="language-plaintext highlighter-rouge">./webui.sh --opt-split-attention-v1 --lowvram</code>). Если для создания изображения 512x512 с 20 шагами с любым сэмплером по-прежнему требуется больше нескольких минут, возможно, вам нужно отключить ускорение графического процессора. Откройте <code class="language-plaintext highlighter-rouge">webui-user.sh</code> в Xcode и измените <code class="language-plaintext highlighter-rouge">#export COMMANDLINE_ARGS=""</code> на <code class="language-plaintext highlighter-rouge">export COMMANDLINE_ARGS="--skip-torch-cuda-test --no-half --use-cpu all"</code>.</p>
+
+<hr>
+
+<p>Discussions/Feedback here: https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/5461</p>
+
+                </section>
+            </div>
+<div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title">
+<span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+                        <a href="/sdwui-docs/ru/install-on-nvidia/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: установить на нвидиа">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        <a href="/sdwui-docs/ru/list-of-time-zones/" class="navigation navigation-next navigation-unique" aria-label="Next page: Список часовых поясов">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "Список часовых поясов",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/ru/List-of-Time-Zones.md",
+            "ref": "_pages/ru/List-of-Time-Zones.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"],
+                "facebook": true,
+                "google": false,
+                "github": true,
+                "github_link": "https://github.com",
+                "telegram": false,
+                "telegram_link": "https://t.me",
+                "instapaper": false,
+                "twitter": true,
+                "vk": false,
+                "weibo": false
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            }
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "Stable Diffusion webUI",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/ru/Installation-on-Apple-Silicon.md",
+        "mtime": "",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2022-12-27 19:12:07 +0300"
+    },
+    "basePath": "/sdwui-docs",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/sdwui-docs/assets/gitbook/gitbook.js"></script>
+<script src="/sdwui-docs/assets/gitbook/theme.js"></script>
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+
+<!-- <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script> -->
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+
+</body>
+</html>
