@@ -17,7 +17,7 @@ target_language = sys.argv[1]
 
 def translate(fle):
     result = ''
-    do_not_translate = ['<img', 'details>', 'summary>', '----', '.png]', '.jpg]']
+    do_not_translate = ['<img', 'details>', 'summary>', '----', '.png]', '.jpg]', '{% raw %}', '{% endraw %}']
     header_open = False
     code_open = False
     for line in fle.readlines():
@@ -63,4 +63,3 @@ for file in os.listdir('_pages/en'):
          n = open(target_path, "x")
          n.write(translate(f))
          n.close()
-         

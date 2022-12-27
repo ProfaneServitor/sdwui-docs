@@ -28,30 +28,30 @@ Subdirectory can be configured under settings.
 Web-Ui provides several patterns that can be used as placeholders for inserting information into the filename or subdirectory,
 user can chain these patterns togetherm forming a filename that suits their use case.
 
-| Pattern                        | Description                                          | Example                                                                                                                               |
-|--------------------------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| `[seed]`                       | Seed                                                 | 1234567890                                                                                                                            |
-| `[steps]`                      | Steps                                                | 20                                                                                                                                    |
-| `[cfg]`                        | CFG scale                                            | 7                                                                                                                                     |
-| `[sampler]`                    | Sampling method                                      | Euler a                                                                                                                               |
-| `[model_hash]`                 | Hash of the model                                    | 7460a6fa                                                                                                                              |
-| `[width]`                      | Image width                                          | 512                                                                                                                                   |
-| `[height]`                     | Image hight                                          | 512                                                                                                                                   |
-| `[styles]`                     | Name of the chosen Styles                            | my style name                                                                                                                         |
-| `[date]`                       | Date of the computer in ISO format                   | 2022-10-24                                                                                                                            |
-| `[datetime]`                   | Datetime in "%Y%m%d%H%M%S"                           | 20221025013106                                                                                                                        |
-| `[datetime<Format>]`           | Datetime in specified \<Format\>                       | \[datetime<%Y%m%d_%H%M%S_%f>]<br>20221025_014350_733877                                                                                   |
-| `[datetime<Format><TimeZone>]` | Datetime at specific \<Time Zone\> in specified \<Format\> | \[datetime<%Y%m%d_%H%M%S_%f><Asia/Tokyo>]`<br>20221025_014350_733877                                                                                       |
-| `[prompt_no_styles]`           | Prompt without Styles                                | 1gir,   white space, ((very   important)), [not important], (some value_1.5), (whatever), the end<br>                                     |
-| `[prompt_spaces]`              | Prompt with Styles                                   | 1gir,   white space, ((very   important)), [not important], (some value_1.5), (whatever), the end<br>,   (((crystals texture Hair)))，((( |
-| `[prompt]`                     | Prompt with Styles, `Space bar` replaced with`_`       | 1gir,\_\_\_white_space,\_((very\_important)),\_[not\_important],\_(some\_value\_1.5),\_(whatever),\_the\_end,\_(((crystals_texture_Hair)))，(((     |
-| `[prompt_words]`               | Prompt   with Styles, Bracket and Comma removed      | 1gir white space very important not important some value 1 5 whatever the   end crystals texture Hair ， extremely detailed           |
+| Pattern                        | Description   |Example         |
+|--------------------------------|------------------------------------------------------|---------------------------------------------|
+| `[seed]`                       | Seed                                                 | 1234567890  |
+| `[steps]`                      | Steps                                                | 20  |
+| `[cfg]`                        | CFG scale                                            | 7     |
+| `[sampler]`                    | Sampling method                                      | Euler a             |
+| `[model_hash]`                 | Hash of the model                                    | 7460a6fa     |
+| `[width]`                      | Image width                                          | 512    |
+| `[height]`                     | Image hight                                          | 512       |
+| `[styles]`                     | Name of the chosen Styles                            | my style name        |
+| `[date]`                       | Date of the computer in ISO format                   | 2022-10-24                |
+| `[datetime]`                   | Datetime in "%Y%m%d%H%M%S"                           | 20221025013106             |
+| `[datetime<Format>]`           | Datetime in specified \<Format\>                       | \[datetime<%Y%m%d_%H%M%S_%f>]<br>20221025_014350_733877        |
+| `[datetime<Format><TimeZone>]` | Datetime at specific \<Time Zone\> in specified \<Format\> | \[datetime<%Y%m%d_%H%M%S_%f><Asia/Tokyo>]`<br>20221025_014350_733877  |
+| `[prompt_no_styles]`           | Prompt without Styles                                | 1gir,   white space, ((very   important)), [not important], (some value_1.5), (whatever), the end |
+| [prompt_spaces]              | Prompt with Styles                                   | 1gir,   white space, ((very   important)), [not important], (some value_1.5), (whatever), the end, <br> (((crystals texture Hair)))，((( |
+| [prompt]                     | Prompt with Styles, Space bar replaced with _       | 1gir,\_\_\_white_space,\_((very\_important)),\_[not\_important],\_(some\_value\_1.5),\_(whatever),\_the\_end,\_(((crystals_texture_Hair)))，(((     |
+| [prompt_words]               | Prompt   with Styles, Bracket and Comma removed      | 1gir white space very important not important some value 1 5 whatever the   end crystals texture Hair ， extremely detailed           |
 
 ### Datetime Formatting details
 Reference python documentation for more details on [Format Codes](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes)
 
 ### Datetime Time Zone details
-Reference [List of Time Zones](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/List-of-Time-Zones) for a list of valid time zones
+Reference [List of Time Zones](../list-of-time-zones/) for a list of valid time zones
 
 If `<Format>` is blank or invalid, it will use the default time format "%Y%m%d%H%M%S"
 tip: you can use extra characters inside `<Format>` for punctuation, such as `_ -`

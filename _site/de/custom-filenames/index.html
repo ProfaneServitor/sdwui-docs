@@ -442,30 +442,103 @@
 <p>Web-Ui provides several patterns that can be used as placeholders for inserting information into the filename or subdirectory,
 user can chain these patterns togetherm forming a filename that suits their use case.</p>
 
-<p>| Pattern                        | Description                                          | Example                                                                                                                               |
-|——————————–|——————————————————|—————————————————————————————————————————————|
-| <code class="language-plaintext highlighter-rouge">[seed]</code>                       | Seed                                                 | 1234567890                                                                                                                            |
-| <code class="language-plaintext highlighter-rouge">[steps]</code>                      | Steps                                                | 20                                                                                                                                    |
-| <code class="language-plaintext highlighter-rouge">[cfg]</code>                        | CFG scale                                            | 7                                                                                                                                     |
-| <code class="language-plaintext highlighter-rouge">[sampler]</code>                    | Sampling method                                      | Euler a                                                                                                                               |
-| <code class="language-plaintext highlighter-rouge">[model_hash]</code>                 | Hash of the model                                    | 7460a6fa                                                                                                                              |
-| <code class="language-plaintext highlighter-rouge">[width]</code>                      | Image width                                          | 512                                                                                                                                   |
-| <code class="language-plaintext highlighter-rouge">[height]</code>                     | Image hight                                          | 512                                                                                                                                   |
-| <code class="language-plaintext highlighter-rouge">[styles]</code>                     | Name of the chosen Styles                            | my style name                                                                                                                         |
-| <code class="language-plaintext highlighter-rouge">[date]</code>                       | Date of the computer in ISO format                   | 2022-10-24                                                                                                                            |
-| <code class="language-plaintext highlighter-rouge">[datetime]</code>                   | Datetime in “%Y%m%d%H%M%S”                           | 20221025013106                                                                                                                        |
-| <code class="language-plaintext highlighter-rouge">[datetime&lt;Format&gt;]</code>           | Datetime in specified &lt;Format&gt;                       | [datetime&lt;%Y%m%d_%H%M%S_%f&gt;]<br>20221025<em>014350_733877                                                                                   |
-| <code class="language-plaintext highlighter-rouge">[datetime&lt;Format&gt;&lt;TimeZone&gt;]</code> | Datetime at specific &lt;Time Zone&gt; in specified &lt;Format&gt; | [datetime&lt;%Y%m%d</em>%H%M%S_%f&gt;&lt;Asia/Tokyo&gt;]<code class="language-plaintext highlighter-rouge">&lt;br&gt;20221025_014350_733877                                                                                       |
-| </code>[prompt_no_styles]<code class="language-plaintext highlighter-rouge">           | Prompt without Styles                                | 1gir,   white space, ((very   important)), [not important], (some value_1.5), (whatever), the end&lt;br&gt;                                     |
-| </code>[prompt_spaces]<code class="language-plaintext highlighter-rouge">              | Prompt with Styles                                   | 1gir,   white space, ((very   important)), [not important], (some value_1.5), (whatever), the end&lt;br&gt;,   (((crystals texture Hair)))，((( |
-| </code>[prompt]<code class="language-plaintext highlighter-rouge">                     | Prompt with Styles, </code>Space bar<code class="language-plaintext highlighter-rouge"> replaced with</code>_<code class="language-plaintext highlighter-rouge">       | 1gir,\_\_\_white_space,\_((very\_important)),\_[not\_important],\_(some\_value\_1.5),\_(whatever),\_the\_end,\_(((crystals_texture_Hair)))，(((     |
-| </code>[prompt_words]`               | Prompt   with Styles, Bracket and Comma removed      | 1gir white space very important not important some value 1 5 whatever the   end crystals texture Hair ， extremely detailed           |</p>
+<table>
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[seed]</code></td>
+      <td>Seed</td>
+      <td>1234567890</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[steps]</code></td>
+      <td>Steps</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[cfg]</code></td>
+      <td>CFG scale</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[sampler]</code></td>
+      <td>Sampling method</td>
+      <td>Euler a</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[model_hash]</code></td>
+      <td>Hash of the model</td>
+      <td>7460a6fa</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[width]</code></td>
+      <td>Image width</td>
+      <td>512</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[height]</code></td>
+      <td>Image hight</td>
+      <td>512</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[styles]</code></td>
+      <td>Name of the chosen Styles</td>
+      <td>my style name</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[date]</code></td>
+      <td>Date of the computer in ISO format</td>
+      <td>2022-10-24</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[datetime]</code></td>
+      <td>Datetime in “%Y%m%d%H%M%S”</td>
+      <td>20221025013106</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[datetime&lt;Format&gt;]</code></td>
+      <td>Datetime in specified &lt;Format&gt;</td>
+      <td>[datetime&lt;%Y%m%d_%H%M%S_%f&gt;]<br>20221025_014350_733877</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[datetime&lt;Format&gt;&lt;TimeZone&gt;]</code></td>
+      <td>Datetime at specific &lt;Time Zone&gt; in specified &lt;Format&gt;</td>
+      <td>[datetime&lt;%Y%m%d_%H%M%S_%f&gt;&lt;Asia/Tokyo&gt;]`<br>20221025_014350_733877</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[prompt_no_styles]</code></td>
+      <td>Prompt without Styles</td>
+      <td>1gir,   white space, ((very   important)), [not important], (some value_1.5), (whatever), the end</td>
+    </tr>
+    <tr>
+      <td>[prompt_spaces]</td>
+      <td>Prompt with Styles</td>
+      <td>1gir,   white space, ((very   important)), [not important], (some value_1.5), (whatever), the end, <br> (((crystals texture Hair)))，(((</td>
+    </tr>
+    <tr>
+      <td>[prompt]</td>
+      <td>Prompt with Styles, Space bar replaced with _</td>
+      <td>1gir,___white_space,_((very_important)),_[not_important],_(some_value_1.5),_(whatever),_the_end,_(((crystals_texture_Hair)))，(((</td>
+    </tr>
+    <tr>
+      <td>[prompt_words]</td>
+      <td>Prompt   with Styles, Bracket and Comma removed</td>
+      <td>1gir white space very important not important some value 1 5 whatever the   end crystals texture Hair ， extremely detailed</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="datetime-formatting-details">Datetime Formatting details</h3>
 <p>Reference python documentation for more details on <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes">Format Codes</a></p>
 
 <h3 id="datetime-time-zone-details">Datetime Time Zone details</h3>
-<p>Reference <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/List-of-Time-Zones">List of Time Zones</a> for a list of valid time zones</p>
+<p>Reference <a href="../list-of-time-zones/">List of Time Zones</a> for a list of valid time zones</p>
 
 <p>If <code class="language-plaintext highlighter-rouge">&lt;Format&gt;</code> is blank or invalid, it will use the default time format “%Y%m%d%H%M%S”
 tip: you can use extra characters inside <code class="language-plaintext highlighter-rouge">&lt;Format&gt;</code> for punctuation, such as <code class="language-plaintext highlighter-rouge">_ -</code></p>
@@ -679,7 +752,7 @@ MathJax = {
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2022-12-27 23:03:08 +0300"
+        "time": "2022-12-28 00:11:33 +0300"
     },
     "basePath": "/sdwui-docs",
     "book": {

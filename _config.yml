@@ -13,7 +13,8 @@ baseurl:          '/sdwui-docs'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
-remote_theme: sighingnow/jekyll-gitbook
+# remote_theme: sighingnow/jekyll-gitbook
+remote_theme: NrdyBhu1/atlas-jekyll-theme 
 
 toc:
   enabled: true

@@ -294,3 +294,7 @@ details {
 code .highlight .err {
   background-color: transparent;
 }
+
+.page-inner {
+  max-width: 100% !important;
+}
