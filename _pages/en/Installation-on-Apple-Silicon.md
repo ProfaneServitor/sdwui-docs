@@ -1,7 +1,7 @@
 ---
 title: install on Apple
 layout: post
-category: Getting started
+category: development
 permalink: /install-on-apple/
 lang: en
 ---

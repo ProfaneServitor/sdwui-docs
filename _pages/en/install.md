@@ -6,13 +6,16 @@ layout: post
 permalink: /install/
 lang: en
 ---
-Make sure the required [dependencies](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Dependencies) are met and follow the instructions available for both [NVidia](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-NVidia-GPUs) (recommended) and [AMD](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs) GPUs.
-
-Alternatively, use online services (like Google Colab):
+If you are using an older weaker computer, consider using one of online services (like Colab). While it is possible to run generative models on GPUs with less than 4Gb memory or even TPU with some [optimizations](../optimizations), it's usually faster and more practical to rely on cloud services.
 
 - [Online Services](../Online-services)
 
+If you decide to install locally, make sure the required [dependencies](../dependencies) are met.
+
 ### Automatic Installation on Windows
+
+This is instructions for NVidia-based GPUs. For AMD, see [here](https://rentry.org/ayymd-stable-diffustion-v1_4-guide).
+
 1. Install [Python 3.10.6](https://www.python.org/downloads/windows/), checking "Add Python to PATH"
 2. Install [git](https://git-scm.com/download/win).
 3. Download the stable-diffusion-webui repository, for example by running `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git`.
@@ -21,6 +24,9 @@ Alternatively, use online services (like Google Colab):
 6. Run `webui-user.bat` from Windows Explorer as normal, non-administrator, user.
 
 ### Automatic Installation on Linux
+
+This is instructions for NVidia-based GPUs. For AMD, see  [AMD](../install-on-amd/)
+
 1. Install the dependencies:
 ```bash
 # Debian-based:
@@ -37,4 +43,4 @@ bash <(wget -qO- https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusio
 
 ### Installation on Apple Silicon
 
-Find the instructions [here](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon).
+Find the instructions [here](../install-on-apple/).

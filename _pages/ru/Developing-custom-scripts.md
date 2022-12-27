@@ -1,7 +1,7 @@
 ---
 title: Разработка пользовательских скриптов
 layout: post
-category: Guides
+category: development
 permalink: /developing-custom-scripts/
 machine_translated: true
 lang: ru

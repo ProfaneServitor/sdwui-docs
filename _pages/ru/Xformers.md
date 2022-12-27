@@ -38,7 +38,7 @@ lang: ru
 ***
 
 
-1. [Установить VS Build Tools 2022] (https://visualstudio.microsoft.com/downloads/?q=build+tools#build-tools-for-visual-studio-2022), вам нужна только `Разработка рабочего стола с C++ `
+1. [Установить VS Build Tools 2022](https://visualstudio.microsoft.com/downloads/?q=build+tools#build-tools-for-visual-studio-2022), вам нужна только `Разработка рабочего стола с C++ `
 
 ![setup_COFbK0AJAZ](https://user-images.githubusercontent.com/6380270/194767872-232136a1-9204-4b16-ae21-3e01f6f526ea.png)
 

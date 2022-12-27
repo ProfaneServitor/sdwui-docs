@@ -1,7 +1,7 @@
 ---
 title: install on AMD
 layout: post
-category: Getting started
+category: development
 permalink: /install-on-amd/
 lang: en
 ---

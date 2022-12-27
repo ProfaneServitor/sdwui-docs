@@ -2,6 +2,7 @@
 title: Тесты
 layout: post
 category: development
+permalink: /tests
 machine_translated: true
 lang: ru
 ---

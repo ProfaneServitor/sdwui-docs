@@ -9,10 +9,10 @@ A browser interface based on Gradio library for Stable Diffusion.
 
 ![](/sdwui-docs/assets/txt2img_Screenshot.jpg)
 
-Check the [custom scripts](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Custom-Scripts) wiki page for extra scripts developed by users.
+Check the [custom scripts](../custom-scripts) wiki page for extra scripts developed by users.
 
 ## Features
-[Detailed feature showcase with images](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features):
+[Detailed feature showcase with images](../features):
 - Original txt2img and img2img modes
 - One click install and run script (but you still must install python and git)
 - Outpainting
@@ -71,13 +71,13 @@ Check the [custom scripts](https://github.com/AUTOMATIC1111/stable-diffusion-web
 - Highres Fix, a convenience option to produce high resolution pictures in one click without usual distortions
 - Reloading checkpoints on the fly
 - Checkpoint Merger, a tab that allows you to merge up to 3 checkpoints into one
-- [Custom scripts](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Custom-Scripts) with many extensions from community
+- [Custom scripts](../custom-scripts) with many extensions from community
 - [Composable-Diffusion](https://energy-based-model.github.io/Compositional-Visual-Generation-with-Composable-Diffusion-Models/), a way to use multiple prompts at once
      - separate prompts using uppercase `AND`
      - also supports weights for prompts: `a cat :1.2 AND a dog AND a penguin :2.2`
 - No token limit for prompts (original stable diffusion lets you use up to 75 tokens)
 - DeepDanbooru integration, creates danbooru style tags for anime prompts
-- [xformers](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Xformers), major speed increase for select cards: (add --xformers to commandline args)
+- [xformers](../xformers), major speed increase for select cards: (add --xformers to commandline args)
 - via extension: [History tab](https://github.com/yfszzx/stable-diffusion-webui-images-browser): view, direct and delete images conveniently within the UI
 - Generate forever option
 - Training tab

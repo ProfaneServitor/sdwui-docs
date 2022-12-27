@@ -23,7 +23,7 @@
             <!-- <li class="divider"></li> -->
 
 
-                    {% assign categories = site.pages | group_by: 'category' %}
+                    {% assign categories = site.pages | group_by: 'category' | sort: "name" %}
                     {% for category in categories %}
                     <li>
                       <h2>{{ category.name }}</h2>
@@ -35,9 +35,11 @@
                           {% else %}
                           <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
                           {% endif %}
-                              <a href="{{site.baseurl}}/{{site.active_lang}}{{post.url}}">
-                                  {{ post.title | escape }}
-                              </a>
+                              {% if site.default_lang == site.active_lang %}
+                                <a href="{{site.baseurl}}{{post.url}}">{{ post.title | escape }}</a>
+                              {% else %}
+                                <a href="{{site.baseurl}}/{{site.active_lang}}{{post.url}}">{{ post.title | escape }}</a>
+                              {% endif %}
                               {% if site.toc.enabled %}
                                   {% if page.url == post.url %}
                                       {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}

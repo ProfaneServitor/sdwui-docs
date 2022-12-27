@@ -10,10 +10,10 @@ lang: ru
 
 ![](/sdwui-docs/assets/txt2img_Screenshot.jpg)
 
-Проверьте вики-страницу [пользовательские сценарии] (https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Custom-Scripts) на наличие дополнительных сценариев, разработанных пользователями.
+Проверьте вики-страницу [пользовательские сценарии](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Custom-Scripts) на наличие дополнительных сценариев, разработанных пользователями.
 
 ## Функции
-[Подробная демонстрация функций с изображениями] (https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features):
+[Подробная демонстрация функций с изображениями](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features):
 - Оригинальные режимы txt2img и img2img
 - Установить и запустить скрипт одним щелчком мыши (но вы все равно должны установить python и git)
 - Окрашивание
@@ -72,14 +72,14 @@ lang: ru
 - Highres Fix, удобная опция для создания изображений высокого разрешения в один клик без обычных искажений
 - Перезагрузка чекпоинтов на лету
 - Checkpoint Merger, вкладка, позволяющая объединить до 3-х контрольных точек в одну
-- [Пользовательские сценарии] (https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Custom-Scripts) со многими расширениями от сообщества
-- [Composable-Diffusion] (https://energy-based-model.github.io/Compositional-Visual-Generation-with-Composable-Diffusion-Models/), способ одновременного использования нескольких подсказок.
+- [Пользовательские сценарии](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Custom-Scripts) со многими расширениями от сообщества
+- [Composable-Diffusion](https://energy-based-model.github.io/Compositional-Visual-Generation-with-Composable-Diffusion-Models/), способ одновременного использования нескольких подсказок.
 - разделяйте подсказки с помощью заглавной буквы `И`
 - также поддерживает веса для подсказок: «кошка: 1,2 И собака И пингвин: 2,2»
 - Нет лимита токенов для подсказок (оригинальная стабильная диффузия позволяет использовать до 75 токенов)
 - Интеграция DeepDanbooru, создание тегов в стиле danbooru для подсказок аниме.
 - [xformers](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Xformers), значительное увеличение скорости для некоторых карт: (добавьте --xformers в аргументы командной строки)
-- через расширение: [вкладка «История»] (https://github.com/yfszzx/stable-diffusion-webui-images-browser): удобно просматривать, направлять и удалять изображения в пользовательском интерфейсе.
+- через расширение: [вкладка «История»](https://github.com/yfszzx/stable-diffusion-webui-images-browser): удобно просматривать, направлять и удалять изображения в пользовательском интерфейсе.
 - Создать навсегда вариант
 - вкладка "Обучение"
 - варианты гиперсетей и вложений
@@ -89,20 +89,20 @@ lang: ru
 - Используйте VAE
 - Расчетное время завершения в индикаторе выполнения
 - API
-- Поддержка выделенной [модели рисования] (https://github.com/runwayml/stable-diffusion#inpainting-with-stable-diffusion) от RunwayML.
-- через расширение: [Эстетические градиенты] (https://github.com/AUTOMATIC1111/stable-diffusion-webui-aesthetic-gradients), способ создания изображений с определенной эстетикой с помощью встраивания изображений клипов (реализация [https: //github.com/vicgalle/stable-diffusion-aesthetic-gradients](https://github.com/vicgalle/stable-diffusion-aesthetic-gradients))
+- Поддержка выделенной [модели рисования](https://github.com/runwayml/stable-diffusion#inpainting-with-stable-diffusion) от RunwayML.
+- через расширение: [Эстетические градиенты](https://github.com/AUTOMATIC1111/stable-diffusion-webui-aesthetic-gradients), способ создания изображений с определенной эстетикой с помощью встраивания изображений клипов (реализация [https: //github.com/vicgalle/stable-diffusion-aesthetic-gradients](https://github.com/vicgalle/stable-diffusion-aesthetic-gradients))
 - Поддержка [Stable Diffusion 2.0](https://github.com/Stability-AI/stablediffusion) - см. [wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#stable- диффузия-20) по инструкции
 
 ## Установка и запуск
-Убедитесь, что необходимые [зависимости] (https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Dependencies) соблюдены, и следуйте инструкциям, доступным для обоих [NVidia] (https://github.com/AUTOMATIC1111 /stable-diffusion-webui/wiki/Install-and-Run-on-NVidia-GPU) (рекомендуется) и [AMD](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and -Run-on-AMD-GPUs) графические процессоры.
+Убедитесь, что необходимые [зависимости](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Dependencies) соблюдены, и следуйте инструкциям, доступным для обоих [NVidia](https://github.com/AUTOMATIC1111 /stable-diffusion-webui/wiki/Install-and-Run-on-NVidia-GPU) (рекомендуется) и [AMD](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and -Run-on-AMD-GPUs) графические процессоры.
 
 В качестве альтернативы используйте онлайн-сервисы (например, Google Colab):
 
-- [Список онлайн-сервисов] (https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Online-Services)
+- [Список онлайн-сервисов](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Online-Services)
 
 ### Автоматическая установка в Windows
-1. Установите [Python 3.10.6] (https://www.python.org/downloads/windows/), отметив «Добавить Python в PATH».
-2. Установите [git] (https://git-scm.com/download/win).
+1. Установите [Python 3.10.6](https://www.python.org/downloads/windows/), отметив «Добавить Python в PATH».
+2. Установите [git](https://git-scm.com/download/win).
 3. Загрузите репозиторий stable-diffusion-webui, например, запустив `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git`.
 4. Поместите `model.ckpt` в каталог `models` (см. [зависимости](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Dependencies), чтобы узнать, где его взять).
 5. _*(Необязательно)*_ Поместите `GFPGANv1.4.pth` в базовый каталог вместе с `webui.py` (см. [зависимости](https://github.com/AUTOMATIC1111/stable-diffusion-webui/ wiki/Зависимости) для того, чтобы узнать, где его взять).
@@ -125,7 +125,7 @@ bash <(wget -qO- https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusio
 
 ### Установка на Apple Silicon
 
-Найдите инструкции [здесь] (https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon).
+Найдите инструкции [здесь](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon).
 
 ## Содействие
 Вот как добавить код в этот репозиторий: [Contributing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing)

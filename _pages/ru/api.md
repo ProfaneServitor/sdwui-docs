@@ -1,63 +1,65 @@
 ---
-title: API guide
+title: Руководство по API
 author: Kilvoctu
 layout: post
-category: Guides
 permalink: /api/
+machine_translated: true
 lang: ru
 ---
-RUSSIAN
-- First, of course, is to run web ui with `--api` commandline argument
-  - example in your "webui-user.bat": `set COMMANDLINE_ARGS=--api`
-- This enables the api which can be reviewed at http://127.0.0.1:7860/docs (or whever the URL is + /docs)
-The basic ones I'm interested in are these two. Let's just focus only on ` /sdapi/v1/txt2img`
+- Во-первых, конечно же, запустить веб-интерфейс с аргументом командной строки `--api`
+- пример в вашем "webui-user.bat": `set COMMANDLINE_ARGS=--api`
+- Это включает API, который можно просмотреть по адресу http://127.0.0.1:7860/docs (или любой URL-адрес +/docs)
+Основные, которые меня интересуют, это эти два. Давайте сосредоточимся только на `/sdapi/v1/txt2img`
 
-![image](https://user-images.githubusercontent.com/2993060/198171114-ed1c5edd-76ce-4c34-ad73-04e388423162.png)
+![изображение](https://user-images.githubusercontent.com/2993060/198171114-ed1c5edd-76ce-4c34-ad73-04e388423162.png)
 
-- When you expand that tab, it gives an example of a payload to send to the API. I used this often as reference.
+- Когда вы раскрываете эту вкладку, она дает пример полезной нагрузки для отправки в API. Я часто использовал это как ссылку.
 
-![image](https://user-images.githubusercontent.com/2993060/198171454-5b826ded-5e73-4249-9c0c-a97b32c42569.png)
+![изображение](https://user-images.githubusercontent.com/2993060/198171454-5b826ded-5e73-4249-9c0c-a97b32c42569.png)
 
 ------
 
-- So that's the backend. The API basically says what's available, what it's asking for, and where to send it. Now moving onto the frontend, I'll start with constructing a payload with the parameters I want. An example can be:
+
+- Так это бэкэнд. API в основном говорит, что доступно, что запрашивает и куда это отправить. Теперь, переходя к внешнему интерфейсу, я начну с создания полезной нагрузки с нужными мне параметрами. Примером может быть:
 ```
 payload = {
     "prompt": "maltese puppy",
     "steps": 5
 }
 ```
-I can put in as few or as many parameters as I want in the payload. The API will use the defaults for anything I don't set.
+Я могу ввести в полезную нагрузку столько параметров, сколько захочу. API будет использовать значения по умолчанию для всего, что я не установлю.
 
-- After that, I can send it to the API
+- После этого я могу отправить его в API
 ```
 response = requests.post(url=f'http://127.0.0.1:7860/sdapi/v1/txt2img', json=payload)
 ```
-Again, this URL needs to match the web ui's URL.
-If we execute this code, the web ui will generate an image based on the payload. That's great, but then what? There is no image anywhere...
+Опять же, этот URL-адрес должен соответствовать URL-адресу веб-интерфейса.
+Если мы выполним этот код, веб-интерфейс сгенерирует изображение на основе полезной нагрузки. Это здорово, но что потом? Нигде нет изображения...
 
 ------
 
-- After the backend does its thing, the API sends the response back in a variable that was assigned above: `response`. The response contains three entries; "images", "parameters", and "info", and I have to find some way to get the information from these entries.
-- First, I put this line `r = response.json()` to make it easier to work with the response.
-- "images" is the generated image, which is what I want mostly. There's no link or anything; it's a giant string of random characters, apparently we have to decode it. This is how I do it:
+
+- После того, как бэкенд сделает свое дело, API отправляет ответ обратно в переменной, которая была назначена выше: `response`. Ответ содержит три записи; «изображения», «параметры» и «информация», и мне нужно найти способ получить информацию из этих записей.
+- Во-первых, я поставил эту строку `r = response.json()`, чтобы было проще работать с ответом.
+- «изображения» - это сгенерированное изображение, чего я больше всего и хочу. Там нет ссылки или чего-то еще; это гигантская строка случайных символов, по-видимому, нам нужно ее расшифровать. Вот как я это делаю:
 ```
 for i in r['images']:
     image = Image.open(io.BytesIO(base64.b64decode(i.split(",",1)[0])))
 ```
-- With that, we have an image in the `image` variable that we can work with, for example saving it with `image.save('output.png')`.
-- "parameters" shows what was sent to the API, which could be useful, but what I want in this case is "info". I use it to insert metadata into the image, so I can drop it into web ui PNG Info. For that, I can access the `/sdapi/v1/png-info` API. I'll need to feed the image I got above into it.
+- При этом у нас есть изображение в переменной `image`, с которым мы можем работать, например, сохраняя его с помощью `image.save('output.png')`.
+- «параметры» показывают, что было отправлено в API, что может быть полезно, но в данном случае мне нужна «информация». Я использую его для вставки метаданных в изображение, поэтому я могу поместить его в веб-интерфейс PNG Info. Для этого я могу получить доступ к API `/sdapi/v1/png-info`. Мне нужно будет загрузить в него изображение, которое я получил выше.
 ```
 png_payload = {
         "image": "data:image/png;base64," + i
     }
     response2 = requests.post(url=f'http://127.0.0.1:7860/sdapi/v1/png-info', json=png_payload)
 ```
-After that, I can get the information with `response2.json().get("info")`
+После этого я могу получить информацию с помощью `response2.json().get("info")`
 
 ------
 
-A sample code that should work can look like this:
+
+Пример кода, который должен работать, может выглядеть так:
 ```
 import json
 import requests
@@ -88,22 +90,23 @@ for i in r['images']:
     pnginfo.add_text("parameters", response2.json().get("info"))
     image.save('output.png', pnginfo=pnginfo)
 ```
-- Import the things I need
-- define the url and the payload to send
-- send said payload to said url through the API
-- in a loop grab "images" and decode it
-- for each image, send it to png info API and get that info back
-- define a plugin to add png info, then add the png info I defined into it
-- at the end here, save the image with the png info
+- Импорт вещей, которые мне нужны
+- определить URL-адрес и полезную нагрузку для отправки
+- отправить указанную полезную нагрузку на указанный URL-адрес через API
+- в цикле захватите "изображения" и расшифруйте их
+- для каждого изображения отправьте его в API информации png и получите эту информацию обратно
+- определите плагин для добавления информации png, затем добавьте информацию png, которую я определил в него
+- в конце сохраните изображение с информацией png
 
 -----
 
-A note on `"override_settings"`.
-The purpose of this endpoint is to override the web ui settings for a single request, such as the CLIP skip. The settings that can be passed into this parameter are visible here at the url's /docs.
 
-![image](https://user-images.githubusercontent.com/2993060/202877368-c31a6e9e-0d05-40ec-ade0-49ed2c4be22b.png)
+Примечание к `"override_settings"`.
+Целью этой конечной точки является переопределение настроек веб-интерфейса для одного запроса, например пропуска CLIP. Настройки, которые можно передать в этот параметр, видны здесь, в URL-адресе /docs.
 
-You can expand the tab and the API will provide a list. There are a few ways you can add this value to your payload, but this is how I do it. I'll demonstrate with "filter_nsfw", and "CLIP_stop_at_last_layers".
+![изображение](https://user-images.githubusercontent.com/2993060/202877368-c31a6e9e-0d05-40ec-ade0-49ed2c4be22b.png)
+
+Вы можете развернуть вкладку, и API предоставит список. Есть несколько способов добавить это значение к полезной нагрузке, но я делаю это так. Я продемонстрирую с «filter_nsfw» и «CLIP_stop_at_last_layers».
 
 ```
 payload = {
@@ -120,17 +123,17 @@ override_payload = {
             }
 payload.update(override_payload)
 ```
-- Have the normal payload
-- after that, initialize a dictionary (I call it "override_settings", but maybe not the best name)
-- then I can add as many key:value pairs as I want to it
-- make a new payload with just this parameter
-- update the original payload to add this one to it
+- иметь нормальную грузоподъемность
+- после этого инициализировать словарь (я называю его "override_settings", но может не самое удачное название)
+- тогда я могу добавить столько пар ключ: значение, сколько захочу
+- сделать новую полезную нагрузку только с этим параметром
+- обновить исходную полезную нагрузку, чтобы добавить к ней эту
 
-So in this case, when I send the payload, I should get a "cirno" at 20 steps, with the CLIP skip at 2, as well as the NSFW filter on.
+Таким образом, в этом случае, когда я отправляю полезную нагрузку, я должен получить «cirno» на 20 шагах, с пропуском CLIP на 2, а также с включенным фильтром NSFW.
 
 
-For certain settings or situations, you may want your changes to stay. For that you can post to the `/sdapi/v1/options` API endpoint
-We can use what we learned so far and set up the code easily for this. Here is an example:
+Для определенных настроек или ситуаций вы можете захотеть, чтобы ваши изменения остались. Для этого вы можете отправить сообщение в конечную точку API `/sdapi/v1/options`
+Мы можем использовать то, что мы узнали до сих пор, и легко настроить код для этого. Вот пример:
 ```
 url = "http://127.0.0.1:7860"
 
@@ -141,21 +144,23 @@ option_payload = {
 
 response = requests.post(url=f'{url}/sdapi/v1/options', json=option_payload)
 ```
-After sending this payload to the API, the model should swap to the one I set and set the CLIP skip to 2. Reiterating, this is different from "override_settings", because this change will persist, while "override_settings" is for a single request.
-Note that if you're changing the `sd_model_checkpoint`, the value should be the name of the checkpoint as it appears in the web ui. This can be referenced with this API endpoint (same way we reference "options" API)
+После отправки этой полезной нагрузки в API модель должна переключиться на ту, которую я установил, и установить пропуск CLIP на 2. Повторяю, это отличается от «override_settings», потому что это изменение будет сохраняться, в то время как «override_settings» предназначен для одного запроса. .
+Обратите внимание, что если вы меняете `sd_model_checkpoint`, значением должно быть имя контрольной точки, как оно отображается в веб-интерфейсе. На это можно ссылаться с помощью этой конечной точки API (так же, как мы ссылаемся на API «опций»)
 
-![image](https://user-images.githubusercontent.com/2993060/202928589-114aff91-2777-4269-9492-2eab015c5bca.png)
+![изображение](https://user-images.githubusercontent.com/2993060/202928589-114aff91-2777-4269-9492-2eab015c5bca.png)
 
-The "title" (name and hash) is what you want to use.
+«Название» (имя и хэш) — это то, что вы хотите использовать.
 
 -----
 
-This is as of commit [47a44c7](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/47a44c7e421b98ca07e92dbf88769b04c9e28f86)
 
-For a more complete implementation of a frontend, my Discord bot is [here](https://github.com/Kilvoctu/aiyabot) if anyone wants to look at it as an example. Most of the action happens in stablecog.py. There are many comments explaining what each code does.
+Это на момент фиксации [47a44c7](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/47a44c7e421b98ca07e92dbf88769b04c9e28f86)
+
+Для более полной реализации фронтенда мой бот Discord находится [здесь](https://github.com/Kilvoctu/aiyabot), если кто хочет посмотреть на него в качестве примера. Большая часть действий происходит в файле stablecog.py. Есть много комментариев, объясняющих, что делает каждый код.
 
 ------
 
-This guide can be found in [discussions](https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/3734) page.
 
-Also, check out this python API client library for webui: https://github.com/mix1009/sdwebuiapi
+Это руководство можно найти на странице [обсуждения](https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/3734).
+
+Кроме того, ознакомьтесь с этой клиентской библиотекой API Python для webui: https://github.com/mix1009/sdwebuiapi.

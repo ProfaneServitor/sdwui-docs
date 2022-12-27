@@ -19,14 +19,14 @@ lang: ru
 - Вам все равно нужно установить git, даже если вы выберете это.
 - Для обновления придется заново скачивать zip и заменять файлы.
 3. Контрольную точку модели Stable Diffusion, файл с расширением `.ckpt`, необходимо загрузить и поместить в каталог `models/Stable-diffusion`.
-- [Официальная загрузка] (https://huggingface.co/CompVis/stable-diffusion-v-1-4-original)
+- [Официальная загрузка](https://huggingface.co/CompVis/stable-diffusion-v-1-4-original)
 - [Файловое хранилище](https://drive.yerf.org/wl/?id=EBfTrmcCCUAGaQBXVIj5lJmEhjoP1tgl)
 - Torrent (magnet:?xt=urn:btih:3a4a612d75ed088ea542acac52f9f45987488d1c&dn=sd-v1-4.ckpt&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org% 3а1337)
 
 # Необязательные зависимости
 
 ## ESRGAN (Увеличение масштаба)
-Модели ESRGAN, такие как модели из [базы данных моделей] (https://upscale.wiki/wiki/Model_Database), могут быть помещены в каталог ESRGAN.
+Модели ESRGAN, такие как модели из [базы данных моделей](https://upscale.wiki/wiki/Model_Database), могут быть помещены в каталог ESRGAN.
 Файл будет загружен как модель, если он имеет расширение `.pth`, и он будет отображаться под своим именем в пользовательском интерфейсе.
 
 > Примечание. Модели RealESRGAN не являются моделями ESRGAN, они несовместимы. Не скачивайте модели RealESRGAN. Не помещайте RealESRGAN в каталог с моделями ESRGAN.

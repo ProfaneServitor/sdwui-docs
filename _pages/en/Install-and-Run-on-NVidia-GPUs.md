@@ -1,7 +1,7 @@
 ---
 title: install on Nvidia
 layout: post
-category: Getting started
+category: development
 permalink: /install-on-nvidia/
 lang: en
 ---

@@ -17,17 +17,21 @@ target_language = sys.argv[1]
 
 def translate(fle):
     result = ''
+    do_not_translate = ['<img', 'details>', 'summary>', '----', '.png]', '.jpg]']
     header_open = False
     code_open = False
     for line in fle.readlines():
         print(f"   {line}")
-        if line[0:3] == '---':
+        if line[0:3] == '---' and not line[0:4] == '----':
             header_open = not header_open
             result += line
             continue
         if line[0:3] == '```':
             code_open = not code_open
             result += line
+            continue
+        if any(word in line for word in do_not_translate):
+            result += line + "\n"
             continue
         if ((not header_open) and (not code_open)):
             translated = GoogleTranslator(source='auto', target=target_language).translate(line)
@@ -41,6 +45,7 @@ def translate(fle):
     result = re.sub("(?<=title: ).*", GoogleTranslator(source='auto', target=target_language).translate(title), result)
     result = re.sub("(?<=lang: ).*", target_language, result)
     result = re.sub("(?<=lang: ).*", target_language, result)
+    result = re.sub("\] \(", '](', result) # link fix
     result = re.sub("(?=lang: )", "machine_translated: true\n", result)
     return result
 
@@ -58,6 +63,4 @@ for file in os.listdir('_pages/en'):
          n = open(target_path, "x")
          n.write(translate(f))
          n.close()
-
-# f = open('_pages/en/UI_defaults.md')
-#
+         

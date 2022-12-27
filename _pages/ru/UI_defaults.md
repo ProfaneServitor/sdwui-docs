@@ -4,6 +4,7 @@ layout: post
 category: Getting started
 permalink: /ui-defaults/
 priority: 2
+machine_translated: true
 lang: ru
 ---
 Значения по умолчанию в веб-интерфейсе можно изменить, отредактировав файл `ui-config.json`, который появляется в базовом каталоге, содержащем `webui.py`, после первого запуска. Изменения применяются только после перезапуска.

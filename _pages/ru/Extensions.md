@@ -85,7 +85,7 @@ https://github.com/adieyal/sd-динамические-подсказки
 ## Будка мечты
 https://github.com/d8ahazard/sd_dreambooth_extension
 
-Dreambooth в пользовательском интерфейсе. Требования к настройке и конфигурации см. в файле readme проекта. Включает [LoRA] (https://github.com/cloneofsimo/lora) (адаптация низкого ранга)
+Dreambooth в пользовательском интерфейсе. Требования к настройке и конфигурации см. в файле readme проекта. Включает [LoRA](https://github.com/cloneofsimo/lora) (адаптация низкого ранга)
 
 На основе репозитория ShivamShiaro.
 
@@ -140,9 +140,9 @@ https://github.com/tsngo/stable-diffusion-webui-aesthetic-image-scorer
 
 Расширение для https://github.com/AUTOMATIC1111/stable-diffusion-webui
 
-Вычисляет эстетическую оценку для сгенерированных изображений с помощью [предиктора эстетической оценки CLIP+MLP] (https://github.com/christophschuhmann/improved-aesthetic-predictor) на основе [оценщика Чада] (https://github.com/grexzen/SD). -Чад/blob/main/chad_scorer.py)
+Вычисляет эстетическую оценку для сгенерированных изображений с помощью [предиктора эстетической оценки CLIP+MLP](https://github.com/christophschuhmann/improved-aesthetic-predictor) на основе [оценщика Чада](https://github.com/grexzen/SD). -Чад/blob/main/chad_scorer.py)
 
-См. [Обсуждения] (https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/1831).
+См. [Обсуждения](https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/1831).
 
 Сохраняет счет в тегах Windows с другими запланированными параметрами
 
@@ -151,9 +151,9 @@ https://github.com/tsngo/stable-diffusion-webui-aesthetic-image-scorer
 ## Редактор тегов набора данных
 https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor
 
-[Японский файл Readme] (https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor/blob/main/README-JP.md)
+[Японский файл Readme](https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor/blob/main/README-JP.md)
 
-Это расширение для редактирования подписей в обучающем наборе данных для [веб-интерфейса Stable Diffusion от AUTOMATIC1111] (https://github.com/AUTOMATIC1111/stable-diffusion-webui).
+Это расширение для редактирования подписей в обучающем наборе данных для [веб-интерфейса Stable Diffusion от AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui).
 
 Он хорошо работает с текстовыми подписями в стиле, разделенном запятыми (например, теги, сгенерированные запросчиком DeepBooru).
 

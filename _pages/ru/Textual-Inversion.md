@@ -89,8 +89,8 @@ Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 4077357776, Size: 512x512, Mode
 ## Сторонние репозитории
 Я успешно обучил вложения, используя эти репозитории:
 
-- [nicolai256] (https://github.com/nicolai256/Stable-textual-inversion_win)
-- [lstein] (https://github.com/invoke-ai/InvokeAI)
+- [nicolai256](https://github.com/nicolai256/Stable-textual-inversion_win)
+- [lstein](https://github.com/invoke-ai/InvokeAI)
 
 Другие варианты — тренироваться на колабах и/или использовать библиотеку диффузоров, о которой я ничего не знаю.
 

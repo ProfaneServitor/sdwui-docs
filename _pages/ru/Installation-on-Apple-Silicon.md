@@ -1,12 +1,12 @@
 ---
 title: установить на Apple
 layout: post
-category: Getting started
+category: development
 permalink: /install-on-apple/
 machine_translated: true
 lang: ru
 ---
-Пользователи Mac: отправьте отзыв о том, работают ли эти инструкции для вас или нет, и если что-то неясно или у вас все еще есть проблемы с установкой, которые в настоящее время не [упомянуты здесь] (https://github.com /AUTOMATIC1111/stable-diffusion-webui/discussions/5461).
+Пользователи Mac: отправьте отзыв о том, работают ли эти инструкции для вас или нет, и если что-то неясно или у вас все еще есть проблемы с установкой, которые в настоящее время не [упомянуты здесь](https://github.com /AUTOMATIC1111/stable-diffusion-webui/discussions/5461).
 
 Важные заметки
 ------

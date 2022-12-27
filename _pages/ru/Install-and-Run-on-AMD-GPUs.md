@@ -1,12 +1,12 @@
 ---
 title: установить на амд
 layout: post
-category: Getting started
+category: development
 permalink: /install-on-amd/
 machine_translated: true
 lang: ru
 ---
-Инструкции ниже работают только в Linux! Альтернативное руководство для пользователя Windows можно найти [здесь] (https://rentry.org/ayymd-stable-diffustion-v1_4-guide) (непроверено).
+Инструкции ниже работают только в Linux! Альтернативное руководство для пользователя Windows можно найти [здесь](https://rentry.org/ayymd-stable-diffustion-v1_4-guide) (непроверено).
 
 # Работает изначально
 
@@ -98,6 +98,6 @@ Docker», пропуская «git clone https://github.com/AUTOMATIC1111/stable
 TORCH_COMMAND='pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/rocm5.1.1' python launch.py --precision full --no-half
 ```
 Возможно, вам не нужно "--precision full", убрав "--no-half", однако это может не сработать для всех.
-Некоторые карты, такие как Radeon RX 6000 Series и RX 500 Series, будут нормально работать без опции `--precision full --no-half`, что сэкономит много оперативной памяти. (отмечено [здесь] (https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/5468).)
+Некоторые карты, такие как Radeon RX 6000 Series и RX 500 Series, будут нормально работать без опции `--precision full --no-half`, что сэкономит много оперативной памяти. (отмечено [здесь](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/5468).)
 
 С этого момента всегда используйте эту новую команду запуска, а также при перезапуске веб-интерфейса в следующих запусках.

@@ -1,7 +1,7 @@
 ---
 title: Developing custom scripts
 layout: post
-category: Guides
+category: development
 permalink: /developing-custom-scripts/
 lang: en
 ---
