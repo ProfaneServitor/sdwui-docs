@@ -3,6 +3,7 @@ title: Расширения
 layout: post
 category: Guides
 permalink: /extensions/
+handles: /extensions/
 machine_translated: true
 lang: ru
 ---

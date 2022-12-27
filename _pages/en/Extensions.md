@@ -3,6 +3,7 @@ title: Extensions
 layout: post
 category: Guides
 permalink: /extensions/
+handle: /extensions/
 lang: en
 ---
 # General info
