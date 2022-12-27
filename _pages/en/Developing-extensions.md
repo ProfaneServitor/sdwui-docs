@@ -22,7 +22,7 @@ def preload(parser):
     parser.add_argument("--wildcards-dir", type=str, help="directory with wildcards", default=None)
 ```
 
-For how to develop custom scripts, which usually will do most of extension's work, see [Developing custom scripts](Developing-custom-scripts).
+For how to develop custom scripts, which usually will do most of extension's work, see [Developing custom scripts](../Developing-custom-scripts).
 
 ## Localization extensions
 The preferred way to do localizations for the project is via making an extension. The basic file structure for the extension should be:

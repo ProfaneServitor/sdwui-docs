@@ -54,6 +54,9 @@ GEM
       sass (~> 3.4)
     jekyll-timeago (0.14.0)
       mini_i18n (>= 0.8.0)
+    jekyll-toc (0.17.1)
+      jekyll (>= 3.9)
+      nokogiri (~> 1.11)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     jemoji (0.13.0)
@@ -106,6 +109,7 @@ DEPENDENCIES
   jekyll-readme-index
   jekyll-relative-links
   jekyll-timeago
+  jekyll-toc
   jemoji
   kramdown-parser-gfm
   webrick

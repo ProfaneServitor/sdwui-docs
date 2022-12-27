@@ -27,6 +27,7 @@
                     {% for category in categories %}
                     <li>
                       <h2>{{ category.name }}</h2>
+                      </li>
                       {% assign sortd = category.items | sort: 'priority' %}
                       {% for post in sortd %}
                           {% if page.url == post.url %}
@@ -44,7 +45,7 @@
                               {% endif %}
                           </li>
                       {% endfor %}
-                      </li>
+                      <li class="divider"></li>
                     {% endfor %}
 
                     {% if reversed_posts.size > 0 %}

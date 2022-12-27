@@ -5,6 +5,7 @@ category: Guides
 lang: en
 ---
 ## webui-user
+
 The recommended way to customize how the program is run is editing `webui-user.bat` (Windows) and `webui-user.sh` (Linux):
 - `set PYTHON` allows for setting a custom Python path
     - Example: `set PYTHON=b:/soft/Python310/Python.exe`

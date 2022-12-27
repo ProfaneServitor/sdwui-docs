@@ -6,7 +6,6 @@ category: Guides
 permalink: /api/
 lang: en
 ---
-ENGLISH
 - First, of course, is to run web ui with `--api` commandline argument
   - example in your "webui-user.bat": `set COMMANDLINE_ARGS=--api`
 - This enables the api which can be reviewed at http://127.0.0.1:7860/docs (or whever the URL is + /docs)

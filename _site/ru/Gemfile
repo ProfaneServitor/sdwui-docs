@@ -16,5 +16,6 @@ gem 'jekyll-timeago'
 gem "jekyll-index-pages"
 gem 'jekyll-relative-links'
 gem 'jekyll-compose', group: [:jekyll_plugins]
+gem 'jekyll-toc'
 
 # gem "rails"
