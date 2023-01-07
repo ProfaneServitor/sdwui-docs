@@ -1,0 +1,749 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>稳定扩散 webUI · Stable Diffusion webUI</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="A browser interface based on Gradio library for Stable Diffusion.
+"><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/style.css">
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/rouge/colorful.css">
+
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/custom.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/sdwui-docs/cn/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/sdwui-docs/cn//assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+
+
+
+
+        
+            <link rel="next" href="/sdwui-docs/cn/2022-12-27-my-new-post.html" />
+        
+    </head>
+    <body>
+        <div class="book">
+<div class="book-summary">
+    <nav role="navigation">
+        <div id="lang">
+<a href="/sdwui-docs/"><img class="emoji" title=":uk:" alt=":uk:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png" height="20" width="20"> en</a> | <a href="/sdwui-docs/ru/"><img class="emoji" title=":ru:" alt=":ru:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1f7-1f1fa.png" height="20" width="20"> ru</a> | <a href="/sdwui-docs/de/"><img class="emoji" title=":de:" alt=":de:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1e9-1f1ea.png" height="20" width="20"> de</a> | <a style="font-weight: bold;" href="/sdwui-docs/cn/"><img class="emoji" title=":cn:" alt=":cn:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1e8-1f1f3.png" height="20" width="20"> cn</a> | <br>
+</div>
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search">
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/sdwui-docs/cn/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter active" data-level="1.1" data-path="/sdwui-docs">
+            
+                <!-- <a href="/sdwui-docs/cn/">
+                    Stable Diffusion webUI
+                </a> -->
+            </li>
+
+            <!-- <li class="divider"></li> -->
+
+
+                    
+                    
+                    <li>
+                      <h2>Getting started</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/dependencies/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/dependencies/">依赖关系</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter active" data-level="1.2" data-path="/sdwui-docs/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/">稳定扩散 webUI</a>
+                              
+                              
+                                  
+                                      <ul>
+<li>
+<a href="#%E5%AE%89%E8%A3%85%E5%92%8C%E8%BF%90%E8%A1%8C">安装和运行</a><ul>
+<li><a href="#%E5%9C%A8-windows-%E4%B8%8A%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85">在 Windows 上自动安装</a></li>
+<li><a href="#%E5%9C%A8-linux-%E4%B8%8A%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85">在 Linux 上自动安装</a></li>
+<li><a href="#%E5%9C%A8-apple-silicon-%E4%B8%8A%E5%AE%89%E8%A3%85">在 Apple Silicon 上安装</a></li>
+</ul>
+</li>
+<li><a href="#%E8%B4%A1%E7%8C%AE">贡献</a></li>
+<li><a href="#%E6%96%87%E6%A1%A3">文档</a></li>
+</ul>
+
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install/">安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/online-services/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/online-services/">在线服务</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/ui-defaults/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/ui-defaults/">更改用户界面默认值</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>Guides</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/cli/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/cli/">命令行参数和设置</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-filenames/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/custom-filenames/">自定义图像文件名和子目录</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-scripts/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/custom-scripts/">自定义脚本</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/extensions/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/extensions/">扩展</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/features/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/features/">特征</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/list-of-time-zones/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/list-of-time-zones/">时区列表</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/localization/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/localization/">本土化</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/negative-prompt/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/negative-prompt/">否定提示</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/optimizations/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/optimizations/">优化</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/textual-inversion/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/textual-inversion/">文字倒置</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/troubleshooting/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/troubleshooting/">故障排除</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/xformers/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/xformers/">变形金刚</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/api/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/api/">API指南</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>development</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/contributing/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/contributing/">贡献</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-custom-scripts/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/developing-custom-scripts/">开发自定义脚本</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-extensions/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/developing-extensions/">开发扩展</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-amd/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install-on-amd/">在 AMD 上安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-nvidia/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install-on-nvidia/">在英伟达上安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-apple/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install-on-apple/">在苹果上安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/tests">
+                          
+                              
+                                <a href="/sdwui-docs/cn/tests">测试</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+
+                    
+                        </li>
+<li class="divider">
+                    
+
+            <!-- <li>
+                <a href="https://github.com/sighingnow/jekyll-gitbook/fork" target="blank" class="gitbook-link">
+                    Fork it Now!
+                </a>
+            </li> -->
+            </li>
+<li><h2>Release notes</h2></li>
+            
+              <li>
+                <a href="/sdwui-docs/cn/2022-12-27-my-new-post.html">
+                  Release note example
+                </a>
+              </li>
+            
+        </ul>
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href=".">稳定扩散 webUI</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner">
+<div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/README">稳定扩散 webUI</h1>
+                    
+
+                    
+                      <div style="border: 1px dashed red; width: 100%; padding: 1em;">
+  <b><img class="emoji" title=":robot:" alt=":robot:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f916.png" height="20" width="20"> This page have been translated automatically. If you want to improve this translation and remove this warning,
+    see <a href="https://github.com/ProfaneServitor/sdwui-docs">project's repository</a></b>
+</div>
+
+                    
+                    <p>基于用于稳定扩散的 Gradio 库的浏览器界面。</p>
+
+<p><img src="/sdwui-docs/assets/txt2img_Screenshot.jpg" alt=""></p>
+
+<p>查看 <a href="../custom-scripts">自定义脚本</a> wiki 页面以获取用户开发的额外脚本。</p>
+
+<p>＃＃ 特征
+<a href="../features">带有图像的详细功能展示</a>：</p>
+<ul>
+  <li>原始的 txt2img 和 img2img 模式</li>
+  <li>一键安装并运行脚本（但您仍然必须安装 python 和 git）</li>
+  <li>涂装</li>
+  <li>修复</li>
+  <li>彩色素描</li>
+  <li>提示矩阵</li>
+  <li>稳定扩散高档</li>
+  <li>注意，指定模型应该更加注意的文本部分</li>
+  <li>a man in a ((tuxedo)) - 会更加注意燕尾服</li>
+  <li>一个穿燕尾服的男人 (tuxedo:1.21) - 替代语法</li>
+  <li>选择文本并按 ctrl+up 或 ctrl+down 自动调整对所选文本的关注（代码由匿名用户提供）</li>
+  <li>Loopback，多次运行img2img处理</li>
+  <li>X/Y 图，一种绘制具有不同参数的二维图像图的方法</li>
+  <li>文本倒置</li>
+  <li>拥有任意数量的嵌入，并为它们使用任何你喜欢的名称</li>
+  <li>使用每个标记具有不同数量向量的多个嵌入</li>
+  <li>适用于半精度浮点数</li>
+  <li>在 8GB 上训练嵌入（还有 6GB 工作的报告）</li>
+  <li>附加选项卡：</li>
+  <li>GFPGAN，修复人脸的神经网络</li>
+  <li>CodeFormer，面部修复工具作为 GFPGAN 的替代品</li>
+  <li>RealESRGAN，神经网络升级器</li>
+  <li>ESRGAN，具有大量第三方模型的神经网络升级器</li>
+  <li>SwinIR 和 Swin2SR（<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/pull/2092">见此处</a>），神经网络升频器</li>
+  <li>LDSR，潜在扩散超分辨率升级</li>
+  <li>调整宽高比选项</li>
+  <li>取样方法选择</li>
+  <li>调整采样器 eta 值（噪声倍增器）</li>
+  <li>更高级的噪音设置选项</li>
+  <li>随时中断处理</li>
+  <li>4GB 视频卡支持（还有 2GB 工作报告）</li>
+  <li>正确的批次种子</li>
+  <li>实时提示令牌长度验证</li>
+  <li>生成参数</li>
+  <li>用于生成图像的参数与该图像一起保存</li>
+  <li>在 PNG 的 PNG 块中，在 JPEG 的 EXIF 中</li>
+  <li>可将图片拖拽至PNG信息标签，恢复生成参数并自动复制到UI中</li>
+  <li>可以在设置中禁用</li>
+  <li>将图像/文本参数拖放到提示框</li>
+  <li>读取生成参数按钮，将提示框中的参数加载到 UI</li>
+  <li>设置页面</li>
+  <li>从 UI 运行任意 python 代码（必须使用 –allow-code 运行才能启用）</li>
+  <li>大多数 UI 元素的鼠标悬停提示</li>
+  <li>可以通过文本配置更改 UI 元素的默认值/混合/最大/步进值</li>
+  <li>随机艺术家按钮</li>
+  <li>平铺支持，用于创建可以像纹理一样平铺的图像的复选框</li>
+  <li>进度条和实时图像生成预览</li>
+  <li>否定提示，一个额外的文本字段，允许您列出您不想在生成的图像中看到的内容</li>
+  <li>样式，一种保存部分提示并稍后通过下拉列表轻松应用它们的方法</li>
+  <li>变体，一种生成相同图像但有微小差异的方法</li>
+  <li>调整种子大小，一种生成相同图像但分辨率略有不同的方法</li>
+  <li>CLIP 询问器，一个尝试从图像中猜测提示的按钮</li>
+  <li>Prompt Editing，一种改变prompt mid-generation的方法，说开始制作西瓜并中途切换到动漫女孩</li>
+  <li>批处理，使用 img2img 处理一组文件</li>
+  <li>Img2img Alternative, reverse Euler method of cross attention control</li>
+  <li>Highres Fix，一个方便的选项，可以一键生成高分辨率图片而不会出现通常的失真</li>
+  <li>即时重新加载检查点</li>
+  <li>检查点合并，一个允许您将最多 3 个检查点合并为一个的选项卡</li>
+  <li>
+<a href="../custom-scripts">自定义脚本</a> 具有来自社区的许多扩展</li>
+  <li>
+<a href="https://energy-based-model.github.io/Compositional-Visual-Generation-with-Composable-Diffusion-Models/">Composable-Diffusion</a>，一种同时使用多个提示的方法</li>
+  <li>使用大写的 <code class="language-plaintext highlighter-rouge">AND</code> 分隔提示</li>
+  <li>还支持提示权重：<code class="language-plaintext highlighter-rouge">a cat :1.2 AND a dog AND a penguin :2.2</code>
+</li>
+  <li>提示没有令牌限制（原始稳定扩散让您最多使用 75 个令牌）</li>
+  <li>DeepDanbooru 集成，为动漫提示创建 danbooru 风格标签</li>
+  <li>
+<a href="../xformers">xformers</a>，选择卡片的主要速度提升：（添加 –xformers 到命令行参数）</li>
+  <li>通过扩展：<a href="https://github.com/yfszzx/stable-diffusion-webui-images-browser">历史选项卡</a>：在 UI 中方便地查看、定向和删除图像</li>
+  <li>生成永久选项</li>
+  <li>培训标签</li>
+  <li>超网络和嵌入选项</li>
+  <li>预处理图像：使用 BLIP 或 deepdanbooru（用于动漫）裁剪、镜像、自动标记</li>
+  <li>剪辑跳过</li>
+  <li>使用超网络</li>
+  <li>使用 VAE</li>
+  <li>进度条中的预计完成时间</li>
+  <li>应用程序接口</li>
+  <li>支持 RunwayML 的专用<a href="https://github.com/runwayml/stable-diffusion#inpainting-with-stable-diffusion">修复模型</a>。</li>
+  <li>通过扩展：<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui-aesthetic-gradients">Aesthetic Gradients</a>，一种通过使用剪辑图像嵌入生成具有特定美感的图像的方法（<a href="https://github.com/vicgalle/stable-diffusion-aesthetic-gradients">https: //github.com/vicgalle/stable-diffusion-aesthetic-gradients</a>)</li>
+  <li>
+<a href="https://github.com/Stability-AI/stablediffusion">稳定扩散 2.0</a> 支持 - 请参阅 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#stable-%20diffusion-20">wiki</a> 的说明</li>
+</ul>
+
+<h2 id="安装和运行">安装和运行</h2>
+<p>确保满足所需的 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Dependencies">dependencies</a> 并遵循适用于 <a href="https://github.com/AUTOMATIC1111">NVidia</a> 的说明/stable-diffusion-webui/wiki/Install-and-Run-on-NVidia-GPUs）（推荐）和 [AMD](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and -在 AMD-GPU 上运行）GPU。</p>
+
+<p>或者，使用在线服务（如 Google Colab）：</p>
+
+<ul>
+  <li><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Online-Services">在线服务列表</a></li>
+</ul>
+
+<h3 id="在-windows-上自动安装">在 Windows 上自动安装</h3>
+<ol>
+  <li>安装<a href="https://www.python.org/downloads/windows/">Python 3.10.6</a>，勾选“Add Python to PATH”</li>
+  <li>安装 <a href="https://git-scm.com/download/win">git</a>。</li>
+  <li>下载 stable-diffusion-webui 存储库，例如通过运行 <code class="language-plaintext highlighter-rouge">git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git</code>。</li>
+  <li>将 <code class="language-plaintext highlighter-rouge">model.ckpt</code> 放在 <code class="language-plaintext highlighter-rouge">models</code> 目录中（参见 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Dependencies">dependencies</a> 获取它的位置）。</li>
+  <li>
+<em>*（可选）*</em> 将 <code class="language-plaintext highlighter-rouge">GFPGANv1.4.pth</code> 与 <code class="language-plaintext highlighter-rouge">webui.py</code> 放在基本目录中（参见 [dependencies](https://github.com/AUTOMATIC1111/stable-diffusion-webui/ wiki/Dependencies）获取它的位置）。</li>
+  <li>以普通非管理员用户身份从 Windows 资源管理器运行 <code class="language-plaintext highlighter-rouge">webui-user.bat</code>。</li>
+</ol>
+
+<h3 id="在-linux-上自动安装">在 Linux 上自动安装</h3>
+<p>1.安装依赖：</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Debian-based:</span>
+<span class="nb">sudo </span>apt <span class="nb">install </span>wget git python3 python3-venv
+<span class="c"># Red Hat-based:</span>
+<span class="nb">sudo </span>dnf <span class="nb">install </span>wget git python3
+<span class="c"># Arch-based:</span>
+<span class="nb">sudo </span>pacman <span class="nt">-S</span> wget git python3
+</code></pre></div></div>
+<ol>
+  <li>要安装在<code class="language-plaintext highlighter-rouge">/home/$(whoami)/stable-diffusion-webui/</code>，运行：
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>bash &lt;<span class="o">(</span>wget <span class="nt">-qO-</span> https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh<span class="o">)</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="在-apple-silicon-上安装">在 Apple Silicon 上安装</h3>
+
+<p><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon">此处</a> 找到说明。</p>
+
+<h2 id="贡献">贡献</h2>
+<p>以下是向此存储库添加代码的方法：<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Contributing">贡献</a></p>
+
+<h2 id="文档">文档</h2>
+<p>文档已从本自述文件移至项目的 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki">wiki</a>。</p>
+
+<p>##学分</p>
+<ul>
+  <li>稳定扩散 - https://github.com/CompVis/stable-diffusion, https://github.com/CompVis/taming-transformers</li>
+  <li>k-diffusion - https://github.com/crowsonkb/k-diffusion.git</li>
+  <li>GFPGAN - https://github.com/TencentARC/GFPGAN.git</li>
+  <li>CodeFormer - https://github.com/sczhou/CodeFormer</li>
+  <li>ESRGAN - https://github.com/xinntao/ESRGAN</li>
+  <li>SwinIR - https://github.com/JingyunLiang/SwinIR</li>
+  <li>Swin2SR - https://github.com/mv-lab/swin2sr</li>
+  <li>LDSR - https://github.com/Hafiidz/latent-diffusion</li>
+  <li>MiDaS - https://github.com/isl-org/MiDaS</li>
+  <li>优化思路 - https://github.com/basujindal/stable-diffusion</li>
+  <li>交叉注意层优化 - Doggettx - https://github.com/Doggettx/stable-diffusion，快速编辑的原创想法。</li>
+  <li>交叉注意层优化 - InvokeAI，lstein - https://github.com/invoke-ai/InvokeAI（原 http://github.com/lstein/stable-diffusion）</li>
+  <li>Textual Inversion - Rinon Gal - https://github.com/rinongal/textual_inversion（我们没有使用他的代码，但我们正在使用他的想法）。</li>
+  <li>SD 高档的想法 - https://github.com/jquesnelle/txt2imghd</li>
+  <li>为 outpainting mk2 生成噪音 - https://github.com/parlance-zz/g-diffuser-bot</li>
+  <li>CLIP 审讯器的想法和借用一些代码 - https://github.com/pharmapsychotic/clip-interrogator</li>
+  <li>可组合扩散的想法 - https://github.com/energy-based-model/Compositional-Visual-Generation-with-Composable-Diffusion-Models-PyTorch</li>
+  <li>xformers - https://github.com/facebookresearch/xformers</li>
+  <li>DeepDanbooru - 动漫扩散器审讯器 https://github.com/KichangKim/DeepDanbooru</li>
+  <li>安全建议 - RyotaK</li>
+  <li>初始 Gradio 脚本 - 由匿名用户发布在 4chan 上。谢谢匿名用户。</li>
+  <li>（你）</li>
+</ul>
+
+                </section>
+            </div>
+<div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title">
+<span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+                        <a href="/sdwui-docs/cn/2022-12-27-my-new-post.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Release note example">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+
+        
+        "next": {
+            "title": "Release note example",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_posts/2022-12-27-my-new-post.md",
+            "ref": "_posts/2022-12-27-my-new-post.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"],
+                "facebook": false,
+                "google": false,
+                "github": true,
+                "github_link": "https://github.com/ProfaneServitor/sdwui-docs/",
+                "telegram": false,
+                "telegram_link": "https://t.me",
+                "instapaper": false,
+                "twitter": false,
+                "vk": false,
+                "weibo": false
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            }
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "Stable Diffusion webUI",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/cn/README.md",
+        "mtime": "",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2023-01-07 18:51:31 +0300"
+    },
+    "basePath": "/sdwui-docs",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/sdwui-docs/assets/gitbook/gitbook.js"></script>
+<script src="/sdwui-docs/assets/gitbook/theme.js"></script>
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+
+<!-- <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script> -->
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+
+</body>
+</html>

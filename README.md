@@ -5,7 +5,7 @@ lang: en
 permalink: /docs-readme
 ---
 
-This is docs translation repository for Stable Diffusion web User Interface.
+This is unofficial docs translation repository for Stable Diffusion web User Interface.
 
 ## How to translate a page
 

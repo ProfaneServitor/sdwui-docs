@@ -38,7 +38,7 @@ def translate(fle):
             if translated == None:
                 translated = line
             result = result + translated + "\n"
-            time.sleep(0.2)
+            time.sleep(0.05)
         else:
             result += line
     title = re.findall("(?<=title: ).*", result)[0]
@@ -55,8 +55,13 @@ for file in os.listdir('_pages/en'):
      filename = os.fsdecode(file)
      target_path = f"{target_dir}/{filename}"
      if os.path.exists(target_path):
-         print(f"{target_path} exists, skipping to next file...")
-         continue
+         f = open(target_path)
+         content = f.read()
+         if len(content) > 4 and not 'machine_translated: true' in content:
+             print(f"{target_path} exists, skipping to next file...")
+             f.close()
+             continue
+         f.close()
      else:
          print(f"Translating {target_path}...")
          f = open(f"_pages/en/{filename}")

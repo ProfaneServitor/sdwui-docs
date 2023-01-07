@@ -2,6 +2,7 @@
 title: Оптимизации
 layout: post
 category: Guides
+permalink: /optimizations/
 machine_translated: true
 lang: ru
 ---

@@ -1,0 +1,1401 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>特征 · Stable Diffusion webUI</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="A browser interface based on Gradio library for Stable Diffusion.
+"><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/style.css">
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/rouge/colorful.css">
+
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/custom.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/sdwui-docs/cn/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/sdwui-docs/cn//assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+
+
+
+            <link rel="prev" href="/sdwui-docs/extensions/" />
+        
+
+        
+            <link rel="next" href="/sdwui-docs/cn/install-on-amd/" />
+        
+    </head>
+    <body>
+        <div class="book">
+<div class="book-summary">
+    <nav role="navigation">
+        <div id="lang">
+<a href="/sdwui-docs/features/"><img class="emoji" title=":uk:" alt=":uk:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png" height="20" width="20"> en</a> | <a href="/sdwui-docs/ru/features/"><img class="emoji" title=":ru:" alt=":ru:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1f7-1f1fa.png" height="20" width="20"> ru</a> | <a href="/sdwui-docs/de/features/"><img class="emoji" title=":de:" alt=":de:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1e9-1f1ea.png" height="20" width="20"> de</a> | <a style="font-weight: bold;" href="/sdwui-docs/cn/features/"><img class="emoji" title=":cn:" alt=":cn:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1e8-1f1f3.png" height="20" width="20"> cn</a> | <br>
+</div>
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search">
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/sdwui-docs/cn/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter" data-level="1.1" data-path="/sdwui-docs">
+            
+                <!-- <a href="/sdwui-docs/cn/">
+                    Stable Diffusion webUI
+                </a> -->
+            </li>
+
+            <!-- <li class="divider"></li> -->
+
+
+                    
+                    
+                    <li>
+                      <h2>Getting started</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/dependencies/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/dependencies/">依赖关系</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/">稳定扩散 webUI</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install/">安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/online-services/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/online-services/">在线服务</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/ui-defaults/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/ui-defaults/">更改用户界面默认值</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>Guides</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/cli/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/cli/">命令行参数和设置</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-filenames/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/custom-filenames/">自定义图像文件名和子目录</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-scripts/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/custom-scripts/">自定义脚本</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/extensions/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/extensions/">扩展</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter active" data-level="1.2" data-path="/sdwui-docs/features/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/features/">特征</a>
+                              
+                              
+                                  
+                                      <ul>
+<li>
+<a href="#%E7%A8%B3%E5%AE%9A%E6%89%A9%E6%95%A3-20">稳定扩散 2.0</a><ul><li><a href="#%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B">基本模型</a></li></ul>
+</li>
+<li><a href="#%E6%B6%82%E8%A3%85">涂装</a></li>
+<li>
+<a href="#%E4%BF%AE%E5%A4%8D">修复</a><ul>
+<li><a href="#%E5%B1%8F%E8%94%BD%E5%86%85%E5%AE%B9">屏蔽内容</a></li>
+<li><a href="#%E4%BB%A5%E5%85%A8%E5%88%86%E8%BE%A8%E7%8E%87%E4%BF%AE%E5%A4%8D">以全分辨率修复</a></li>
+<li><a href="#%E5%B1%8F%E8%94%BD%E6%A8%A1%E5%BC%8F">屏蔽模式</a></li>
+<li><a href="#%E9%98%BF%E5%B0%94%E6%B3%95%E8%92%99%E7%89%88">阿尔法蒙版</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8F%90%E7%A4%BA%E7%9F%A9%E9%98%B5">提示矩阵</a></li>
+<li><a href="#%E5%BD%A9%E8%89%B2%E7%B4%A0%E6%8F%8F">彩色素描</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E5%BC%BA%E8%B0%83">注意/强调</a></li>
+<li><a href="#%E7%8E%AF%E5%9B%9E">环回</a></li>
+<li>
+<a href="#xy-%E5%9B%BE">X/Y 图</a><ul><li><a href="#%E6%8F%90%E7%A4%BAsr">提示S/R</a></li></ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%96%87%E6%9C%AC%E5%8F%8D%E8%BD%AC">文本反转</a></li>
+<li><a href="#%E8%B0%83%E6%95%B4%E5%A4%A7%E5%B0%8F">调整大小</a></li>
+<li><a href="#%E9%87%87%E6%A0%B7%E6%96%B9%E5%BC%8F%E9%80%89%E6%8B%A9">采样方式选择</a></li>
+<li><a href="#%E7%A7%8D%E5%AD%90%E8%B0%83%E6%95%B4%E5%A4%A7%E5%B0%8F">种子调整大小</a></li>
+<li><a href="#%E6%A0%B7%E5%BC%8F">样式</a></li>
+<li><a href="#%E5%90%A6%E5%AE%9A%E6%8F%90%E7%A4%BA">否定提示</a></li>
+<li>
+<a href="#%E5%BF%AB%E9%80%9F%E7%BC%96%E8%BE%91">快速编辑</a><ul><li><a href="#%E4%BA%A4%E6%9B%BF%E8%AF%8D">交替词</a></li></ul>
+</li>
+<li><a href="#%E5%8F%AF%E7%BB%84%E5%90%88%E6%89%A9%E6%95%A3">可组合扩散</a></li>
+<li><a href="#4gb-%E6%98%BE%E5%8D%A1%E6%94%AF%E6%8C%81">4GB 显卡支持</a></li>
+<li><a href="#%E4%BA%BA%E8%84%B8%E4%BF%AE%E5%A4%8D">人脸修复</a></li>
+<li><a href="#%E4%BF%9D%E5%AD%98">保存</a></li>
+<li><a href="#%E5%8A%A0%E8%BD%BD%E4%B8%AD">加载中</a></li>
+<li><a href="#%E6%8F%90%E7%A4%BA%E9%AA%8C%E8%AF%81">提示验证</a></li>
+<li><a href="#png-%E4%BF%A1%E6%81%AF">PNG 信息</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE">设置</a></li>
+<li><a href="#%E6%96%87%E4%BB%B6%E5%90%8D%E6%A0%BC%E5%BC%8F">文件名格式</a></li>
+<li><a href="#%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC">用户脚本</a></li>
+<li><a href="#%E7%95%8C%E9%9D%A2%E9%85%8D%E7%BD%AE">界面配置</a></li>
+<li><a href="#img2img-%E6%9B%BF%E4%BB%A3%E6%B5%8B%E8%AF%95">img2img 替代测试</a></li>
+<li><a href="#%E7%94%A8%E6%88%B7css">用户.css</a></li>
+<li><a href="#%E9%80%9A%E7%9F%A5mp3">通知.mp3</a></li>
+<li>
+<a href="#%E8%B0%83%E6%95%B4">调整</a><ul><li><a href="#%E5%BF%BD%E7%95%A5-clip-%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%B1%82">忽略 CLIP 模型的最后一层</a></li></ul>
+</li>
+</ul>
+
+                                  
+                              
+                          
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/list-of-time-zones/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/list-of-time-zones/">时区列表</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/localization/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/localization/">本土化</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/negative-prompt/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/negative-prompt/">否定提示</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/optimizations/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/optimizations/">优化</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/textual-inversion/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/textual-inversion/">文字倒置</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/troubleshooting/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/troubleshooting/">故障排除</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/xformers/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/xformers/">变形金刚</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/api/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/api/">API指南</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>development</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/contributing/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/contributing/">贡献</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-custom-scripts/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/developing-custom-scripts/">开发自定义脚本</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-extensions/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/developing-extensions/">开发扩展</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-amd/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install-on-amd/">在 AMD 上安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-nvidia/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install-on-nvidia/">在英伟达上安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-apple/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install-on-apple/">在苹果上安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/tests">
+                          
+                              
+                                <a href="/sdwui-docs/cn/tests">测试</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+
+                    
+
+            <!-- <li>
+                <a href="https://github.com/sighingnow/jekyll-gitbook/fork" target="blank" class="gitbook-link">
+                    Fork it Now!
+                </a>
+            </li> -->
+            </li>
+<li><h2>Release notes</h2></li>
+            
+              <li>
+                <a href="/sdwui-docs/cn/2022-12-27-my-new-post.html">
+                  Release note example
+                </a>
+              </li>
+            
+        
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href=".">特征</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner">
+<div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/Features">特征</h1>
+                    
+
+                    
+                      <div style="border: 1px dashed red; width: 100%; padding: 1em;">
+  <b><img class="emoji" title=":robot:" alt=":robot:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f916.png" height="20" width="20"> This page have been translated automatically. If you want to improve this translation and remove this warning,
+    see <a href="https://github.com/ProfaneServitor/sdwui-docs">project's repository</a></b>
+</div>
+
+                    
+                    <p>这是 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Stable Diffusion web UI</a> 的功能展示页面。</p>
+
+<p>除非另有说明，否则所有示例都是非精选的。</p>
+
+<h1 id="稳定扩散-20">稳定扩散 2.0</h1>
+<h2 id="基本模型">基本模型</h2>
+<p>支持的模型：768-v-ema.ckpt（[模型]（https://huggingface.co/stabilityai/stable-diffusion-2/blob/main/768-v-ema.ckpt），[配置]（https ://raw.githubusercontent.com/Stability-AI/stablediffusion/main/configs/stable-diffusion/v2-inference-v.yaml)) 和 512-base-ema.ckpt (<a href="https://huggingface%20.co/stabilityai/stable-diffusion-2-base/blob/main/512-base-ema.ckpt">模型</a>, [配置](https://raw.githubusercontent.com/Stability-AI/stablediffusion/main/configs/稳定扩散/v2-inference.yaml））。 2.1 检查站也应该工作。</p>
+
+<ul>
+  <li>下载检查点（从这里：https://huggingface.co/stabilityai/stable-diffusion-2）</li>
+  <li>将其放入 models/Stable-Diffusion 目录</li>
+  <li>从 SD2.0 存储库中获取配置并将其放入与检查点相同的位置，将其重命名为具有相同的文件名（即，如果您的检查点名为“768-v-ema.ckpt”，则配置应命名为“768- v-ema.yaml`)</li>
+  <li>从 UI 中选择新的检查点</li>
+</ul>
+
+<p>对于 2.0 模型，训练选项卡很可能会被破坏。</p>
+
+<p>如果 2.0 或 2.1 正在生成黑色图像，请使用 <code class="language-plaintext highlighter-rouge">--no-half</code> 启用全精度或尝试使用 <code class="language-plaintext highlighter-rouge">--xformers</code> 优化。</p>
+
+<p><em><strong>注意：</strong></em> SD 2.0 和 2.1 对 FP16 数值不稳定性更敏感（正如他们自己所指出的<a href="https://github.com/Stability-AI/stablediffusion/commit/c12d960d1ee4f9134c2516862ef991ec52d3f59e">此处</a>）由于它们新的交叉注意力模块。</p>
+
+<p>在 fp16 上：<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/5503#issuecomment-1341495770">comment</a> 在 webui-user.bat 中启用：</p>
+
+<p>@回声关闭</p>
+
+<p>设置蟒蛇=
+设置 GIT=
+设置 VENV_DIR=
+设置 COMMANDLINE_ARGS=你的命令行选项
+set STABLE_DIFFUSION_COMMIT_HASH=”c12d960d1ee4f9134c2516862ef991ec52d3f59e”
+设置 ATTN_PRECISION=fp16</p>
+
+<p>调用webui.bat</p>
+
+<p>##深度引导模型
+<a href="https://github.com/Stability-AI/stablediffusion#depth-conditional-stable-diffusion">更多信息</a>。 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/pull/5542">PR</a>。
+指示：</p>
+<ul>
+  <li>下载 <a href="https://huggingface.co/stabilityai/stable-diffusion-2-depth">512-depth-ema.ckpt</a> 检查点</li>
+  <li>将其放置在模型/稳定扩散中</li>
+  <li>获取 <a href="https://raw.githubusercontent.com/Stability-AI/stablediffusion/main/configs/stable-diffusion/v2-midas-inference.yaml">config</a> 并将其放在与检查点相同的文件夹中</li>
+  <li>将配置重命名为“512-depth-ema.yaml”</li>
+  <li>从 UI 中选择新的检查点</li>
+</ul>
+
+<p>深度引导模型仅适用于 img2img 选项卡。</p>
+
+<h1 id="涂装">涂装</h1>
+
+<p>Outpainting 扩展了原始图像并修复了创建的空白区域。</p>
+
+<p>例子：</p>
+
+<p>|原创 |外涂 |再次超越 |
+|——————————|——————————|——————————|</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="%E5%9B%BE%E7%89%87/outpainting-1.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/outpainting-2.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/outpainting-3.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>来自 4chan 的匿名用户的原始图像。谢谢匿名用户。</p>
+
+<p>您可以在底部的 img2img 选项卡中找到该功能，位于脚本 -&gt; 穷人的涂装下。</p>
+
+<p>Outpainting 与普通图像生成不同，它似乎从大步数中获益良多。一个好的涂装的秘诀
+是一个很好的提示，与图片相匹配，用于去噪的滑块和 CFG 比例设置为最大，步数为 50 到 100
+Euler 祖先或 DPM2 祖先采样器。</p>
+
+<p>| 81 步，欧拉 A | 30 步，欧拉 A | 10 步，欧拉 A | 80 步，欧拉 A |
+|————————————-|—————————————|————————————–|————————————-|</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="%E5%9B%BE%E5%83%8F/inpainting-81-euler-a.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/inpainting-30-euler-a.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/%E4%BF%AE%E5%A4%8D-10-euler-a.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/inpainting-80-dpm2-a.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="修复">修复</h1>
+<p>在 img2img 选项卡中，在图像的一部分上绘制遮罩，该部分将被补漆。</p>
+
+<p><img src="%E5%9B%BE%E5%83%8F/%E4%BF%AE%E5%A4%8D.png" alt=""></p>
+
+<p>修复选项：</p>
+<ul>
+  <li>在网络编辑器中自己绘制一个面具</li>
+  <li>在外部编辑器中删除部分图片并上传透明图片。任何稍微透明的区域都将成为蒙版的一部分。请注意 [某些编辑器](https://docs.krita.org/en/reference_manual/layers_and_masks/split_alpha.html#how-to-save-a-png-texture-and-keep-color-values-in-全透明区域）默认将完全透明区域保存为黑色。</li>
+  <li>将模式（图片右下角）更改为“上传蒙版”并为蒙版选择单独的黑白图像（白色=修复）。</li>
+</ul>
+
+<p>##修复模型
+RunwayML 已经训练了一个专门为修复而设计的附加模型。这个模型接受额外的输入——没有噪声的初始图像加上蒙版——并且似乎在工作上要好得多。</p>
+
+<p>该模型的下载和额外信息在这里：https://github.com/runwayml/stable-diffusion#inpainting-with-stable-diffusion</p>
+
+<p>要使用该模型，您必须重命名检查点，使其文件名以“inpainting.ckpt”结尾，例如“1.5-inpainting.ckpt”。</p>
+
+<p>之后只需选择检查点，因为您通常会选择任何检查点，您就可以开始了。</p>
+
+<h2 id="屏蔽内容">屏蔽内容</h2>
+<p>屏蔽的内容字段决定了在修复之前将内容放入屏蔽区域。</p>
+
+<p>| mask                                            | fill                                            | original                                            | latent noise                                            | latent nothing                                            |
+|————————————————-|————————————————-|—————————————————–|———————————————————|———————————————————–|</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="%E5%9B%BE%E5%83%8F/%E4%BF%AE%E5%A4%8D%E5%88%9D%E5%A7%8B%E5%86%85%E5%AE%B9%E6%8E%A9%E7%A0%81.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/%E4%BF%AE%E5%A4%8D%E5%88%9D%E5%A7%8B%E5%86%85%E5%AE%B9%E5%A1%AB%E5%85%85.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/%E4%BF%AE%E5%A4%8D%E5%88%9D%E5%A7%8B%E5%86%85%E5%AE%B9-original.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/%E4%BF%AE%E5%A4%8D%E5%88%9D%E5%A7%8B%E5%86%85%E5%AE%B9-%E6%BD%9C%E5%9C%A8%E5%99%AA%E5%A3%B0.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/%E4%BF%AE%E5%A4%8D%E5%88%9D%E5%A7%8B%E5%86%85%E5%AE%B9-%E6%BD%9C%E5%9C%A8-nothing.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="以全分辨率修复">以全分辨率修复</h2>
+<p>通常，修复会将图像调整为 UI 中指定的目标分辨率。全分辨率 Inpaint
+启用后，仅调整遮罩区域的大小，并在处理后粘贴回原始图片。
+这允许您处理大图片，并允许您以更大的分辨率渲染修复的对象。</p>
+
+<p>|输入 |修复正常 |全分辨率修复 |
+|————————————-|———————————-|———————————–|</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="%E5%9B%BE%E5%83%8F/inpaint-whole-mask.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/inpaint-whole-no.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/inpaint-whole-yes.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="屏蔽模式">屏蔽模式</h2>
+<p>屏蔽模式有两个选项：</p>
+<ul>
+  <li>Inpaint masked - 遮罩下的区域被修复</li>
+  <li>Inpaint not masked - 面具下没有变化，其他一切都被修复</li>
+</ul>
+
+<h2 id="阿尔法蒙版">阿尔法蒙版</h2>
+
+<p>|输入 |输出 |
+|——————————|——————————-|</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="%E5%9B%BE%E5%83%8F/%E4%BF%AE%E5%A4%8D-mask.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/inpaint-mask2.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="提示矩阵">提示矩阵</h1>
+<p>使用 <code class="language-plaintext highlighter-rouge">|</code> 字符分隔多个提示，系统将为它们的每个组合生成一个图像。
+例如，如果您使用“现代城市中繁忙的城市街道|插图|电影灯光”提示，则有四种可能的组合（提示的第一部分始终保留）：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">现代城市中繁忙的城市街道</code></li>
+  <li><code class="language-plaintext highlighter-rouge">现代城市中繁忙的城市街道，插图</code></li>
+  <li>
+<code class="language-plaintext highlighter-rouge">现代城市中繁忙的城市街道，电影般的灯光</code>
+-<code class="language-plaintext highlighter-rouge">现代城市中繁忙的城市街道，插图，电影灯光</code>
+</li>
+</ul>
+
+<p>将按此顺序生成四个图像，所有图像都具有相同的种子，每个图像都有相应的提示：
+<img src="%E5%9B%BE%E7%89%87/%E6%8F%90%E7%A4%BA%E7%9F%A9%E9%98%B5.png" alt=""></p>
+
+<p>另一个例子，这次有 5 个提示和 16 个变体：
+<img src="%E5%9B%BE%E7%89%87/prompt_matrix.jpg" alt=""></p>
+
+<p>您可以在底部的脚本 -&gt; 提示矩阵下找到该功能。</p>
+
+<h1 id="彩色素描">彩色素描</h1>
+
+<p>img2img 的基本着色工具。要在 img2img 中使用此功能，请在命令行参数中使用“–gradio-img2img-tool color-sketch”启用。要在修复模式下使用此功能，请启用“–gradio-inpaint-tool color-sketch”。基于 Chromium 的浏览器支持滴管工具。 （见图）</p>
+
+<p><img src="https://user-images.githubusercontent.com/98228077/196140222-54bc71ad-2746-4c38-8075-5c53fbcde2a9.png" alt="滴管"></p>
+
+<p>#稳定扩散高档
+使用 RealESRGAN/ESRGAN 的高档图像，然后遍历结果的图块，使用 img2img 改进它们。
+它还有一个选项，让您可以在外部程序中自己完成放大部分，只需使用 img2img 遍历图块。</p>
+
+<p>原创想法：https://github.com/jquesnelle/txt2imghd。这是一个独立的实现。</p>
+
+<p>要使用此功能，请从脚本下拉选择中选择“SD upscale”（img2img 选项卡）。</p>
+
+<p><img src="https://user-images.githubusercontent.com/39339941/193300082-be3b8864-3c28-44b7-bb75-f893f92269b6.png" alt="chrome_dl8hcMPYcx"></p>
+
+<p>输入图像将放大到原始图像的两倍
+宽度和高度，以及 UI 的宽度和高度滑块指定各个图块的大小。因为重叠，
+拼贴的大小可能非常重要：512x512 图像需要九个 512x512 拼贴（因为重叠），但仅
+四个 640x640 的图块。</p>
+
+<p>升级的推荐参数：</p>
+<ul>
+  <li>采样方法：欧拉a</li>
+  <li>降噪强度：0.2，如果你喜欢冒险，可以提高到 0.4</li>
+</ul>
+
+<p>|原创 |真ESRGAN |黄玉十亿像素 |标清高档|
+|——————————————-|———————————————|———————————————————|———————————————|</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="%E5%9B%BE%E7%89%87/sd-upscale-robot-original.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/sd-upscale-robot-realrgan.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E5%83%8F/sd-upscale-robot-esrgan-topaz-gigapixel.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/sd-upscale-robot-sd-upscale.png" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="%E5%9B%BE%E7%89%87/sd-upscale-castle-original.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/sd-upscale-castle-realesrgan.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/sd-upscale-castle-esrgan-topaz-gigapixel.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/sd-upscale-castle-sd-upscale.png" alt=""></td>
+    </tr>
+    <tr>
+      <td><img src="%E5%9B%BE%E7%89%87/sd-upscale-city-original.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/sd-upscale-city-realesrgan.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/sd-upscale-city-esrgan-topaz-gigapixel.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/sd-upscale-city-sd-upscale.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="注意强调">注意/强调</h1>
+<p>在提示中使用 <code class="language-plaintext highlighter-rouge">()</code> 会增加模型对封闭词的注意力，而 <code class="language-plaintext highlighter-rouge">[]</code> 会减少它。您可以组合多个修饰符：</p>
+
+<p><img src="%E5%9B%BE%E7%89%87/attention-3.jpg" alt=""></p>
+
+<p>备忘单：</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">a (word)</code> - 将对 <code class="language-plaintext highlighter-rouge">word</code> 的关注度提高 1.1 倍</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">a ((word))</code> - 将对 <code class="language-plaintext highlighter-rouge">word</code> 的关注度提高 1.21 (= 1.1 * 1.1)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">a [word]</code> - 将对 <code class="language-plaintext highlighter-rouge">word</code> 的关注度降低 1.1 倍</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">a (word:1.5)</code> - 将对 <code class="language-plaintext highlighter-rouge">word</code> 的关注度提高 1.5 倍</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">a (word:0.25)</code> - 将对 <code class="language-plaintext highlighter-rouge">word</code> 的关注度降低 4 倍（= 1 / 0.25）</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">a \(word\)</code> - 在提示中使用文字 <code class="language-plaintext highlighter-rouge">()</code> 字符</li>
+</ul>
+
+<p>使用 <code class="language-plaintext highlighter-rouge">()</code>，可以像这样指定权重：<code class="language-plaintext highlighter-rouge">(text:1.4)</code>。如果未指定权重，则假定为 1.1。指定权重仅适用于 <code class="language-plaintext highlighter-rouge">()</code> 而不适用于 <code class="language-plaintext highlighter-rouge">[]</code>。</p>
+
+<p>如果你想在提示中使用任何文字 <code class="language-plaintext highlighter-rouge">()[]</code> 字符，请使用反斜杠将它们转义：<code class="language-plaintext highlighter-rouge">anime_\(character\)</code>。</p>
+
+<p>在 2022-09-29，添加了支持转义字符和数字权重的新实现。新实现的一个缺点是旧实现并不完美，有时会吃掉字符：例如，“a (((farm))), daytime”，如果没有逗号，将变成“a farm daytime”。正确保留所有文本的新实现不共享此行为，这意味着您保存的种子可能会产生不同的图片。目前，设置中有一个选项可以使用旧的实现。</p>
+
+<p>NAI 使用我在 2022 年 9 月 29 日之前的实现，除了他们使用 1.05 作为乘数并使用“{}”而不是“()”。所以转换适用：</p>
+
+<ul>
+  <li>他们的 <code class="language-plaintext highlighter-rouge">{word}</code> = 我们的 <code class="language-plaintext highlighter-rouge">(word:1.05)</code>
+</li>
+  <li>他们的 `` = 我们的 <code class="language-plaintext highlighter-rouge">(word:1.1025)</code>
+</li>
+  <li>他们的 <code class="language-plaintext highlighter-rouge">[word]</code> = 我们的 <code class="language-plaintext highlighter-rouge">(word:0.952)</code> (0.952 = 1/1.05)</li>
+  <li>他们的 <code class="language-plaintext highlighter-rouge">[[word]]</code> = 我们的 <code class="language-plaintext highlighter-rouge">(word:0.907)</code> (0.907 = 1/1.05/1.05)</li>
+</ul>
+
+<h1 id="环回">环回</h1>
+<p>在 img2img 中选择环回脚本允许您自动将输出图像作为下一批的输入。相当于
+保存输出图像，并用它替换输入图像。批次计数设置控制多少次迭代
+这是你得到的。</p>
+
+<p>通常，在执行此操作时，您会自己从众多图像中选择一个用于下一次迭代，因此有用性
+这个功能可能有问题，但我已经设法用它获得了一些我无法获得的非常好的输出
+否则。</p>
+
+<p>示例：（精选结果）</p>
+
+<p><img src="%E5%9B%BE%E7%89%87/loopback.jpg" alt=""></p>
+
+<p>来自 4chan 的匿名用户的原始图像。谢谢匿名用户。</p>
+
+<h1 id="xy-图">X/Y 图</h1>
+<p>创建具有不同参数的图像网格。选择哪些参数应由行和列使用共享
+X 类型和Y 类型字段，并将以逗号分隔的那些参数输入到X 值/Y 值字段中。对于整数，
+和浮点数，并支持范围。例子：</p>
+
+<ul>
+  <li>简单范围：</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">1-5</code> = 1、2、3、4、5</li>
+  <li>括号内增量的范围：</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">1-5 (+2)</code> = 1, 3, 5</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">10-5 (-3)</code> = 10, 7</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">1-3 (+0.5)</code> = 1, 1.5, 2, 2.5, 3</li>
+  <li>方括号中包含计数的范围：</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">1-10 [5]</code> = 1, 3, 5, 7, 10</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">0.0-1.0 [6]</code> = 0.0, 0.2, 0.4, 0.6, 0.8, 1.0</li>
+</ul>
+
+<p><img src="%E5%9B%BE%E7%89%87/xy_grid-medusa.png" alt=""></p>
+
+<p>以下是创建上图的设置：</p>
+
+<p><img src="%E5%9B%BE%E7%89%87/xy_grid-medusa-ui.png" alt=""></p>
+
+<h3 id="提示sr">提示S/R</h3>
+<p>Prompt S/R 是 X/Y Plot 较难理解的操作模式之一。 S/R 代表搜索/替换，这就是它的作用 - 您输入一个单词或短语列表，它从列表中获取第一个并将其视为关键字，然后用列表中的其他条目替换该关键字的所有实例.</p>
+
+<p>例如，使用提示 <code class="language-plaintext highlighter-rouge">a man holding an apple, 8k clean</code> 和 Prompt S/R <code class="language-plaintext highlighter-rouge">an apple, a watermelon, a gun</code> 你会得到三个提示：</p>
+
+<p>-<code class="language-plaintext highlighter-rouge">一个拿着苹果的男人，8k 干净</code>
+-<code class="language-plaintext highlighter-rouge">一个拿着西瓜的人，8k 干净</code>
+-<code class="language-plaintext highlighter-rouge">一个拿着枪的男人，8k 干净</code></p>
+
+<p>该列表使用与 CSV 文件中的一行相同的语法，因此如果您想在条目中包含逗号，您必须将文本放在引号中并确保引号和分隔逗号之间没有空格：</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">darkness, light, green, heat</code> - 4 items - <code class="language-plaintext highlighter-rouge">darkness</code>, <code class="language-plaintext highlighter-rouge">light</code>, <code class="language-plaintext highlighter-rouge">green</code>, <code class="language-plaintext highlighter-rouge">heat</code>
+</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">darkness, "light, green", heat</code> - 错误 - 4 items - <code class="language-plaintext highlighter-rouge">darkness</code>, <code class="language-plaintext highlighter-rouge">"light</code>, <code class="language-plaintext highlighter-rouge">green"</code>, <code class="language-plaintext highlighter-rouge">heat</code>
+</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">darkness,"light, green", heat</code> - RIGHT - 3 items - <code class="language-plaintext highlighter-rouge">darkness</code>, <code class="language-plaintext highlighter-rouge">light, green</code>, <code class="language-plaintext highlighter-rouge">heat</code>
+</li>
+</ul>
+
+<h1 id="文本反转">文本反转</h1>
+<p>简短说明：将您的嵌入放入 embeddings 目录，并在提示中使用文件名。</p>
+
+<p>详细解释：<a href="Textual-Inversion">Textual Inversion</a></p>
+
+<p><img src="https://user-images.githubusercontent.com/20920490/193285770-9454c5e1-e594-463c-8be8-1488ddf2877b.png" alt="grid-0037"></p>
+
+<h1 id="调整大小">调整大小</h1>
+<p>在 img2img 模式下调整输入图像的大小有三个选项：</p>
+
+<ul>
+  <li>调整大小 - 简单地将源图像调整为目标分辨率，导致宽高比不正确</li>
+  <li>裁剪和调整大小 - 调整源图像的大小以保持纵横比，使其占据整个目标分辨率，并裁剪突出的部分</li>
+  <li>调整大小和填充 - 调整源图像的大小，保留宽高比，使其完全适合目标分辨率，并按源图像的行/列填充空白空间</li>
+</ul>
+
+<p>例子：
+<img src="%E5%9B%BE%E7%89%87/resizing.jpg" alt=""></p>
+
+<h1 id="采样方式选择">采样方式选择</h1>
+<p>为txt2img挑出多种采样方式：</p>
+
+<p><img src="%E5%9B%BE%E7%89%87/%E9%87%87%E6%A0%B7.jpg" alt=""></p>
+
+<h1 id="种子调整大小">种子调整大小</h1>
+<p>此功能允许您从不同分辨率的已知种子生成图像。通常，当您更改分辨率时，
+即使保留所有其他参数（包括种子），图像也会完全改变。通过调整种子大小，您可以指定分辨率
+的原始图像，并且模型很可能会产生看起来非常相似的东西，即使分辨率不同。
+在下面的示例中，最左边的图片是 512x512，其他图片使用完全相同的参数生成，但垂直方向更大
+解析度。</p>
+
+<p>|资讯 |图片 |
+|—————————|——————————-|</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>未启用种子调整大小</td>
+      <td><img src="%E5%9B%BE%E7%89%87/seed-noresize.png" alt=""></td>
+    </tr>
+    <tr>
+      <td>种子从 512x512 调整大小</td>
+      <td><img src="%E5%9B%BE%E7%89%87/seed-resize.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>祖先采样器在这方面比其他采样器差一点。</p>
+
+<p>您可以通过单击种子附近的“额外”复选框找到此功能。</p>
+
+<p>＃ 变化
+变化强度滑块和变化种子字段允许您指定现有图片应更改多少以使其看起来
+像一个不同的。在最大强度下，您将获得带有变异种子的图片，至少 - 带有原始种子的图片（除了
+用于使用祖先采样器时）。</p>
+
+<p><img src="%E5%9B%BE%E7%89%87/%E7%A7%8D%E5%AD%90%E5%8F%98%E4%BD%93.jpg" alt=""></p>
+
+<p>您可以通过单击种子附近的“额外”复选框找到此功能。</p>
+
+<h1 id="样式">样式</h1>
+<p>按“将提示另存为样式”按钮将当前提示写入 styles.csv，这是一个包含样式集合的文件。一个保管箱
+提示的右侧将允许您从以前保存的样式中选择任何样式，并自动将其附加到您的输入中。
+要删除样式，请从 styles.csv 中手动删除它并重新启动程序。</p>
+
+<p>如果您在样式中使用特殊字符串“{prompt}”，它会将提示中当前的任何内容替换到该位置，而不是将样式附加到您的提示中。</p>
+
+<h1 id="否定提示">否定提示</h1>
+
+<p>允许您使用另一个提示，提示模型在生成图片时应避免的事情。这通过使用
+采样过程中无条件条件的否定提示，而不是空字符串。</p>
+
+<p>进阶解释：【否定提示】（Negative-prompt）</p>
+
+<p>|原创 |负：紫色 |负面：触角 |
+|——————————-|———————————|————————————|</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="%E5%9B%BE%E7%89%87/negative-base.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/negative-purple.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/negative-tentacles.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>#CLIP 询问器</p>
+
+<p>最初来自：https://github.com/pharmapsychotic/clip-interrogator</p>
+
+<p>CLIP 询问器允许您从图像中检索提示。提示不允许您重现此内容
+精确的图像（有时它甚至不会很接近），但这可能是一个好的开始。</p>
+
+<p><img src="%E5%9B%BE%E7%89%87/CLIP-interrogate.png" alt=""></p>
+
+<p>第一次运行 CLIP interrogator 时，它会下载几千兆字节的模型。</p>
+
+<p>CLIP 询问器有两个部分：一个是 BLIP 模型，它根据图片创建文本描述。
+另一个是 CLIP 模型，它会从列表中挑选出与图片相关的几行。默认情况下，有
+只是一个列表 - 艺术家列表（来自 <code class="language-plaintext highlighter-rouge">artists.csv</code>）。您可以通过执行以下操作添加更多列表：</p>
+
+<ul>
+  <li>在与 webui 相同的位置创建 <code class="language-plaintext highlighter-rouge">interrogate</code> 目录</li>
+  <li>将文本文件放入其中，每行都有相关描述</li>
+</ul>
+
+<p>有关要使用的文本文件的示例，请参阅 https://github.com/pharmapsychotic/clip-interrogator/tree/main/data。
+事实上，您可以从那里获取文件并使用它们 - 只需跳过 artists.txt 因为您已经有了一个列表
+<code class="language-plaintext highlighter-rouge">artists.csv</code> 中的艺术家（或者也使用它，谁会阻止你）。每个文件在最终描述中添加一行文本。
+如果您添加“.top3”。到文件名，例如 <code class="language-plaintext highlighter-rouge">flavors.top3.txt</code>，该文件中最相关的三行将是
+添加到提示中（其他号码也可以）。</p>
+
+<p>有与此功能相关的设置：</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">Interrogate: keep models in VRAM</code> - 请勿在使用后从内存中卸载 Interrogate 模型。对于具有大量 VRAM 的用户。</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Interrogate: use artists from artists.csv</code> - 在询问时添加来自 <code class="language-plaintext highlighter-rouge">artists.csv</code> 的艺术家。当你在 interrogate 目录中有你的艺术家列表时，禁用它可能很有用</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Interrogate: num_beams for BLIP</code> - 影响 BLIP 模型详细描述的参数（生成提示的第一部分）</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Interrogate: minimum description length</code> - BLIP 模型文本的最小长度</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Interrogate: maximum descripton length</code> - BLIP 模型文本的最大长度</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Interrogate: text file 中的最大行数</code> - interrogator 将只考虑文件中这么多的第一行。设置为 0，默认为 1500，大约是 4GB 视频卡可以处理的量。</li>
+</ul>
+
+<h1 id="快速编辑">快速编辑</h1>
+
+<p><img src="https://user-images.githubusercontent.com/20920490/190426933-9748708b-6db0-4cb0-8cb9-3285053916b8.jpg" alt="xy_grid-0022-646033397"></p>
+
+<p>即时编辑允许您开始对一张图片进行采样，但在中间切换到其他图片。其基本语法是：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[from:to:when]
+</code></pre></div></div>
+
+<p>其中“from”和“to”是任意文本，“when”是一个数字，它定义了应该在采样周期的多晚进行切换。越晚，模型绘制“to”文本代替“from”文本的能力就越小。如果“when”是一个介于 0 和 1 之间的数字，则它是进行切换之前的步数的一小部分。如果它是一个大于零的整数，它就是进行切换之前的步骤。</p>
+
+<p>将一个提示编辑嵌套在另一个提示编辑中确实有效。</p>
+
+<p>此外：</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">[to:when]</code> - 在固定数量的步骤后将 <code class="language-plaintext highlighter-rouge">to</code> 添加到提示中（<code class="language-plaintext highlighter-rouge">when</code>）</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[from::when]</code> - 在固定步数（<code class="language-plaintext highlighter-rouge">when</code>）后从提示中删除 <code class="language-plaintext highlighter-rouge">from</code>
+</li>
+</ul>
+
+<p>例子：
+<code class="language-plaintext highlighter-rouge">[幻想：赛博朋克：16]风景</code></p>
+
+<ul>
+  <li>开始时，模型将绘制“幻想风景”。</li>
+  <li>在第 16 步之后，它将切换到绘制“赛博朋克风景”，从它停止的地方继续幻想。</li>
+</ul>
+
+<p>这是一个包含多个编辑的更复杂的示例：
+<code class="language-plaintext highlighter-rouge">带有 [mountain:lake:0.25] 和 [an oak:a christmas tree:0.75][ 前景 ::0.6][ 背景 0.25] [shoddy:masterful:0.5] 的奇幻风景</code>（采样器有 100 个步骤）</p>
+
+<ul>
+  <li>开始时，“前景中有一座山和一棵橡树的奇幻风景”</li>
+  <li>在第 25 步之后，“前景中有一个湖泊和一棵橡树的奇幻风景，背景很差”</li>
+  <li>在第 50 步之后，“前景中有一个湖泊和一棵橡树的奇幻风景非常棒”</li>
+  <li>在第 60 步之后，“以湖泊和橡树为背景的奇幻景观精湛”</li>
+  <li>在第 75 步之后，“背景中有湖泊和一棵圣诞树的奇幻景观精湛”</li>
+</ul>
+
+<p>顶部的图片是根据提示制作的：</p>
+
+<p>`微笑的第二次世界大战将军的官方肖像，[男：女：0.99]，开朗，快乐，详细的脸，20 世纪，高度详细，电影照明，Greg Rutkowski 的数字艺术绘画</p>
+
+<p>数字 0.99 将替换为您在图像的列标签中看到的任何内容。</p>
+
+<p>图片最后一列是[male:female:0.0]，这本质上是让模型从头开始画女性，而不是从男性将军开始，这就是为什么它看起来与其他人如此不同。</p>
+
+<h2 id="交替词">交替词</h2>
+
+<p>每隔一步交换的方便语法。</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>[牛</td>
+      <td>马]在田野里</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>在第 1 步中，提示是“田间的奶牛”。第 2 步是“田野里的马”。第 3 步是“田野里的奶牛”，依此类推。</p>
+
+<p><img src="https://user-images.githubusercontent.com/39339941/197556926-49ceb72b-daf3-4208-86f3-c2e7e9cd775a.gif" alt="交替词"></p>
+
+<p>请参阅下面的更高级示例。在第 8 步，链条从“人”循环回到“牛”。</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>[牛</td>
+      <td>牛</td>
+      <td>马</td>
+      <td>人</td>
+      <td>东北虎</td>
+      <td>牛</td>
+      <td>人]在田野里</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>提示编辑首先由 Doggettx 在 <a href="https://www.reddit.com/r/StableDiffusion/comments/xas2os/simple_prompt2prompt_implementation_with_prompt/">this myspace.com post</a> 中实现。</p>
+
+<p>＃ 高分辨率。使固定
+一个方便的选项，可以以较低的分辨率部分渲染您的图像，放大它，然后以高分辨率添加细节。默认情况下，txt2img 以非常高的分辨率制作可怕的图像，这使得避免使用小图片的构图成为可能。通过选中 txt2img 页面上的“Highres.fix”复选框启用。</p>
+
+<p>|没有|与|
+|——————————-|———————————|</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="https://user-images.githubusercontent.com/20920490/191177752-ad983e62-8e1c-4197-8f3b-3165a6a6c31d.png" alt="00262-836728130"></td>
+      <td><img src="https://user-images.githubusercontent.com/20920490/191177785-395a951e-0d2e-4db7-9645-4c5af9321772.png" alt="00261-836728130"></td>
+    </tr>
+    <tr>
+      <td><img src="https://user-images.githubusercontent.com/20920490/191178018-25dcd98d-6c45-4c31-ab7a-3de6c51c52e3.png" alt="00345-950170121"></td>
+      <td><img src="https://user-images.githubusercontent.com/20920490/191178048-3eba3db4-e5be-4617-9bfe-2cb36cebaafc.png" alt="00341-950170121"></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="可组合扩散">可组合扩散</h1>
+
+<p>允许组合多个提示的方法。
+使用大写字母 AND 组合提示</p>
+
+<p>一只猫和一只狗</p>
+
+<p>支持提示权重：<code class="language-plaintext highlighter-rouge">a cat :1.2 AND a dog AND a penguin :2.2</code>
+默认权重值为 1。
+将多个嵌入组合到结果中可能非常有用：<code class="language-plaintext highlighter-rouge">creature_embedding in the woods:0.7 AND arcane_embedding:0.5 AND glitch_embedding:0.2</code></p>
+
+<p>使用低于 0.1 的值几乎没有效果。 <code class="language-plaintext highlighter-rouge">a cat AND a dog:0.03</code> 将产生与 <code class="language-plaintext highlighter-rouge">a cat</code> 基本相同的输出</p>
+
+<p>通过继续将更多提示附加到您的总数，这对于生成微调的递归变体可能很方便。 <code class="language-plaintext highlighter-rouge">log 上的 creature_embedding AND frog:0.13 AND yellow eyes:0.08</code></p>
+
+<p>＃ 打断</p>
+
+<p>按中断按钮停止当前处理。</p>
+
+<h1 id="4gb-显卡支持">4GB 显卡支持</h1>
+<p>针对具有低 VRAM 的 GPU 的优化。这应该可以在具有 4GB 内存的视频卡上生成 512x512 图像。</p>
+
+<p><code class="language-plaintext highlighter-rouge">--lowvram</code> 是 <a href="https://github.com/basujindal/stable-diffusion">basujindal</a> 优化思想的重新实现。
+模型被分成模块，GPU内存中只保留一个模块；当另一个模块需要运行时，前一个
+从 GPU 内存中删除。这种优化的本质使处理运行得更慢——大约慢 10 倍
+与我的 RTX 3090 上的正常操作相比。</p>
+
+<p><code class="language-plaintext highlighter-rouge">--medvram</code> 是另一个优化，应该通过不处理条件和显着减少 VRAM 使用
+同一批次无条件去噪。</p>
+
+<p>这种优化的实现不需要对原始的稳定扩散代码进行任何修改。</p>
+
+<h1 id="人脸修复">人脸修复</h1>
+<p>让您使用 GFPGAN 或 CodeFormer 改善图片中的人脸。每个选项卡中都有一个复选框来使用面部修复，
+还有一个单独的选项卡，只允许您在任何图片上使用面部修复，并带有一个滑块来控制可见度
+效果是。您可以在设置中选择这两种方法。</p>
+
+<p>|原创 | GFPGAN |代码形成者 |
+|————————-|——————————–|————————————|</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="%E5%9B%BE%E7%89%87/facefix.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/facefix-gfpgan.png" alt=""></td>
+      <td><img src="%E5%9B%BE%E7%89%87/facefix-codeformer.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="保存">保存</h1>
+<p>单击输出部分下的保存按钮，生成的图像将保存到设置中指定的目录中；
+生成参数将附加到同一目录中的 csv 文件。</p>
+
+<h1 id="加载中">加载中</h1>
+<p>Gradio 的加载图形对神经网络的处理速度有非常不利的影响。
+当带渐变的选项卡未处于活动状态时，我的 RTX 3090 使图像速度提高约 10%。默认情况下，用户界面
+现在隐藏加载进度动画并将其替换为静态“正在加载…”文本，从而实现
+同样的效果。使用 <code class="language-plaintext highlighter-rouge">--no-progressbar-hiding</code> 命令行选项来恢复它并显示加载动画。</p>
+
+<h1 id="提示验证">提示验证</h1>
+<p>Stable Diffusion 对输入文本长度有限制。如果你的提示太长，你会得到一个
+文本输出字段中的警告，显示文本的哪些部分被模型截断和忽略。</p>
+
+<h1 id="png-信息">PNG 信息</h1>
+<p>将有关生成参数的信息作为文本块添加到 PNG。你
+以后可以使用任何支持查看的软件查看此信息
+PNG 块信息，例如：https://www.nayuki.io/page/png-file-chunk-inspector</p>
+
+<h1 id="设置">设置</h1>
+<p>带有设置的选项卡，允许您使用 UI 编辑以前无法编辑的一半以上的参数
+是命令行。设置保存到 config.js 文件。保留为命令行的设置
+选项是启动时需要的选项。</p>
+
+<h1 id="文件名格式">文件名格式</h1>
+<p>“设置”选项卡中的“图像文件名模式”字段允许自定义生成的 txt2img 和 img2img 图像文件名。此模式定义了要包含在文件名中的生成参数及其顺序。支持的标签是：</p>
+
+<p><code class="language-plaintext highlighter-rouge">[steps], [cfg], [prompt], [prompt_no_styles], [prompt_spaces], [width], [height], [styles], [sampler], [seed], [model_hash], [prompt_words], [日期], [日期时间], [job_timestamp].</code></p>
+
+<p>这个列表会随着新的添加而发展。您可以通过将鼠标悬停在 UI 中的“图像文件名模式”标签上来获取最新的支持标签列表。</p>
+
+<p>模式示例：<code class="language-plaintext highlighter-rouge">[seed]-[steps]-[cfg]-[sampler]-[prompt_spaces]</code></p>
+
+<p>关于“提示”标签的注意事项：<code class="language-plaintext highlighter-rouge">[prompt]</code> 将在提示词之间添加下划线，而 <code class="language-plaintext highlighter-rouge">[prompt_spaces]</code> 将保持提示完整（更容易再次复制/粘贴到 UI 中）。 <code class="language-plaintext highlighter-rouge">[prompt_words]</code> 是您的提示的简化和清理版本，已用于生成子目录名称，仅包含您的提示文字（无标点符号）。</p>
+
+<p>如果将此字段留空，将应用默认模式 (<code class="language-plaintext highlighter-rouge">[seed]-[prompt_spaces]</code>)。</p>
+
+<p>请注意，标签实际上在模式内部被替换了。这意味着您还可以向此模式添加非标签词，以使文件名更加明确。例如：<code class="language-plaintext highlighter-rouge">s=[seed],p=[prompt_spaces]</code></p>
+
+<h1 id="用户脚本">用户脚本</h1>
+<p>如果程序使用 <code class="language-plaintext highlighter-rouge">--allow-code</code> 选项启动，脚本代码的额外文本输入字段
+位于页面底部的脚本 -&gt; 自定义代码下。它允许你输入python
+将处理图像的代码。</p>
+
+<p>在代码中，使用“p”变量从 Web UI 访问参数，并为 Web UI 提供输出
+使用 <code class="language-plaintext highlighter-rouge">display(images, seed, info)</code> 函数。脚本中的所有全局变量也可以访问。</p>
+
+<p>一个简单的脚本，只处理图像并正常输出：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">modules.processing</span>
+
+<span class="n">processed</span> <span class="o">=</span> <span class="n">modules</span><span class="p">.</span><span class="n">processing</span><span class="p">.</span><span class="n">process_images</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Seed was: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">processed</span><span class="p">.</span><span class="n">seed</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">processed</span><span class="p">.</span><span class="n">images</span><span class="p">,</span> <span class="n">processed</span><span class="p">.</span><span class="n">seed</span><span class="p">,</span> <span class="n">processed</span><span class="p">.</span><span class="n">info</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h1 id="界面配置">界面配置</h1>
+<p>您可以更改 UI 元素的参数：</p>
+<ul>
+  <li>无线电组：默认选择</li>
+  <li>滑块：默认值、最小值、最大值、步长</li>
+  <li>复选框：选中状态</li>
+  <li>文本和数字输入：默认值</li>
+</ul>
+
+<p>该文件是 webui 目录下的 ui-config.json ，如果程序启动时没有，它会自动创建。</p>
+
+<p>通常会展开隐藏部分的复选框在设置为 UI 配置条目时最初不会这样做。</p>
+
+<p>某些设置会中断处理，例如宽度和高度不能被 64 整除的步长，以及某些设置，例如更改默认设置
+img2img 选项卡上的功能，可能会破坏 UI。我没有计划在不久的将来解决这些问题。</p>
+
+<p>#ESRGAN
+可以在 Extras 选项卡以及 SD 高档中使用 ESRGAN 模型。</p>
+
+<p>要使用 ESRGAN 模型，请将它们放入与 webui.py 相同位置的 ESRGAN 目录中。
+如果文件具有 .pth 扩展名，则该文件将作为模型加载。从 <a href="https://upscale.wiki/wiki/Model_Database">模型数据库</a> 中获取模型。</p>
+
+<p>并非数据库中的所有模型都受支持。很可能不支持所有 2x 模型。</p>
+
+<h1 id="img2img-替代测试">img2img 替代测试</h1>
+<p>使用 Euler 扩散器的反向解构输入图像，以创建用于构建输入提示的噪声模式。</p>
+
+<p>例如，您可以使用此图像。从 <em>scripts</em> 部分选择 img2img 替代测试。</p>
+
+<p><img src="https://user-images.githubusercontent.com/1633844/191771623-6293ec7b-c1c0-425c-9fe9-9d03313761fb.png" alt="alt_src"></p>
+
+<p>调整重建过程的设置：</p>
+<ul>
+  <li>使用场景的简短描述：“一个棕色头发的微笑女人。”描述您要更改的功能会有所帮助。将其设置为您的启动提示，并在脚本设置中设置“原始输入提示”。</li>
+  <li>你<em>必须</em>使用欧拉采样方法，因为这个脚本是建立在它之上的。</li>
+  <li>采样步数：50-60。这与脚本中的解码步骤值非常匹配，否则您会遇到麻烦。在此演示中使用 50。</li>
+  <li>CFG 等级：2 或更低。对于此演示，请使用 1.8。 （提示，您可以编辑 ui-config.json 将“img2img/CFG Scale/step”更改为 .1 而不是 .5。</li>
+  <li>去噪强度 - 这<em>确实</em>重要，与旧文档所说的相反。将其设置为 1。</li>
+  <li>宽度/高度 - 使用输入图像的宽度/高度。</li>
+  <li>种子……你可以忽略这个。反向欧拉现在正在为图像生成噪声。</li>
+  <li>解码 cfg 比例 - 低于 1 的地方是最佳点。对于演示，使用 1。</li>
+  <li>解码步骤 - 如上所述，这应该与您的采样步骤相匹配。 50 用于演示，考虑增加到 60 以获得更详细的图像。</li>
+</ul>
+
+<p>拨入以上所有内容后，您应该能够点击“生成”并返回一个<em>非常</em>接近原始结果的结果。</p>
+
+<p>在验证脚本以良好的准确度重新生成源照片后，您可以尝试更改提示的详细信息。原始图像的较大变化可能会导致图像的构图与源图像完全不同。</p>
+
+<p>使用上述设置和下面提示的示例输出（图中未显示红头发/小马）</p>
+
+<p><img src="https://user-images.githubusercontent.com/1633844/191776138-c77bf232-1981-47c9-a4d3-ae155631f5c8.png" alt="演示"></p>
+
+<p>“一个微笑的蓝头发女人。”作品。
+“一个皱着眉头的棕色头发的女人。”作品。
+“一个皱着眉头的红头发女人。”作品。
+“一个皱着眉头的红发女子骑着马。”似乎完全取代了女人，现在我们有了一匹姜黄色的小马。</p>
+
+<h1 id="用户css">用户.css</h1>
+<p>在 <code class="language-plaintext highlighter-rouge">webui.py</code> 附近创建一个名为 <code class="language-plaintext highlighter-rouge">user.css</code> 的文件，并将自定义 CSS 代码放入其中。例如，这会使画廊更高：</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#txt2img_gallery</span><span class="o">,</span> <span class="nf">#img2img_gallery</span><span class="p">{</span>
+    <span class="nl">min-height</span><span class="p">:</span> <span class="m">768px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>一个有用的提示是您可以将 <code class="language-plaintext highlighter-rouge">/?__theme=dark</code> 附加到您的 webui url 以启用内置的 <em>dark 主题</em>
+<br>例如(<code class="language-plaintext highlighter-rouge">http://127.0.0.1:7860/?__theme=dark</code>)</p>
+
+<p>或者，您可以将 <code class="language-plaintext highlighter-rouge">--theme=dark</code> 添加到 <code class="language-plaintext highlighter-rouge">webui-user.bat</code> 中的 <code class="language-plaintext highlighter-rouge">set COMMANDLINE_ARGS=</code><br>
+例如<code class="language-plaintext highlighter-rouge">set COMMANDLINE_ARGS=--theme=dark</code></p>
+
+<p><img src="https://user-images.githubusercontent.com/39339941/197560013-51e535d6-7cef-4946-ab6b-747e1c76b007.png" alt="chrome_O1kvfKs1es"></p>
+
+<h1 id="通知mp3">通知.mp3</h1>
+<p>如果名为 notification.mp3 的音频文件存在于 webui 的根文件夹中，它将在生成过程完成时播放。</p>
+
+<p>作为灵感来源：</p>
+<ul>
+  <li>https://pixabay.com/sound-effects/search/ding/?duration=0-30</li>
+  <li>https://pixabay.com/sound-effects/search/notification/?duration=0-30</li>
+</ul>
+
+<h1 id="调整">调整</h1>
+
+<h2 id="忽略-clip-模型的最后一层">忽略 CLIP 模型的最后一层</h2>
+<p>这是设置中的一个滑块，它控制 CLIP 网络处理提示的时间应该多早停止。</p>
+
+<p>更详细的解释：</p>
+
+<p>CLIP 是一种非常先进的神经网络，可将您的提示文本转换为数字表示。神经网络可以很好地处理这种数字表示，这就是为什么 SD 的开发者选择 CLIP 作为稳定扩散图像生成方法中涉及的 3 个模型之一的原因。由于 CLIP 是一个神经网络，这意味着它有很多层。您的提示以简单的方式数字化，然后通过层馈送。您在第一层之后获得提示的数字表示，将其提供给第二层，将其结果提供给第三层，依此类推，直到到达最后一层，这就是稳定版中使用的 CLIP 的输出扩散。这是 1 的滑块值。但是您可以提前停止，并使用倒数第二层的输出 - 这是 2 的滑块值。您停止得越早，处理提示的神经网络层数就越少。</p>
+
+<p>一些模型是通过这种调整进行训练的，因此设置此值有助于在这些模型上产生更好的结果。</p>
+
+                </section>
+            </div>
+<div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title">
+<span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+                        <a href="/sdwui-docs/extensions/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 扩展">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        <a href="/sdwui-docs/cn/install-on-amd/" class="navigation navigation-next navigation-unique" aria-label="Next page: 在 AMD 上安装">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "在 AMD 上安装",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/cn/Install-and-Run-on-AMD-GPUs.md",
+            "ref": "_pages/cn/Install-and-Run-on-AMD-GPUs.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"],
+                "facebook": false,
+                "google": false,
+                "github": true,
+                "github_link": "https://github.com/ProfaneServitor/sdwui-docs/",
+                "telegram": false,
+                "telegram_link": "https://t.me",
+                "instapaper": false,
+                "twitter": false,
+                "vk": false,
+                "weibo": false
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            }
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "Stable Diffusion webUI",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/cn/Features.md",
+        "mtime": "",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2023-01-07 18:51:31 +0300"
+    },
+    "basePath": "/sdwui-docs",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/sdwui-docs/assets/gitbook/gitbook.js"></script>
+<script src="/sdwui-docs/assets/gitbook/theme.js"></script>
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+
+<!-- <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script> -->
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+
+</body>
+</html>

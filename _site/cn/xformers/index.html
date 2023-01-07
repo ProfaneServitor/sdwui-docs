@@ -1,0 +1,696 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>变形金刚 · Stable Diffusion webUI</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="A browser interface based on Gradio library for Stable Diffusion.
+"><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/style.css">
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/rouge/colorful.css">
+
+<link rel="stylesheet" href="/sdwui-docs/cn/assets/gitbook/custom.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/sdwui-docs/cn/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/sdwui-docs/cn//assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+
+
+
+            <link rel="prev" href="/sdwui-docs/cn/ui-defaults/" />
+        
+
+        
+            <link rel="next" href="/sdwui-docs/cn/api/" />
+        
+    </head>
+    <body>
+        <div class="book">
+<div class="book-summary">
+    <nav role="navigation">
+        <div id="lang">
+<a href="/sdwui-docs/xformers/"><img class="emoji" title=":uk:" alt=":uk:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png" height="20" width="20"> en</a> | <a href="/sdwui-docs/ru/xformers/"><img class="emoji" title=":ru:" alt=":ru:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1f7-1f1fa.png" height="20" width="20"> ru</a> | <a href="/sdwui-docs/de/xformers/"><img class="emoji" title=":de:" alt=":de:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1e9-1f1ea.png" height="20" width="20"> de</a> | <a style="font-weight: bold;" href="/sdwui-docs/cn/xformers/"><img class="emoji" title=":cn:" alt=":cn:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1e8-1f1f3.png" height="20" width="20"> cn</a> | <br>
+</div>
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search">
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/sdwui-docs/cn/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter" data-level="1.1" data-path="/sdwui-docs">
+            
+                <!-- <a href="/sdwui-docs/cn/">
+                    Stable Diffusion webUI
+                </a> -->
+            </li>
+
+            <!-- <li class="divider"></li> -->
+
+
+                    
+                    
+                    <li>
+                      <h2>Getting started</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/dependencies/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/dependencies/">依赖关系</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/">稳定扩散 webUI</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install/">安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/online-services/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/online-services/">在线服务</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/ui-defaults/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/ui-defaults/">更改用户界面默认值</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>Guides</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/cli/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/cli/">命令行参数和设置</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-filenames/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/custom-filenames/">自定义图像文件名和子目录</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/custom-scripts/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/custom-scripts/">自定义脚本</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/extensions/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/extensions/">扩展</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/features/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/features/">特征</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/list-of-time-zones/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/list-of-time-zones/">时区列表</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/localization/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/localization/">本土化</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/negative-prompt/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/negative-prompt/">否定提示</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/optimizations/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/optimizations/">优化</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/textual-inversion/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/textual-inversion/">文字倒置</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/troubleshooting/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/troubleshooting/">故障排除</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter active" data-level="1.2" data-path="/sdwui-docs/xformers/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/xformers/">变形金刚</a>
+                              
+                              
+                                  
+                                      <ul>
+<li>
+<a href="#duckness-%E5%9C%A8-windows-%E4%B8%8A%E6%9E%84%E5%BB%BA-xformers"></a><a href="https://github.com/duckness">@duckness</a> 在 Windows 上构建 xFormers<ul><li><a href="#%E5%A6%82%E6%9E%9C%E6%82%A8%E5%9C%A8-python-310-%E4%B8%AD%E4%BD%BF%E7%94%A8-pascalturingamperelovelace-%E6%88%96-hopper-%E5%8D%A1%E5%88%99%E6%97%A0%E9%9C%80%E5%86%8D%E6%89%8B%E5%8A%A8%E6%9E%84%E5%BB%BA%E5%8D%B8%E8%BD%BD%E7%8E%B0%E6%9C%89%E7%9A%84-xformers-%E5%B9%B6%E4%BD%BF%E7%94%A8---xformers-%E5%90%AF%E5%8A%A8-repo%E5%B0%86%E5%AE%89%E8%A3%85%E5%85%BC%E5%AE%B9%E7%9A%84%E8%BD%A6%E8%BD%AE">如果您在 Python 3.10 中使用 Pascal、Turing、Ampere、Lovelace 或 Hopper 卡，则无需再手动构建。卸载现有的 xformers 并使用 <code class="language-plaintext highlighter-rouge">--xformers</code> 启动 repo。将安装兼容的车轮。</a></li></ul>
+</li>
+<li><a href="#non-deterministic--unstable--inconsistent-results">Non-deterministic / unstable / inconsistent results:</a></li>
+</ul>
+
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/api/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/api/">API指南</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+                    </li>
+<li>
+                      <h2>development</h2>
+                      </li>
+                      
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/contributing/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/contributing/">贡献</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-custom-scripts/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/developing-custom-scripts/">开发自定义脚本</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/developing-extensions/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/developing-extensions/">开发扩展</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-amd/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install-on-amd/">在 AMD 上安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-nvidia/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install-on-nvidia/">在英伟达上安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/install-on-apple/">
+                          
+                              
+                                <a href="/sdwui-docs/cn/install-on-apple/">在苹果上安装</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                          
+                          <li class="chapter" data-level="1.1" data-path="/sdwui-docs/tests">
+                          
+                              
+                                <a href="/sdwui-docs/cn/tests">测试</a>
+                              
+                              
+                                  
+                              
+                          </li>
+                      
+                      <li class="divider">
+                    
+
+                    
+
+            <!-- <li>
+                <a href="https://github.com/sighingnow/jekyll-gitbook/fork" target="blank" class="gitbook-link">
+                    Fork it Now!
+                </a>
+            </li> -->
+            </li>
+<li><h2>Release notes</h2></li>
+            
+              <li>
+                <a href="/sdwui-docs/cn/2022-12-27-my-new-post.html">
+                  Release note example
+                </a>
+              </li>
+            
+        </ul>
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href=".">变形金刚</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner">
+<div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/Xformers">变形金刚</h1>
+                    
+
+                    
+                      <div style="border: 1px dashed red; width: 100%; padding: 1em;">
+  <b><img class="emoji" title=":robot:" alt=":robot:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f916.png" height="20" width="20"> This page have been translated automatically. If you want to improve this translation and remove this warning,
+    see <a href="https://github.com/ProfaneServitor/sdwui-docs">project's repository</a></b>
+</div>
+
+                    
+                    <p>Xformers 库是加速图像生成的可选方法。</p>
+
+<p>除了一种特定配置外，没有适用于 Windows 的二进制文件，但您可以自己构建它。</p>
+
+<p>来自一位匿名用户的指南，尽管我认为它适用于在 Linux 上构建：</p>
+
+<p>关于如何构建 XFORMERS 的指南
+还包括如何摆脱 sm86 对 voldy 新提交的限制</p>
+
+<p>1.进入webui目录
+2.<code class="language-plaintext highlighter-rouge">来源./venv/bin/activate</code>
+3.<code class="language-plaintext highlighter-rouge">cd 存储库</code>
+3.<code class="language-plaintext highlighter-rouge">git 克隆 https://github.com/facebookresearch/xformers.git</code>
+4.<code class="language-plaintext highlighter-rouge">cd xformers</code></p>
+<ol>
+  <li>
+<code class="language-plaintext highlighter-rouge">git 子模块更新 --init --recursive</code>
+6.<code class="language-plaintext highlighter-rouge">pip install -r requirements.txt</code>
+7.<code class="language-plaintext highlighter-rouge">pip 安装-e.</code>
+</li>
+</ol>
+
+<h2 id="duckness-在-windows-上构建-xformers">
+<a href="https://github.com/duckness">@duckness</a> 在 Windows 上构建 xFormers</h2>
+
+<hr>
+
+<h3 id="如果您在-python-310-中使用-pascalturingamperelovelace-或-hopper-卡则无需再手动构建卸载现有的-xformers-并使用---xformers-启动-repo将安装兼容的车轮">如果您在 Python 3.10 中使用 Pascal、Turing、Ampere、Lovelace 或 Hopper 卡，则无需再手动构建。卸载现有的 xformers 并使用 <code class="language-plaintext highlighter-rouge">--xformers</code> 启动 repo。将安装兼容的车轮。</h3>
+
+<hr>
+
+<p>1.【安装VS Build Tools 2022】(https://visualstudio.microsoft.com/downloads/?q=build+tools#build-tools-for-visual-studio-2022)，你只需要<code class="language-plaintext highlighter-rouge">Desktop development with C++ </code></p>
+
+<p><img src="https://user-images.githubusercontent.com/6380270/194767872-232136a1-9204-4b16-ae21-3e01f6f526ea.png" alt="setup_COFbK0AJAZ"></p>
+
+<ol>
+  <li>
+<a href="https://developer.nvidia.com/cuda-11.3.0-download-archive">Install CUDA 11.3</a>（后面的版本没测试），选择custom，你只需要下面的（VS integration估计不需要） ):</li>
+</ol>
+
+<p><img src="https://user-images.githubusercontent.com/6380270/194767963-6df7ce14-e6eb-4718-8e93-a11abf172f14.png" alt="setup_QwCdsQ28FM"></p>
+
+<p>3.克隆<a href="https://github.com/facebookresearch/xformers">xFormers repo</a>，创建一个<code class="language-plaintext highlighter-rouge">venv</code>并激活它</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/facebookresearch/xformers.git
+<span class="nb">cd </span>xformers
+git submodule update <span class="nt">--init</span> <span class="nt">--recursive</span>
+python <span class="nt">-m</span> venv venv
+./venv/scripts/activate
+</code></pre></div></div>
+
+<ol>
+  <li>为了避免获取 CPU 版本的问题，<a href="https://pytorch.org/get-started/locally/">单独安装 pyTorch</a>：</li>
+</ol>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>torch torchvision <span class="nt">--extra-index-url</span> https://download.pytorch.org/whl/cu113
+</code></pre></div></div>
+
+<p>5.然后安装其余的依赖项：</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+pip <span class="nb">install </span>wheel
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>由于 CUDA 11.3 相当旧，您需要强制启用它以在 MS Build Tools 2022 上构建。如果在 <code class="language-plaintext highlighter-rouge">powershell</code> 上执行 <code class="language-plaintext highlighter-rouge">$env:NVCC_FLAGS = "-allow-unsupported-compiler"</code>，或 <code class="language-plaintext highlighter-rouge">set NVCC_FLAGS =-allow-unsupported-compiler</code> 如果在 <code class="language-plaintext highlighter-rouge">cmd</code></p>
+  </li>
+  <li>
+    <p>您终于可以构建 xFormers，请注意构建将花费很长时间（可能 10-20 分钟），它最初可能会抱怨一些错误，但它应该仍然可以正确编译。</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>可选提示：要进一步加快多核 CPU Windows 系统的速度，请安装 ninja https://github.com/ninja-build/ninja。
+安装步骤：</p>
+  <ol>
+    <li>从 https://github.com/ninja-build/ninja/releases 下载 ninja-win.zip 并解压</li>
+    <li>将 ninja.exe 放在 C:\Windows 下或将提取的 ninja.exe 的完整路径添加到系统 PATH 中</li>
+    <li>在 cmd 中运行 ninja -h 并验证是否看到打印的帮助消息</li>
+    <li>运行以下命令开始构建。它应该自动使用 Ninja，不需要额外的配置。您应该会看到明显更高的 CPU 使用率 (40%+)。
+      <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>python setup.py 构建
+python setup.py bdist_wheel
+</code></pre></div>      </div>
+      <p>这将配备 AMD 5800X CPU 的 Windows PC 的构建时间从 1.5 小时减少到 10 分钟。
+Linux 和 MacOS 也支持 Ninja，但我没有这些操作系统可以测试，因此无法提供分步教程。</p>
+    </li>
+  </ol>
+</blockquote>
+
+<ol>
+  <li>运行以下命令：
+    <pre><code class="language-嘘">python setup.py 构建
+蟒蛇 setup.py bdist_wheel
+</code></pre>
+  </li>
+  <li>
+    <p>In <code class="language-plaintext highlighter-rouge">xformers</code> directory, navigate to the <code class="language-plaintext highlighter-rouge">dist</code> folder and copy the <code class="language-plaintext highlighter-rouge">.whl</code> file to the base directory of <code class="language-plaintext highlighter-rouge">stable-diffusion-webui</code></p>
+  </li>
+  <li>In <code class="language-plaintext highlighter-rouge">stable-diffusion-webui</code> directory, install the <code class="language-plaintext highlighter-rouge">.whl</code>, change the name of the file in the command below if the name is different:</li>
+</ol>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./venv/脚本/激活
+pip 安装 xformers-0.0.14.dev0-cp310-cp310-win_amd64.whl
+</code></pre></div></div>
+
+<ol>
+  <li>Ensure that <code class="language-plaintext highlighter-rouge">xformers</code> is activated by launching <code class="language-plaintext highlighter-rouge">stable-diffusion-webui</code> with <code class="language-plaintext highlighter-rouge">--force-enable-xformers</code>
+</li>
+</ol>
+
+<h2 id="non-deterministic--unstable--inconsistent-results">Non-deterministic / unstable / inconsistent results:</h2>
+
+<p>Known issue. See <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/2705#discussioncomment-4024378">this</a> list on the discussion page.</p>
+
+                </section>
+            </div>
+<div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title">
+<span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+                        <a href="/sdwui-docs/cn/ui-defaults/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 更改用户界面默认值">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        <a href="/sdwui-docs/cn/api/" class="navigation navigation-next navigation-unique" aria-label="Next page: API指南">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "API指南",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_pages/cn/api.md",
+            "ref": "_pages/cn/api.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"],
+                "facebook": false,
+                "google": false,
+                "github": true,
+                "github_link": "https://github.com/ProfaneServitor/sdwui-docs/",
+                "telegram": false,
+                "telegram_link": "https://t.me",
+                "instapaper": false,
+                "twitter": false,
+                "vk": false,
+                "weibo": false
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            }
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "Stable Diffusion webUI",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_pages/cn/Xformers.md",
+        "mtime": "",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2023-01-07 18:51:31 +0300"
+    },
+    "basePath": "/sdwui-docs",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/sdwui-docs/assets/gitbook/gitbook.js"></script>
+<script src="/sdwui-docs/assets/gitbook/theme.js"></script>
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+
+<!-- <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script> -->
+
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/sdwui-docs/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+
+</body>
+</html>
